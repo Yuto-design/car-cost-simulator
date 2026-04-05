@@ -517,38 +517,57 @@ Nissan,SERENA "e:4ORCE Highway STAR V",hybrid,16.0,1.433,4141500,120000
 Nissan,SKYLINE "400R",gasoline,10.0,2.997,6495500,130000
 Nissan,SKYLINE "GT Type SP",gasoline,10.0,2.997,5723300,130000
 Nissan,SKYLINE "GT Type P",gasoline,10.0,2.997,5442800,130000
-Mazda,CX-30 "20S RETRO SPORTS EDITION" 2WD,hybrid,16.2,1.997,3173500,110000
-Mazda,CX-30 "20S RETRO SPORTS EDITION" 4WD,hybrid,15.5,1.997,3410000,110000
-Mazda,CX-30 "XD RETRO SPORTS EDITION" 2WD,diesel,20.2,1.756,3448500,110000
-Mazda,CX-30 "XD RETRO SPORTS EDITION" 4WD,diesel,19.2,1.756,3685000,110000
-Mazda,CX-30 "20S TOURING" 2WD,hybrid,16.2,1.997,3052500,110000
-Mazda,CX-30 "20S TOURING" 4WD,hybrid,15.5,1.997,3289000,110000
+Mazda,CX-30 "20S Retro Sports Edition" 2WD,hybrid,16.2,1.997,3173500,110000
+Mazda,CX-30 "20S Retro Sports Edition" 4WD,hybrid,15.5,1.997,3410000,110000
+Mazda,CX-30 "XD Retro Sports Edition" 2WD,diesel,20.2,1.756,3448500,110000
+Mazda,CX-30 "XD Retro Sports Edition" 4WD,diesel,19.2,1.756,3685000,110000
+Mazda,CX-30 "20S Touring" 2WD,hybrid,16.2,1.997,3052500,110000
+Mazda,CX-30 "20S Touring" 4WD,hybrid,15.5,1.997,3289000,110000
 Mazda,CX-30 "XD S Package" 2WD,diesel,20.2,1.756,3034900,110000
 Mazda,CX-30 "XD S Package" 4WD,diesel,19.2,1.756,3271400,110000
-Mazda,CX-30 "20S BLACK SELECTION" 2WD,hybrid,16.2,1.997,2998600,110000
-Mazda,CX-30 "20S BLACK SELECTION" 4WD,hybrid,15.5,1.997,3235100,110000
-Mazda,CX-30 "XD DRIVE EDITION" 2WD,diesel,20.2,1.756,3360500,110000
-Mazda,CX-30 "XD DRIVE EDITION" 4WD,diesel,19.2,1.756,3597000,110000
-Mazda,CX-30 "20S i SELECTION" 2WD,hybrid,16.2,1.997,2772000,110000
-Mazda,CX-30 "20S i SELECTION" 4WD,hybrid,15.5,1.997,3008500,110000
-Mazda,CX-5 "20S i SELECTION" 2WD,gasoline,14.6,1.997,2810000,110000
-Mazda,CX-5 "20S i SELECTION" 4WD,gasoline,14.0,1.997,3041500,110000
-Mazda,CX-5 "20S BLACK SELECTION" 2WD,gasoline,14.6,1.997,3140500,110000
-Mazda,CX-5 "20S BLACK SELECTION" 4WD,gasoline,14.0,1.997,3371500,110000
-Mazda,CX-5 "25S SPORTS APPEARANCE" 2WD,gasoline,13.8,1.997,3581600,110000
-Mazda,CX-5 "25S SPORTS APPEARANCE" 4WD,gasoline,13.0,1.997,3812600,110000
-Mazda,CX-5 "XD i SELECTION" 2WD,diesel,17.4,2.188,3129500,110000
-Mazda,CX-5 "XD i SELECTION" 4WD,diesel,16.6,2.188,3360500,110000
-Mazda,CX-5 "XD BLACK SELECTION" 2WD,diesel,17.4,2.188,3459500,110000
-Mazda,CX-5 "XD BLACK SELECTION" 4WD,diesel,16.6,2.188,3690500,110000
-Mazda,CX-5 "XD SPORTS APPEARANCE" 2WD,diesel,17.4,2.188,3850000,110000
-Mazda,CX-5 "XD SPORTS APPEARANCE" 4WD,diesel,16.6,2.188,4081000,110000
-Mazda,CX-5 "XD DRIVE EDITION" 2WD,diesel,17.4,2.188,3901700,110000
-Mazda,CX-5 "XD DRIVE EDITION" 4WD,diesel,16.6,2.188,4132700,110000
-Mazda,CX-60 XD,gasoline,14.5,0,4990000,135000
-Mazda,CX-60 XD Premium,gasoline,14.5,0,5490000,135000
-Mazda,CX-80 XD,gasoline,13.5,0,5490000,140000
-Mazda,CX-80 XD Premium,gasoline,13.5,0,5990000,140000
+Mazda,CX-30 "20S Black Selection" 2WD,hybrid,16.2,1.997,2998600,110000
+Mazda,CX-30 "20S Black Selection" 4WD,hybrid,15.5,1.997,3235100,110000
+Mazda,CX-30 "XD Drive Edition" 2WD,diesel,20.2,1.756,3360500,110000
+Mazda,CX-30 "XD Drive Edition" 4WD,diesel,19.2,1.756,3597000,110000
+Mazda,CX-30 "20S i Selection" 2WD,hybrid,16.2,1.997,2772000,110000
+Mazda,CX-30 "20S i Selection" 4WD,hybrid,15.5,1.997,3008500,110000
+Mazda,CX-5 "20S i Selection" 2WD,gasoline,14.6,1.997,2810000,110000
+Mazda,CX-5 "20S i Selection" 4WD,gasoline,14.0,1.997,3041500,110000
+Mazda,CX-5 "20S Black Selection" 2WD,gasoline,14.6,1.997,3140500,110000
+Mazda,CX-5 "20S Black Selection" 4WD,gasoline,14.0,1.997,3371500,110000
+Mazda,CX-5 "25S Sports Appearance" 2WD,gasoline,13.8,1.997,3581600,110000
+Mazda,CX-5 "25S Sports Appearance" 4WD,gasoline,13.0,1.997,3812600,110000
+Mazda,CX-5 "XD i Selection" 2WD,diesel,17.4,2.188,3129500,110000
+Mazda,CX-5 "XD i Selection" 4WD,diesel,16.6,2.188,3360500,110000
+Mazda,CX-5 "XD Black Selection" 2WD,diesel,17.4,2.188,3459500,110000
+Mazda,CX-5 "XD Black Selection" 4WD,diesel,16.6,2.188,3690500,110000
+Mazda,CX-5 "XD Sports Appearance" 2WD,diesel,17.4,2.188,3850000,110000
+Mazda,CX-5 "XD Sports Appearance" 4WD,diesel,16.6,2.188,4081000,110000
+Mazda,CX-5 "XD Drive Edition" 2WD,diesel,17.4,2.188,3901700,110000
+Mazda,CX-5 "XD Drive Edition" 4WD,diesel,16.6,2.188,4132700,110000
+Mazda,CX-60 "25S L Package" 2WD,gasoline,14.1,2.488,3828000,135000
+Mazda,CX-60 "25S L Package" 4WD,gasoline,13.0,2.488,4053500,135000
+Mazda,CX-60 "25S Exclusive Mode" 2WD,gasoline,14.1,2.488,4130500,135000
+Mazda,CX-60 "25S Exclusive Mode" 4WD,gasoline,13.0,2.488,4356000,135000
+Mazda,CX-60 "XD Drive Edition" 2WD,diesel,19.7,3.283,4303200,135000
+Mazda,CX-60 "XD Drive Edition" 4WD,diesel,18.4,3.283,4528700,135000
+Mazda,CX-60 "XD Drive Edition Nappa Leather Package" 2WD,diesel,19.7,3.283,4598000,135000
+Mazda,CX-60 "XD Drive Edition Nappa Leather Package" 4WD,diesel,18.4,3.283,4823500,135000
+Mazda,CX-60 "XD Premium Sports" 2WD,diesel,19.7,3.283,4698100,135000
+Mazda,CX-60 "XD Premium Sports" 4WD,diesel,18.4,3.283,4923600,135000
+Mazda,CX-60 "XD-HYBRID Drive Edition Nappa Leather Package",hybrid,21.0,3.283,5340500,135000
+Mazda,CX-60 "XD-HYBRID Drive Edition Burgundy Leather Package",hybrid,20.9,3.283,5494500,135000
+Mazda,CX-60 "XD-HYBRID Premium Sports",hybrid,20.9,3.283,5703500,135000
+Mazda,CX-60 "XD-HYBRID Premium Modern",hybrid,20.9,3.283,5703500,135000
+Mazda,CX-80 "XD Drive Edition" 2WD,diesel,18.2,3.283,4781700,140000
+Mazda,CX-80 "XD Drive Edition" 4WD,diesel,16.8,3.283,5018200,140000
+Mazda,CX-80 "XD Drive Edition Nappa Leather Package" 2WD,diesel,18.2,3.283,5093000,140000
+Mazda,CX-80 "XD Drive Edition Nappa Leather Package" 4WD,diesel,16.8,3.283,5329500,140000
+Mazda,CX-80 "XD Premium Sports" 2WD,diesel,18.2,3.283,5447200,140000
+Mazda,CX-80 "XD Premium Sports" 4WD,diesel,16.8,3.283,5683700,140000
+Mazda,CX-80 "XD-HYBRID Drive Edition Nappa Leather Package",hybrid,19.2,3.283,5846500,140000
+Mazda,CX-80 "XD-HYBRID Premium Sports",hybrid,19.0,3.283,6347000,140000
+Mazda,CX-80 "XD-HYBRID Premium Modern",hybrid,19.0,3.283,6347000,140000
 Mazda,MX-30 Standard,gasoline,0,0,3990000,80000
 Mazda,MX-30 L Package,gasoline,0,0,4490000,80000
 Mazda,MX-30 ROTARY-EV,gasoline,0,0,4990000,80000
