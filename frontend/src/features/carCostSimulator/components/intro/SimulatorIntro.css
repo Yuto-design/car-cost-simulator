@@ -254,6 +254,45 @@ button.sim-intro-hero-cta {
   opacity: 0.96;
 }
 
+.sim-intro-comparison {
+  margin: 0 0 1.5rem;
+  padding: 1.15rem 1.15rem 1.2rem;
+  background: var(--sim-glass-bg);
+  backdrop-filter: var(--sim-glass-blur);
+  -webkit-backdrop-filter: var(--sim-glass-blur);
+  border: 1px solid var(--sim-glass-border);
+  border-radius: var(--sim-r-panel);
+  box-shadow: var(--sim-glass-shadow);
+}
+
+.sim-intro-comparison-title {
+  margin: 0 0 0.65rem;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.9375rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--text-h);
+}
+
+.sim-intro-comparison-title::before {
+  content: '';
+  display: inline-block;
+  width: 0.3rem;
+  height: 1.05em;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #ffd921, #0a0a0a);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.sim-intro-comparison-text {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.68;
+  color: var(--text);
+}
+
 .sim-intro-howto {
   margin: 0 0 1.5rem;
   padding: 1.2rem 1.15rem 1.25rem;
@@ -352,7 +391,7 @@ button.sim-intro-hero-cta {
   margin: 0 0 1.35rem;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 0.85rem;
 }
 

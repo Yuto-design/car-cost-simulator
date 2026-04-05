@@ -10,7 +10,7 @@ export default function SimulatorIntro({ onSelectGasoline, onSelectPlugin }) {
     <section
       className="sim-intro"
       id="sim-intro"
-      aria-labelledby="sim-intro-hero-title sim-intro-title sim-intro-howto-heading"
+      aria-labelledby="sim-intro-hero-title sim-intro-title sim-intro-comparison-heading sim-intro-howto-heading"
     >
       <div className="sim-intro-hero">
         <div className="sim-intro-hero-grid">
@@ -56,6 +56,17 @@ export default function SimulatorIntro({ onSelectGasoline, onSelectPlugin }) {
           ガソリン/HEV は従来どおり燃費とガソリン単価。プラグイン系は電気・水素・ガソリンの単価と、PHEV
           の電気走行の割合を足し合わせて試せます。
         </p>
+
+        <div className="sim-intro-comparison">
+          <h3 id="sim-intro-comparison-heading" className="sim-intro-comparison-title">
+            比較機能
+          </h3>
+          <p className="sim-intro-comparison-text">
+            計算後の結果画面にある「比較に追加」で、いまの試算条件を比較リストにためられます。左ナビの「比較」を開くと、ガソリン/HEV
+            と BEV/PHEV/FCV を混在させた複数パターンを、モード・車種・パワートレイン・車両価格・走行距離・維持費の目安などを一覧で並べて確認できます。不要な行は削除でき、表は
+            CSV でダウンロードして保存や共有にも使えます。
+          </p>
+        </div>
 
         <div className="sim-intro-howto">
           <h3 id="sim-intro-howto-heading" className="sim-intro-howto-title">
@@ -106,6 +117,18 @@ export default function SimulatorIntro({ onSelectGasoline, onSelectPlugin }) {
                 </span>
               </div>
             </li>
+            <li className="sim-intro-howto-step">
+              <span className="sim-intro-howto-icon-wrap" aria-hidden="true">
+                <i className="fa-solid fa-code-compare sim-intro-howto-icon" />
+              </span>
+              <div className="sim-intro-howto-step-body">
+                <span className="sim-intro-howto-step-label">比較に追加する（任意）</span>
+                <span className="sim-intro-howto-step-text">
+                  結果画面の「比較に追加」でリストに登録し、左ナビの「比較」から一覧表示。表は CSV
+                  で書き出せます。
+                </span>
+              </div>
+            </li>
           </ol>
         </div>
 
@@ -135,6 +158,15 @@ export default function SimulatorIntro({ onSelectGasoline, onSelectPlugin }) {
             <span className="sim-intro-feature-text">
               <span className="sim-intro-feature-label">区分別CSVで入出力</span>
               ガソリン/HEV用とプラグイン系用のCSVをそれぞれエクスポート・インポートできます。
+            </span>
+          </li>
+          <li className="sim-intro-feature">
+            <span className="sim-intro-feature-badge" aria-hidden="true">
+              4
+            </span>
+            <span className="sim-intro-feature-text">
+              <span className="sim-intro-feature-label">比較で横並びチェック</span>
+              複数の試算を一覧にため、条件や金額の違いを一度に見比べられます。
             </span>
           </li>
         </ul>
