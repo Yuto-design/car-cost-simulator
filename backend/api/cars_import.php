@@ -18,10 +18,11 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 $segment = isset($_GET['segment']) ? trim((string) $_GET['segment']) : (isset($_POST['segment']) ? trim((string) $_POST['segment']) : '');
-if ($segment !== 'gasoline_hybrid' && $segment !== 'plugin_ev') {
+$allowed = ['gasoline_hybrid', 'plugin_ev', 'all'];
+if (!in_array($segment, $allowed, true)) {
   http_response_code(400);
   ob_end_clean();
-  echo json_encode(['error' => 'segment に gasoline_hybrid または plugin_ev を指定してください']);
+  echo json_encode(['error' => 'segment に gasoline_hybrid / plugin_ev / all を指定してください']);
   exit;
 }
 
@@ -55,7 +56,21 @@ if (isset($header[0]) && substr($header[0], 0, 3) === "\xEF\xBB\xBF") {
 }
 $headerLower = array_map('strtolower', $header);
 
-if ($segment === 'gasoline_hybrid') {
+if ($segment === 'all') {
+  $expected = [
+    'segment',
+    'maker',
+    'model',
+    'powertrain',
+    'fuel',
+    'engine',
+    'price',
+    'inspection',
+    'electric_wh_per_km',
+    'hydrogen_km_per_kg',
+  ];
+  $expectedMsg = implode(',', $expected);
+} elseif ($segment === 'gasoline_hybrid') {
   $expected = ['maker', 'model', 'powertrain', 'fuel', 'engine', 'price', 'inspection'];
   $expectedMsg = 'maker,model,powertrain,fuel,engine,price,inspection';
 } else {
@@ -87,18 +102,20 @@ try {
   migrate_electric_km_per_kwh_to_wh_per_km($pdo);
   migrate_gasoline_powertrain_to_powertrain($pdo);
 
-  $pdo->beginTransaction();
-  $segQuoted = $pdo->quote($segment);
-  $pdo->exec("DELETE FROM cars WHERE segment = {$segQuoted}");
+  $stmtGh = $pdo->prepare(
+    'INSERT INTO cars (maker, model, powertrain, fuel, engine, price, inspection, segment, electric_wh_per_km, hydrogen_km_per_kg) VALUES (?, ?, ?, ?, ?, ?, ?, \'gasoline_hybrid\', NULL, NULL)'
+  );
+  $stmtPe = $pdo->prepare(
+    'INSERT INTO cars (maker, model, powertrain, fuel, electric_wh_per_km, hydrogen_km_per_kg, engine, price, inspection, segment) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, \'plugin_ev\')'
+  );
 
-  if ($segment === 'gasoline_hybrid') {
-    $stmt = $pdo->prepare(
-      'INSERT INTO cars (maker, model, powertrain, fuel, engine, price, inspection, segment, electric_wh_per_km, hydrogen_km_per_kg) VALUES (?, ?, ?, ?, ?, ?, ?, \'gasoline_hybrid\', NULL, NULL)'
-    );
+  $pdo->beginTransaction();
+
+  if ($segment === 'all') {
+    $pdo->exec('DELETE FROM cars');
   } else {
-    $stmt = $pdo->prepare(
-      'INSERT INTO cars (maker, model, powertrain, fuel, electric_wh_per_km, hydrogen_km_per_kg, engine, price, inspection, segment) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, \'plugin_ev\')'
-    );
+    $segQuoted = $pdo->quote($segment);
+    $pdo->exec("DELETE FROM cars WHERE segment = {$segQuoted}");
   }
 
   $imported = 0;
@@ -140,7 +157,20 @@ try {
       exit;
     }
 
-    if ($segment === 'gasoline_hybrid') {
+    if ($segment === 'all') {
+      $rowSeg = strtolower(trim($row[$idx['segment']] ?? ''));
+      if (!in_array($rowSeg, ['gasoline_hybrid', 'plugin_ev'], true)) {
+        $pdo->rollBack();
+        fclose($handle);
+        ob_end_clean();
+        echo json_encode(['error' => "{$lineNum}行目: segment は gasoline_hybrid または plugin_ev です"]);
+        exit;
+      }
+    } else {
+      $rowSeg = $segment;
+    }
+
+    if ($rowSeg === 'gasoline_hybrid') {
       $ptGhRaw = trim($row[$idx['powertrain']] ?? '');
       $fuelRaw = trim($row[$idx['fuel']] ?? '');
       $engineRaw = trim($row[$idx['engine']] ?? '');
@@ -186,7 +216,7 @@ try {
         $inspection = null;
       }
 
-      $stmt->execute([$maker, $model, $ptRawNormalized, $fuel, $engine, $price, $inspection]);
+      $stmtGh->execute([$maker, $model, $ptRawNormalized, $fuel, $engine, $price, $inspection]);
     } else {
       $ptRaw = strtolower(trim($row[$idx['powertrain']] ?? ''));
       $elecRaw = trim($row[$idx['electric_wh_per_km']] ?? '');
@@ -269,7 +299,7 @@ try {
         }
       }
 
-      $stmt->execute([$maker, $model, $ptRaw, $fuel, $elec, $hyd, $engine, $price, $inspection]);
+      $stmtPe->execute([$maker, $model, $ptRaw, $fuel, $elec, $hyd, $engine, $price, $inspection]);
     }
 
     $imported++;

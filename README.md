@@ -61,7 +61,7 @@ npm run dev
 SQLite 利用時は、`database/car_cost_simulator.sqlite` を削除してから再起動すると再作成されます。  
 MySQL 利用時は、テーブル構造を `database/schema.sql` に合わせてください。
 
-実行後、アプリの「CSVインポート」で、ガソリン/HV 用の `cars_gasoline_hybrid.csv` と BEV・PHEV・FCV 用の `cars_plugin_ev.csv` をそれぞれ該当する入力画面からインポートしてください。
+実行後、アプリの「CSVインポート」で、統合形式の `cars_all.csv`（先頭列 `segment` で `gasoline_hybrid` / `plugin_ev` を区別）をインポートしてください。エクスポートも同じ形式の `cars_all.csv` です。
 
 ## プロジェクト構成
 

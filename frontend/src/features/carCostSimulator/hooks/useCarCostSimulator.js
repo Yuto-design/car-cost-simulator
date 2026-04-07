@@ -194,8 +194,7 @@ export function useCarCostSimulator() {
   ])
 
   const handleExportCsv = useCallback(() => {
-    const seg = state.simulatorMode
-    fetch(`${API_BASE}/cars_export.php?segment=${encodeURIComponent(seg)}`)
+    fetch(`${API_BASE}/cars_export.php?segment=all`)
       .then((res) => {
         if (!res.ok) throw new Error(res.statusText)
         return res.text()
@@ -205,7 +204,7 @@ export function useCarCostSimulator() {
         const url = URL.createObjectURL(blob)
         const a = document.createElement('a')
         a.href = url
-        a.download = seg === 'plugin_ev' ? 'cars_plugin_ev.csv' : 'cars_gasoline_hybrid.csv'
+        a.download = 'cars_all.csv'
         a.click()
         URL.revokeObjectURL(url)
       })
@@ -214,7 +213,7 @@ export function useCarCostSimulator() {
           error: 'エクスポートに失敗しました。バックエンドが起動しているか確認してください（npm run dev）。',
         })
       )
-  }, [patch, state.simulatorMode])
+  }, [patch])
 
   const handleImportCsv = useCallback(
     (e) => {
@@ -223,8 +222,7 @@ export function useCarCostSimulator() {
       patch({ importMessage: null, importLoading: true })
       const formData = new FormData()
       formData.append('csv', file)
-      const seg = state.simulatorMode
-      fetch(`${API_BASE}/cars_import.php?segment=${encodeURIComponent(seg)}`, {
+      fetch(`${API_BASE}/cars_import.php?segment=all`, {
         method: 'POST',
         body: formData,
       })
@@ -244,7 +242,7 @@ export function useCarCostSimulator() {
           e.target.value = ''
         })
     },
-    [patch, fetchCars, state.simulatorMode]
+    [patch, fetchCars]
   )
 
   const addCurrentResultToComparison = useCallback(() => {

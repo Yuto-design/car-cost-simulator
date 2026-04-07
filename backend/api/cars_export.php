@@ -15,17 +15,23 @@ if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
 }
 
 $segment = isset($_GET['segment']) ? trim((string) $_GET['segment']) : '';
-if ($segment !== 'gasoline_hybrid' && $segment !== 'plugin_ev') {
+if ($segment !== 'gasoline_hybrid' && $segment !== 'plugin_ev' && $segment !== 'all') {
   http_response_code(400);
   header('Content-Type: application/json; charset=utf-8');
-  echo json_encode(['error' => 'segment クエリに gasoline_hybrid または plugin_ev を指定してください']);
+  echo json_encode(['error' => 'segment クエリに gasoline_hybrid / plugin_ev / all を指定してください']);
   exit;
 }
 
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../lib/cars_schema.php';
 
-$filename = $segment === 'plugin_ev' ? 'cars_plugin_ev.csv' : 'cars_gasoline_hybrid.csv';
+if ($segment === 'all') {
+  $filename = 'cars_all.csv';
+} elseif ($segment === 'plugin_ev') {
+  $filename = 'cars_plugin_ev.csv';
+} else {
+  $filename = 'cars_gasoline_hybrid.csv';
+}
 header('Content-Disposition: attachment; filename="' . $filename . '"');
 
 $out = fopen('php://output', 'w');
@@ -42,7 +48,30 @@ try {
   migrate_electric_km_per_kwh_to_wh_per_km($pdo);
   migrate_gasoline_powertrain_to_powertrain($pdo);
 
-  if ($segment === 'gasoline_hybrid') {
+  if ($segment === 'all') {
+    $stmt = $pdo->query(
+      "SELECT segment, maker, model, powertrain, fuel, engine, price, inspection, " .
+      "COALESCE(electric_wh_per_km, 0), COALESCE(hydrogen_km_per_kg, 0) FROM cars ORDER BY segment, maker, model"
+    );
+    fputcsv(
+      $out,
+      [
+        'segment',
+        'maker',
+        'model',
+        'powertrain',
+        'fuel',
+        'engine',
+        'price',
+        'inspection',
+        'electric_wh_per_km',
+        'hydrogen_km_per_kg',
+      ],
+      ',',
+      '"',
+      ''
+    );
+  } elseif ($segment === 'gasoline_hybrid') {
     $stmt = $pdo->query(
       "SELECT maker, model, powertrain, fuel, engine, price, inspection FROM cars WHERE segment = 'gasoline_hybrid' ORDER BY maker, model"
     );
