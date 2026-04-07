@@ -95,7 +95,6 @@ export function useCarCostSimulator() {
       patch({
         selectedMaker: e.target.value,
         selectedCarId: '',
-        gasolinePowertrain: '',
         powertrain: '',
       })
     },
@@ -266,9 +265,7 @@ export function useCarCostSimulator() {
         inspection: normalizeValue(state.inspection),
         ownershipYears: normalizeValue(state.ownershipYears),
         powertrain:
-          state.result.calc_mode === 'plugin_ev'
-            ? normalizeValue(state.powertrain)
-            : normalizeValue(state.gasolinePowertrain ?? ''),
+          normalizeValue(state.powertrain),
         electricWhPerKm: normalizeValue(state.electricWhPerKm),
         hydrogenKmPerKg: normalizeValue(state.hydrogenKmPerKg),
         electricityPrice: normalizeValue(state.electricityPrice),
@@ -296,7 +293,6 @@ export function useCarCostSimulator() {
     state.hydrogenPrice,
     state.phevEvRatio,
     selectedCarName,
-    state.gasolinePowertrain,
   ])
 
   const removeComparisonItem = useCallback((id) => {
@@ -418,7 +414,6 @@ export function useCarCostSimulator() {
           result: null,
           selectedCarId: '',
           selectedMaker: '',
-          gasolinePowertrain: '',
           powertrain: '',
           error: null,
         },

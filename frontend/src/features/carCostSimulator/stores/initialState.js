@@ -18,9 +18,7 @@ export const initialSimulatorState = {
   importMessage: null,
   importLoading: false,
   selectedMaker: '',
-  /** gasoline_hybrid 専用（CSVの powertrain: gasoline / hybrid） */
-  gasolinePowertrain: '',
-  /** plugin_ev 専用（bev / phev / fcv、未選択は ''） */
+  /** 共通パワートレイン（gasoline/hybrid/diesel/bev/phev/fcv、未選択は ''） */
   powertrain: '',
   electricWhPerKm: '',
   hydrogenKmPerKg: '',

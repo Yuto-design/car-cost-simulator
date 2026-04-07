@@ -8,7 +8,7 @@ import ModelPickerModal from './ModelPickerModal.jsx'
 import SimulatorInputModeSwitch from './SimulatorInputModeSwitch.jsx'
 import './SimulatorInput.css'
 
-const GH_PT_LABEL = { gasoline: 'ガソリン', hybrid: 'ハイブリッド' }
+const GH_PT_LABEL = { gasoline: 'ガソリン', hybrid: 'ハイブリッド', diesel: 'ディーゼル' }
 
 export default function SimulatorInputGasolineHybrid({
   fileInputRef,
@@ -33,8 +33,8 @@ export default function SimulatorInputGasolineHybrid({
   engine,
   setEngine,
   onEngineBlur,
-  gasolinePowertrain,
-  setGasolinePowertrain,
+  powertrain,
+  setPowertrain,
   insurance,
   setInsurance,
   parking,
@@ -110,12 +110,13 @@ export default function SimulatorInputGasolineHybrid({
           <label>
             区分
             <select
-              value={gasolinePowertrain}
-              onChange={(e) => setGasolinePowertrain(e.target.value)}
+              value={powertrain}
+              onChange={(e) => setPowertrain(e.target.value)}
             >
               <option value="">選択してください</option>
               <option value="gasoline">{GH_PT_LABEL.gasoline}</option>
               <option value="hybrid">{GH_PT_LABEL.hybrid}</option>
+              <option value="diesel">{GH_PT_LABEL.diesel}</option>
             </select>
           </label>
           <label>

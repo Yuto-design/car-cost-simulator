@@ -5,7 +5,6 @@
  * @property {string} [powertrain]
  * @property {string} [maker]
  * @property {string} [model]
- * @property {string|null} [gasoline_powertrain]
  * @property {string} [name]
  * @property {number|string} [fuel]
  * @property {number|string} [electric_wh_per_km]

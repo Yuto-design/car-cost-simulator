@@ -85,8 +85,7 @@ try {
   $pdo = getPdo();
   ensure_cars_extended_columns($pdo);
   migrate_electric_km_per_kwh_to_wh_per_km($pdo);
-  ensure_gasoline_powertrain_column($pdo);
-  $pdo->exec("ALTER TABLE cars MODIFY engine DECIMAL(5,3) NOT NULL COMMENT '排気量 L（小数点以下3桁）'");
+  migrate_gasoline_powertrain_to_powertrain($pdo);
 
   $pdo->beginTransaction();
   $segQuoted = $pdo->quote($segment);
@@ -94,7 +93,7 @@ try {
 
   if ($segment === 'gasoline_hybrid') {
     $stmt = $pdo->prepare(
-      'INSERT INTO cars (maker, model, gasoline_powertrain, fuel, engine, price, inspection, segment, powertrain, electric_wh_per_km, hydrogen_km_per_kg) VALUES (?, ?, ?, ?, ?, ?, ?, \'gasoline_hybrid\', NULL, NULL, NULL)'
+      'INSERT INTO cars (maker, model, powertrain, fuel, engine, price, inspection, segment, electric_wh_per_km, hydrogen_km_per_kg) VALUES (?, ?, ?, ?, ?, ?, ?, \'gasoline_hybrid\', NULL, NULL)'
     );
   } else {
     $stmt = $pdo->prepare(
@@ -148,7 +147,14 @@ try {
       $priceRaw = trim($row[$idx['price']] ?? '');
       $inspectionRaw = isset($row[$idx['inspection']]) ? trim($row[$idx['inspection']]) : '';
 
-      $gasolinePt = $ptGhRaw === '' ? null : substr($ptGhRaw, 0, 32);
+      $ptRawNormalized = strtolower($ptGhRaw);
+      if (!in_array($ptRawNormalized, ['gasoline', 'hybrid', 'diesel'], true)) {
+        $pdo->rollBack();
+        fclose($handle);
+        ob_end_clean();
+        echo json_encode(['error' => "{$lineNum}行目: powertrain は gasoline / hybrid / diesel のいずれかです"]);
+        exit;
+      }
 
       if ($fuelRaw === '' || !is_numeric($fuelRaw) || (float) $fuelRaw < 0) {
         $pdo->rollBack();
@@ -180,7 +186,7 @@ try {
         $inspection = null;
       }
 
-      $stmt->execute([$maker, $model, $gasolinePt, $fuel, $engine, $price, $inspection]);
+      $stmt->execute([$maker, $model, $ptRawNormalized, $fuel, $engine, $price, $inspection]);
     } else {
       $ptRaw = strtolower(trim($row[$idx['powertrain']] ?? ''));
       $elecRaw = trim($row[$idx['electric_wh_per_km']] ?? '');

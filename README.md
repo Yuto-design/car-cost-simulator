@@ -6,19 +6,21 @@
 
 - **フロントエンド**: React (Vite) + Chart.js
 - **バックエンド**: PHP API
-- **データベース**: MySQL
+- **データベース**: SQLite（既定）/ MySQL（任意）
 
 ## セットアップ
 
 ### 1. データベース（初回のみ）
 
-MySQL でデータベースとテーブルを作成し、サンプルデータを投入します。
+既定では SQLite を使用します。初回アクセス時に `database/car_cost_simulator.sqlite` とテーブルが自動作成されるため、事前のDB作成作業は不要です。
 
-```bash
-mysql -u root -p < database/schema.sql
-```
+#### SQLite（既定）
+- 追加設定は不要です。
+- DBファイルの場所を変える場合のみ、`SQLITE_DB_PATH` 環境変数を設定してください。
 
-環境に合わせて `backend/config/database.php` の接続情報（`DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASS`）を変更してください。環境変数でも指定できます。
+#### MySQL を使いたい場合（任意）
+- `DB_DRIVER=mysql` を指定し、`DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASS` を環境変数で設定します。
+- 必要であれば `database/schema.sql` を参考にテーブルを作成してください（API初回アクセス時の補助マイグレーションもあります）。
 
 ### 2. フロントエンドの依存関係（初回のみ）
 
@@ -56,11 +58,8 @@ npm run dev
 
 ### インポートで「データベースエラー」が出る場合
 
-テーブル構造が想定と異なる場合は、データベースを作り直してください。
-
-```bash
-mysql -u root -p < database/schema.sql
-```
+SQLite 利用時は、`database/car_cost_simulator.sqlite` を削除してから再起動すると再作成されます。  
+MySQL 利用時は、テーブル構造を `database/schema.sql` に合わせてください。
 
 実行後、アプリの「CSVインポート」で、ガソリン/HV 用の `cars_gasoline_hybrid.csv` と BEV・PHEV・FCV 用の `cars_plugin_ev.csv` をそれぞれ該当する入力画面からインポートしてください。
 
