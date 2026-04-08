@@ -47,6 +47,7 @@ try {
   ensure_cars_extended_columns($pdo);
   migrate_electric_km_per_kwh_to_wh_per_km($pdo);
   migrate_gasoline_powertrain_to_powertrain($pdo);
+  migrate_gasoline_hybrid_null_energy_to_zero($pdo);
 
   if ($segment === 'all') {
     $stmt = $pdo->query(

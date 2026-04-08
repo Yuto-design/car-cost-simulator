@@ -31,6 +31,7 @@ try {
   ensure_cars_extended_columns($pdo);
   migrate_electric_km_per_kwh_to_wh_per_km($pdo);
   migrate_gasoline_powertrain_to_powertrain($pdo);
+  migrate_gasoline_hybrid_null_energy_to_zero($pdo);
 
   $sql = 'SELECT id, segment, powertrain, maker, model, fuel, electric_wh_per_km, hydrogen_km_per_kg, engine, price, inspection FROM cars';
   if ($segment === 'gasoline_hybrid' || $segment === 'plugin_ev') {

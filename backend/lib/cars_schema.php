@@ -80,6 +80,20 @@ function migrate_gasoline_powertrain_to_powertrain(PDO $pdo): void {
   }
 }
 
+/**
+ * gasoline_hybrid 行の電気・水素列は CSV と同様 0 を格納（従来 NULL の行を補正）
+ */
+function migrate_gasoline_hybrid_null_energy_to_zero(PDO $pdo): void {
+  if (!has_column($pdo, 'cars', 'electric_wh_per_km') || !has_column($pdo, 'cars', 'hydrogen_km_per_kg')) {
+    return;
+  }
+  $pdo->exec(
+    "UPDATE cars SET electric_wh_per_km = 0, hydrogen_km_per_kg = 0 " .
+    "WHERE segment = 'gasoline_hybrid' " .
+    "AND (electric_wh_per_km IS NULL OR hydrogen_km_per_kg IS NULL)"
+  );
+}
+
 function is_sqlite_driver(PDO $pdo): bool {
   return $pdo->getAttribute(PDO::ATTR_DRIVER_NAME) === 'sqlite';
 }

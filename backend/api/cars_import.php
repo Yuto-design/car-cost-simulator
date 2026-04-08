@@ -101,9 +101,10 @@ try {
   ensure_cars_extended_columns($pdo);
   migrate_electric_km_per_kwh_to_wh_per_km($pdo);
   migrate_gasoline_powertrain_to_powertrain($pdo);
+  migrate_gasoline_hybrid_null_energy_to_zero($pdo);
 
   $stmtGh = $pdo->prepare(
-    'INSERT INTO cars (maker, model, powertrain, fuel, engine, price, inspection, segment, electric_wh_per_km, hydrogen_km_per_kg) VALUES (?, ?, ?, ?, ?, ?, ?, \'gasoline_hybrid\', NULL, NULL)'
+    'INSERT INTO cars (maker, model, powertrain, fuel, engine, price, inspection, segment, electric_wh_per_km, hydrogen_km_per_kg) VALUES (?, ?, ?, ?, ?, ?, ?, \'gasoline_hybrid\', 0, 0)'
   );
   $stmtPe = $pdo->prepare(
     'INSERT INTO cars (maker, model, powertrain, fuel, electric_wh_per_km, hydrogen_km_per_kg, engine, price, inspection, segment) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, \'plugin_ev\')'
