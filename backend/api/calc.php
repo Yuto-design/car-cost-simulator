@@ -15,11 +15,14 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
   exit;
 }
 
+require_once __DIR__ . '/../lib/cars_schema.php';
+
 $input = json_decode(file_get_contents('php://input'), true) ?: [];
-$calcMode = isset($input['calc_mode']) ? trim((string) $input['calc_mode']) : 'gasoline_hybrid';
-if ($calcMode !== 'gasoline_hybrid' && $calcMode !== 'plugin_ev') {
+$calcModeRaw = isset($input['calc_mode']) ? trim((string) $input['calc_mode']) : 'combustion';
+$calcMode = normalize_stored_segment($calcModeRaw);
+if ($calcMode === null) {
   http_response_code(400);
-  echo json_encode(['error' => 'calc_mode は gasoline_hybrid または plugin_ev です']);
+  echo json_encode(['error' => 'calc_mode は combustion または electric です（従来の gasoline_hybrid / plugin_ev も指定可能です）']);
   exit;
 }
 
@@ -57,7 +60,7 @@ $parking_annual = $parking * 12;
 $ownership_years = $ownership_years > 0 ? $ownership_years : 1;
 $vehicle_annual = (int) round($price / $ownership_years);
 
-if ($calcMode === 'gasoline_hybrid') {
+if ($calcMode === 'combustion') {
   $fuel = (float) ($input['fuel'] ?? 0);
   $gas_price = (int) ($input['gas_price'] ?? 0);
   $gas_cost = $fuel > 0 ? (int) round($distance / $fuel * $gas_price) : 0;
@@ -68,7 +71,7 @@ if ($calcMode === 'gasoline_hybrid') {
   $monthly_with_vehicle = (int) round($total_with_vehicle / 12);
 
   echo json_encode([
-    'calc_mode' => 'gasoline_hybrid',
+    'calc_mode' => 'combustion',
     'gas_cost' => $gas_cost,
     'tax' => $tax,
     'inspection_annual' => $inspection_annual,
@@ -83,7 +86,7 @@ if ($calcMode === 'gasoline_hybrid') {
   exit;
 }
 
-// plugin_ev
+// electric（BEV / PHEV / FCV）
 $powertrain = isset($input['powertrain']) ? strtolower(trim((string) $input['powertrain'])) : '';
 if (!in_array($powertrain, ['bev', 'phev', 'fcv'], true)) {
   http_response_code(400);
@@ -149,7 +152,7 @@ $total_with_vehicle = $total + $vehicle_annual;
 $monthly_with_vehicle = (int) round($total_with_vehicle / 12);
 
 echo json_encode([
-  'calc_mode' => 'plugin_ev',
+  'calc_mode' => 'electric',
   'powertrain' => $powertrain,
   'electricity_cost' => $electricity_cost,
   'gasoline_cost' => $gasoline_cost,

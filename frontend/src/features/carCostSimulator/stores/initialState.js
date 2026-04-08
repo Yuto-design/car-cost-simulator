@@ -1,5 +1,5 @@
 export const initialSimulatorState = {
-  simulatorMode: 'gasoline_hybrid',
+  simulatorMode: 'combustion',
   cars: [],
   activeView: 'intro',
   selectedCarId: '',

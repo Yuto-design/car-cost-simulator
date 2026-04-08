@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS cars (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  segment TEXT NOT NULL DEFAULT 'gasoline_hybrid',
+  segment TEXT NOT NULL DEFAULT 'combustion',
   powertrain TEXT NULL,
   maker TEXT NOT NULL,
   model TEXT NOT NULL,

@@ -1,6 +1,7 @@
 import '../../../../components/ResultDownloadButton.css'
 import SpaSectionLead from '../../../../components/SpaSectionLead.jsx'
 import './ComparisonPage.css'
+import { isElectricSegment } from '../../segments.js'
 
 const POWERTRAIN_LABELS = {
   bev: 'BEV',
@@ -21,7 +22,7 @@ function formatYen(value) {
  *   items: Array<{
  *     id: string,
  *     addedAt: string,
- *     mode: 'gasoline_hybrid'|'plugin_ev',
+ *     mode: 'combustion'|'electric'|'gasoline_hybrid'|'plugin_ev',
  *     carName: string,
  *     inputs: Record<string, unknown>,
  *     result: Record<string, unknown>
@@ -88,7 +89,7 @@ export default function ComparisonPage({ items, onRemove, onClear, onDownload })
               </thead>
               <tbody>
                 {items.map((item) => {
-                  const modeName = item.mode === 'plugin_ev' ? 'BEV/PHEV/FCV' : 'ガソリン/HEV'
+                  const modeName = isElectricSegment(item.mode) ? 'BEV/PHEV/FCV' : 'ガソリン/HEV'
                   const distance = Number(item.inputs?.distance)
                   const pt = String(item.inputs?.powertrain ?? '')
                   return (

@@ -6,6 +6,7 @@ import CalcButton from '../../../../components/CalcButton.jsx'
 import { carFieldMeta } from '../../../../schemas/carFields.js'
 import ModelPickerModal from './ModelPickerModal.jsx'
 import SimulatorInputModeSwitch from './SimulatorInputModeSwitch.jsx'
+import { SEGMENT_COMBUSTION } from '../../segments.js'
 import './SimulatorInput.css'
 
 const GH_PT_LABEL = { gasoline: 'ガソリン', hybrid: 'ハイブリッド', diesel: 'ディーゼル' }
@@ -76,7 +77,7 @@ export default function SimulatorInputGasolineHybrid({
           />
         </div>
       </div>
-      <SimulatorInputModeSwitch mode="gasoline_hybrid" onSelectMode={onSelectInputMode} />
+      <SimulatorInputModeSwitch mode={SEGMENT_COMBUSTION} onSelectMode={onSelectInputMode} />
       <div className="input-block">
         <h3 className="input-block-title">車・スペック</h3>
         <p className="field-hint">

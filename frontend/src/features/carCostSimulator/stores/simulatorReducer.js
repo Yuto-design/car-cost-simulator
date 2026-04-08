@@ -1,4 +1,5 @@
 import { formatEngineToThreeDecimals } from '../../../utils/numberFormat.js'
+import { isElectricSegment } from '../segments.js'
 
 /**
  * @param {typeof import('./initialState.js').initialSimulatorState} state
@@ -18,7 +19,7 @@ export function simulatorReducer(state, action) {
         price: String(car.price ?? ''),
         inspection: car.inspection ?? 100000,
       }
-      if (car.segment === 'plugin_ev') {
+      if (isElectricSegment(car.segment)) {
         const pt = car.powertrain === 'phev' || car.powertrain === 'fcv' ? car.powertrain : 'bev'
         return {
           ...state,

@@ -1,7 +1,9 @@
+import { SEGMENT_COMBUSTION, SEGMENT_ELECTRIC } from '../../segments.js'
+
 /**
  * @param {object} props
- * @param {'gasoline_hybrid' | 'plugin_ev'} props.mode
- * @param {(mode: 'gasoline_hybrid' | 'plugin_ev') => void} props.onSelectMode
+ * @param {'combustion' | 'electric'} props.mode
+ * @param {(mode: 'combustion' | 'electric') => void} props.onSelectMode
  */
 export default function SimulatorInputModeSwitch({ mode, onSelectMode }) {
   return (
@@ -9,18 +11,18 @@ export default function SimulatorInputModeSwitch({ mode, onSelectMode }) {
       <button
         type="button"
         role="tab"
-        aria-selected={mode === 'gasoline_hybrid'}
-        className={`input-mode-switch__btn${mode === 'gasoline_hybrid' ? ' is-active' : ''}`}
-        onClick={() => onSelectMode('gasoline_hybrid')}
+        aria-selected={mode === SEGMENT_COMBUSTION}
+        className={`input-mode-switch__btn${mode === SEGMENT_COMBUSTION ? ' is-active' : ''}`}
+        onClick={() => onSelectMode(SEGMENT_COMBUSTION)}
       >
         ガソリン・HEV
       </button>
       <button
         type="button"
         role="tab"
-        aria-selected={mode === 'plugin_ev'}
-        className={`input-mode-switch__btn${mode === 'plugin_ev' ? ' is-active' : ''}`}
-        onClick={() => onSelectMode('plugin_ev')}
+        aria-selected={mode === SEGMENT_ELECTRIC}
+        className={`input-mode-switch__btn${mode === SEGMENT_ELECTRIC ? ' is-active' : ''}`}
+        onClick={() => onSelectMode(SEGMENT_ELECTRIC)}
       >
         BEV・PHEV・FCV
       </button>

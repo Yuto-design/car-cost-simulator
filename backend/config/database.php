@@ -41,7 +41,7 @@ function ensure_cars_table(PDO $pdo): void {
     $pdo->exec(
       "CREATE TABLE IF NOT EXISTS cars (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        segment TEXT NOT NULL DEFAULT 'gasoline_hybrid',
+        segment TEXT NOT NULL DEFAULT 'combustion',
         powertrain TEXT NULL,
         maker TEXT NOT NULL,
         model TEXT NOT NULL,
@@ -59,8 +59,8 @@ function ensure_cars_table(PDO $pdo): void {
   $pdo->exec(
     "CREATE TABLE IF NOT EXISTS cars (
       id INT AUTO_INCREMENT PRIMARY KEY,
-      segment ENUM('gasoline_hybrid','plugin_ev') NOT NULL DEFAULT 'gasoline_hybrid' COMMENT 'リスト区分',
-      powertrain ENUM('bev','phev','fcv') NULL COMMENT 'plugin_ev のみ',
+      segment VARCHAR(32) NOT NULL DEFAULT 'combustion' COMMENT 'リスト区分 combustion|electric',
+      powertrain ENUM('bev','phev','fcv') NULL COMMENT 'electric 区分のみ',
       maker VARCHAR(50) NOT NULL COMMENT 'メーカー名（例: Toyota, Honda）',
       model VARCHAR(100) NOT NULL COMMENT '車種名・グレード（例: Aqua X, N-BOX Base）',
       fuel DECIMAL(4,1) NOT NULL COMMENT 'GHV: km/L / PHEV: ガソリン時 km/L / BEV・FCVは0可',

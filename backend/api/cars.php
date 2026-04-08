@@ -19,11 +19,14 @@ require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../lib/cars_schema.php';
 
 $segment = isset($_GET['segment']) ? trim((string) $_GET['segment']) : '';
-$allowed = ['gasoline_hybrid', 'plugin_ev', ''];
-if ($segment !== '' && !in_array($segment, ['gasoline_hybrid', 'plugin_ev'], true)) {
-  http_response_code(400);
-  echo json_encode(['error' => 'segment は gasoline_hybrid または plugin_ev です']);
-  exit;
+$segmentNorm = '';
+if ($segment !== '') {
+  $segmentNorm = normalize_stored_segment(strtolower($segment));
+  if ($segmentNorm === null) {
+    http_response_code(400);
+    echo json_encode(['error' => 'segment は combustion または electric です（従来の gasoline_hybrid / plugin_ev も指定可能です）']);
+    exit;
+  }
 }
 
 try {
@@ -34,8 +37,8 @@ try {
   migrate_gasoline_hybrid_null_energy_to_zero($pdo);
 
   $sql = 'SELECT id, segment, powertrain, maker, model, fuel, electric_wh_per_km, hydrogen_km_per_kg, engine, price, inspection FROM cars';
-  if ($segment === 'gasoline_hybrid' || $segment === 'plugin_ev') {
-    $sql .= ' WHERE segment = ' . $pdo->quote($segment);
+  if ($segmentNorm !== '') {
+    $sql .= ' WHERE segment = ' . $pdo->quote($segmentNorm);
   }
   $sql .= ' ORDER BY maker, model';
 

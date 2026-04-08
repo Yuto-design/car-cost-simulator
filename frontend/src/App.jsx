@@ -9,6 +9,11 @@ import ComparisonPage from './features/carCostSimulator/components/compare/Compa
 import ResultSectionGasolineHybrid from './features/carCostSimulator/components/result/ResultSectionGasolineHybrid.jsx'
 import ResultSectionPluginEv from './features/carCostSimulator/components/result/ResultSectionPluginEv.jsx'
 import { useCarCostSimulator } from './features/carCostSimulator/hooks/useCarCostSimulator.js'
+import {
+  SEGMENT_COMBUSTION,
+  SEGMENT_ELECTRIC,
+  isElectricSegment,
+} from './features/carCostSimulator/segments.js'
 
 function App() {
   const {
@@ -79,8 +84,8 @@ function App() {
     if (activeView === 'intro') {
       return (
         <SimulatorIntro
-          onSelectGasoline={() => selectSimulatorMode('gasoline_hybrid')}
-          onSelectPlugin={() => selectSimulatorMode('plugin_ev')}
+          onSelectGasoline={() => selectSimulatorMode(SEGMENT_COMBUSTION)}
+          onSelectPlugin={() => selectSimulatorMode(SEGMENT_ELECTRIC)}
         />
       )
     }
@@ -117,7 +122,7 @@ function App() {
 
       return (
         <main className="main">
-          {simulatorMode === 'gasoline_hybrid' ? (
+          {simulatorMode === SEGMENT_COMBUSTION ? (
             <SimulatorInputGasolineHybrid
               {...inputCommon}
               fuel={fuel}
@@ -182,7 +187,7 @@ function App() {
       )
     }
 
-    const isPlugin = result.calc_mode === 'plugin_ev'
+    const isPlugin = isElectricSegment(result.calc_mode)
     if (activeView === 'compare') {
       return (
         <ComparisonPage

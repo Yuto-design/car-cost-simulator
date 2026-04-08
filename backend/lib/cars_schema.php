@@ -1,30 +1,69 @@
 <?php
-function ensure_cars_extended_columns(PDO $pdo): void {
-  $has = has_column($pdo, 'cars', 'segment');
-  if ($has) {
+/**
+ * DB・API・CSV で用いる segment / calc_mode を正規化（単一トークン: combustion / electric）。
+ * 旧名 gasoline_hybrid / plugin_ev もここで受け付ける。
+ *
+ * @return 'combustion'|'electric'|null null は不正値
+ */
+function normalize_stored_segment(string $raw): ?string {
+  $t = strtolower(trim($raw));
+  if ($t === 'combustion' || $t === 'gasoline_hybrid') {
+    return 'combustion';
+  }
+  if ($t === 'electric' || $t === 'plugin_ev') {
+    return 'electric';
+  }
+  return null;
+}
+
+/**
+ * 既存 DB の segment 列を combustion / electric へ移行（SQLite TEXT / MySQL は VARCHAR に寄せる）
+ */
+function migrate_segment_to_single_word(PDO $pdo): void {
+  if (!has_column($pdo, 'cars', 'segment')) {
     return;
   }
-
   if (is_sqlite_driver($pdo)) {
-    $pdo->exec("ALTER TABLE cars ADD COLUMN segment TEXT NOT NULL DEFAULT 'gasoline_hybrid'");
-    $pdo->exec("ALTER TABLE cars ADD COLUMN powertrain TEXT NULL");
-    $pdo->exec("ALTER TABLE cars ADD COLUMN electric_wh_per_km REAL NULL");
-    $pdo->exec("ALTER TABLE cars ADD COLUMN hydrogen_km_per_kg REAL NULL");
-  } else {
-    $pdo->exec(
-      "ALTER TABLE cars ADD COLUMN segment ENUM('gasoline_hybrid','plugin_ev') NOT NULL DEFAULT 'gasoline_hybrid' COMMENT 'リスト区分' AFTER id"
-    );
-    $pdo->exec(
-      "ALTER TABLE cars ADD COLUMN powertrain ENUM('bev','phev','fcv') NULL COMMENT 'plugin_ev のみ' AFTER segment"
-    );
-    $pdo->exec(
-      "ALTER TABLE cars ADD COLUMN electric_wh_per_km DECIMAL(7,2) NULL COMMENT '電費 Wh/km（BEV・PHEV）' AFTER fuel"
-    );
-    $pdo->exec(
-      "ALTER TABLE cars ADD COLUMN hydrogen_km_per_kg DECIMAL(6,2) NULL COMMENT '水素費 km/kg' AFTER electric_wh_per_km"
-    );
+    $pdo->exec("UPDATE cars SET segment = 'combustion' WHERE segment = 'gasoline_hybrid'");
+    $pdo->exec("UPDATE cars SET segment = 'electric' WHERE segment = 'plugin_ev'");
+    return;
   }
-  $pdo->exec("UPDATE cars SET segment = 'gasoline_hybrid'");
+  try {
+    $pdo->exec(
+      "ALTER TABLE cars MODIFY COLUMN segment VARCHAR(32) NOT NULL DEFAULT 'combustion' COMMENT 'リスト区分'"
+    );
+  } catch (Throwable $e) {
+    // 既に VARCHAR 等の場合は無視
+  }
+  $pdo->exec("UPDATE cars SET segment = 'combustion' WHERE segment = 'gasoline_hybrid'");
+  $pdo->exec("UPDATE cars SET segment = 'electric' WHERE segment = 'plugin_ev'");
+}
+
+function ensure_cars_extended_columns(PDO $pdo): void {
+  $has = has_column($pdo, 'cars', 'segment');
+  if (!$has) {
+    if (is_sqlite_driver($pdo)) {
+      $pdo->exec("ALTER TABLE cars ADD COLUMN segment TEXT NOT NULL DEFAULT 'combustion'");
+      $pdo->exec("ALTER TABLE cars ADD COLUMN powertrain TEXT NULL");
+      $pdo->exec("ALTER TABLE cars ADD COLUMN electric_wh_per_km REAL NULL");
+      $pdo->exec("ALTER TABLE cars ADD COLUMN hydrogen_km_per_kg REAL NULL");
+    } else {
+      $pdo->exec(
+        "ALTER TABLE cars ADD COLUMN segment VARCHAR(32) NOT NULL DEFAULT 'combustion' COMMENT 'リスト区分' AFTER id"
+      );
+      $pdo->exec(
+        "ALTER TABLE cars ADD COLUMN powertrain ENUM('bev','phev','fcv') NULL COMMENT 'electric 区分のみ' AFTER segment"
+      );
+      $pdo->exec(
+        "ALTER TABLE cars ADD COLUMN electric_wh_per_km DECIMAL(7,2) NULL COMMENT '電費 Wh/km（BEV・PHEV）' AFTER fuel"
+      );
+      $pdo->exec(
+        "ALTER TABLE cars ADD COLUMN hydrogen_km_per_kg DECIMAL(6,2) NULL COMMENT '水素費 km/kg' AFTER electric_wh_per_km"
+      );
+    }
+    $pdo->exec("UPDATE cars SET segment = 'combustion'");
+  }
+  migrate_segment_to_single_word($pdo);
 }
 
 /**
@@ -72,7 +111,7 @@ function migrate_gasoline_powertrain_to_powertrain(PDO $pdo): void {
     $pdo->exec(
       "UPDATE cars
        SET powertrain = gasoline_powertrain
-       WHERE segment = 'gasoline_hybrid'
+       WHERE segment = 'combustion'
          AND gasoline_powertrain IS NOT NULL
          AND gasoline_powertrain <> ''
          AND (powertrain IS NULL OR powertrain = '')"
@@ -81,7 +120,7 @@ function migrate_gasoline_powertrain_to_powertrain(PDO $pdo): void {
 }
 
 /**
- * gasoline_hybrid 行の電気・水素列は CSV と同様 0 を格納（従来 NULL の行を補正）
+ * combustion 区分の行の電気・水素列は CSV と同様 0 を格納（従来 NULL の行を補正）
  */
 function migrate_gasoline_hybrid_null_energy_to_zero(PDO $pdo): void {
   if (!has_column($pdo, 'cars', 'electric_wh_per_km') || !has_column($pdo, 'cars', 'hydrogen_km_per_kg')) {
@@ -89,7 +128,7 @@ function migrate_gasoline_hybrid_null_energy_to_zero(PDO $pdo): void {
   }
   $pdo->exec(
     "UPDATE cars SET electric_wh_per_km = 0, hydrogen_km_per_kg = 0 " .
-    "WHERE segment = 'gasoline_hybrid' " .
+    "WHERE segment = 'combustion' " .
     "AND (electric_wh_per_km IS NULL OR hydrogen_km_per_kg IS NULL)"
   );
 }

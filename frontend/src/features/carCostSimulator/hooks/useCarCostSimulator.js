@@ -5,6 +5,12 @@ import { escapeCsvCell } from '../../../utils/csv.js'
 import { formatEngineToThreeDecimals } from '../../../utils/numberFormat.js'
 import { initialSimulatorState } from '../stores/initialState.js'
 import { simulatorReducer } from '../stores/simulatorReducer.js'
+import {
+  SEGMENT_COMBUSTION,
+  SEGMENT_ELECTRIC,
+  isCombustionSegment,
+  isElectricSegment,
+} from '../segments.js'
 
 function normalizeValue(v) {
   return v == null ? '' : v
@@ -12,6 +18,35 @@ function normalizeValue(v) {
 
 function formatDateForFileName() {
   return new Date().toISOString().slice(0, 10)
+}
+
+/**
+ * 車種一覧・結果の車名用タグ（electric: [BEV] 等、combustion: [Gasoline] / [HEV] 等）
+ * @param {string} [segment]
+ * @param {string} [powertrain]
+ */
+function powertrainBracketForDisplay(segment, powertrain) {
+  const pt = String(powertrain ?? '').trim().toLowerCase()
+  if (!pt) return ''
+  if (isElectricSegment(segment) && ['bev', 'phev', 'fcv'].includes(pt)) {
+    return ` [${pt.toUpperCase()}]`
+  }
+  if (isCombustionSegment(segment)) {
+    if (pt === 'gasoline') return ' [Gasoline]'
+    if (pt === 'hybrid') return ' [HEV]'
+    if (pt === 'diesel') return ' [Diesel]'
+  }
+  return ''
+}
+
+/**
+ * @param {{ name?: string, model?: string, segment?: string, powertrain?: string }} c
+ * @param {(c: { maker?: string, model?: string, name?: string }) => string} carDisplayName
+ */
+function carPickerLabel(c, carDisplayName) {
+  const base = c.name || c.model || carDisplayName(c)
+  const suffix = powertrainBracketForDisplay(c.segment, c.powertrain)
+  return suffix ? `${base}${suffix}` : base
 }
 
 export function useCarCostSimulator() {
@@ -69,10 +104,7 @@ export function useCarCostSimulator() {
     () =>
       carsByMaker.map((c) => ({
         id: String(c.id),
-        label:
-          c.segment === 'plugin_ev' && c.powertrain
-            ? `${c.name || c.model || carDisplayName(c)} [${String(c.powertrain).toUpperCase()}]`
-            : c.name || c.model || carDisplayName(c),
+        label: carPickerLabel(c, carDisplayName),
       })),
     [carsByMaker]
   )
@@ -80,8 +112,11 @@ export function useCarCostSimulator() {
   const selectedCarName = useMemo(() => {
     const c = state.cars.find((x) => String(x.id) === state.selectedCarId)
     if (!c) return ''
-    return c.name || c.model || carDisplayName(c)
-  }, [state.cars, state.selectedCarId])
+    const base = c.name || c.model || carDisplayName(c)
+    const pt = state.powertrain || c.powertrain
+    const suffix = powertrainBracketForDisplay(state.simulatorMode, pt)
+    return suffix ? `${base}${suffix}` : base
+  }, [state.cars, state.selectedCarId, state.simulatorMode, state.powertrain])
 
   const handleCarSelect = useCallback(
     (car) => {
@@ -110,7 +145,7 @@ export function useCarCostSimulator() {
   )
 
   const handleCalculate = useCallback(() => {
-    if (state.simulatorMode === 'plugin_ev') {
+    if (state.simulatorMode === SEGMENT_ELECTRIC) {
       const pt = String(state.powertrain ?? '')
         .trim()
         .toLowerCase()
@@ -131,10 +166,10 @@ export function useCarCostSimulator() {
     }
 
     const body =
-      state.simulatorMode === 'plugin_ev'
+      state.simulatorMode === SEGMENT_ELECTRIC
         ? {
             ...baseBody,
-            calc_mode: 'plugin_ev',
+            calc_mode: SEGMENT_ELECTRIC,
             powertrain: state.powertrain,
             fuel: Number(state.fuel) || 0,
             electric_wh_per_km: Number(state.electricWhPerKm) || 0,
@@ -146,7 +181,7 @@ export function useCarCostSimulator() {
           }
         : {
             ...baseBody,
-            calc_mode: 'gasoline_hybrid',
+            calc_mode: SEGMENT_COMBUSTION,
             fuel: Number(state.fuel) || 0,
             gas_price: Number(state.gasPrice) || 0,
           }
@@ -339,7 +374,7 @@ export function useCarCostSimulator() {
     const rows = state.comparisonItems.map((item) => {
       const r = item.result || {}
       const i = item.inputs || {}
-      const modeName = item.mode === 'plugin_ev' ? 'BEV/PHEV/FCV' : 'ガソリン/HEV'
+      const modeName = isElectricSegment(item.mode) ? 'BEV/PHEV/FCV' : 'ガソリン/HEV'
       return [
         item.addedAt,
         modeName,
@@ -365,7 +400,7 @@ export function useCarCostSimulator() {
         r.total_with_vehicle,
         r.monthly_with_vehicle,
         r.electricity_cost,
-        r.calc_mode === 'plugin_ev' ? r.gasoline_cost : r.gas_cost,
+        isElectricSegment(r.calc_mode) ? r.gasoline_cost : r.gas_cost,
         r.hydrogen_cost,
         r.energy_cost,
         r.tax,

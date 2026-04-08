@@ -16,7 +16,7 @@
 
 /**
  * @typedef {Object} CalcResultGasolineHybrid
- * @property {'gasoline_hybrid'} calc_mode
+ * @property {'combustion'} calc_mode
  * @property {number} total
  * @property {number} monthly
  * @property {number} vehicle_annual
@@ -31,7 +31,7 @@
 
 /**
  * @typedef {Object} CalcResultPluginEv
- * @property {'plugin_ev'} calc_mode
+ * @property {'electric'} calc_mode
  * @property {'bev'|'phev'|'fcv'} powertrain
  * @property {number} electricity_cost
  * @property {number} gasoline_cost

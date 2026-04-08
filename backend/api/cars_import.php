@@ -17,12 +17,19 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
   exit;
 }
 
+require_once __DIR__ . '/../lib/cars_schema.php';
+
 $segment = isset($_GET['segment']) ? trim((string) $_GET['segment']) : (isset($_POST['segment']) ? trim((string) $_POST['segment']) : '');
-$allowed = ['gasoline_hybrid', 'plugin_ev', 'all'];
-if (!in_array($segment, $allowed, true)) {
+$segLower = strtolower($segment);
+$importScope = null;
+if ($segLower === 'all') {
+  $importScope = 'all';
+} elseif (($norm = normalize_stored_segment($segLower)) !== null) {
+  $importScope = $norm;
+} else {
   http_response_code(400);
   ob_end_clean();
-  echo json_encode(['error' => 'segment に gasoline_hybrid / plugin_ev / all を指定してください']);
+  echo json_encode(['error' => 'segment に combustion / electric / all を指定してください（従来の gasoline_hybrid / plugin_ev も可）']);
   exit;
 }
 
@@ -56,7 +63,7 @@ if (isset($header[0]) && substr($header[0], 0, 3) === "\xEF\xBB\xBF") {
 }
 $headerLower = array_map('strtolower', $header);
 
-if ($segment === 'all') {
+if ($importScope === 'all') {
   $expected = [
     'segment',
     'maker',
@@ -70,7 +77,7 @@ if ($segment === 'all') {
     'hydrogen_km_per_kg',
   ];
   $expectedMsg = implode(',', $expected);
-} elseif ($segment === 'gasoline_hybrid') {
+} elseif ($importScope === 'combustion') {
   $expected = ['maker', 'model', 'powertrain', 'fuel', 'engine', 'price', 'inspection'];
   $expectedMsg = 'maker,model,powertrain,fuel,engine,price,inspection';
 } else {
@@ -94,7 +101,6 @@ foreach ($expected as $col) {
 }
 
 require_once __DIR__ . '/../config/database.php';
-require_once __DIR__ . '/../lib/cars_schema.php';
 
 try {
   $pdo = getPdo();
@@ -104,18 +110,18 @@ try {
   migrate_gasoline_hybrid_null_energy_to_zero($pdo);
 
   $stmtGh = $pdo->prepare(
-    'INSERT INTO cars (maker, model, powertrain, fuel, engine, price, inspection, segment, electric_wh_per_km, hydrogen_km_per_kg) VALUES (?, ?, ?, ?, ?, ?, ?, \'gasoline_hybrid\', 0, 0)'
+    'INSERT INTO cars (maker, model, powertrain, fuel, engine, price, inspection, segment, electric_wh_per_km, hydrogen_km_per_kg) VALUES (?, ?, ?, ?, ?, ?, ?, \'combustion\', 0, 0)'
   );
   $stmtPe = $pdo->prepare(
-    'INSERT INTO cars (maker, model, powertrain, fuel, electric_wh_per_km, hydrogen_km_per_kg, engine, price, inspection, segment) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, \'plugin_ev\')'
+    'INSERT INTO cars (maker, model, powertrain, fuel, electric_wh_per_km, hydrogen_km_per_kg, engine, price, inspection, segment) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, \'electric\')'
   );
 
   $pdo->beginTransaction();
 
-  if ($segment === 'all') {
+  if ($importScope === 'all') {
     $pdo->exec('DELETE FROM cars');
   } else {
-    $segQuoted = $pdo->quote($segment);
+    $segQuoted = $pdo->quote($importScope);
     $pdo->exec("DELETE FROM cars WHERE segment = {$segQuoted}");
   }
 
@@ -158,20 +164,21 @@ try {
       exit;
     }
 
-    if ($segment === 'all') {
-      $rowSeg = strtolower(trim($row[$idx['segment']] ?? ''));
-      if (!in_array($rowSeg, ['gasoline_hybrid', 'plugin_ev'], true)) {
+    if ($importScope === 'all') {
+      $rowSegRaw = strtolower(trim($row[$idx['segment']] ?? ''));
+      $rowSeg = normalize_stored_segment($rowSegRaw);
+      if ($rowSeg === null) {
         $pdo->rollBack();
         fclose($handle);
         ob_end_clean();
-        echo json_encode(['error' => "{$lineNum}行目: segment は gasoline_hybrid または plugin_ev です"]);
+        echo json_encode(['error' => "{$lineNum}行目: segment は combustion または electric です（従来の gasoline_hybrid / plugin_ev も可）"]);
         exit;
       }
     } else {
-      $rowSeg = $segment;
+      $rowSeg = $importScope;
     }
 
-    if ($rowSeg === 'gasoline_hybrid') {
+    if ($rowSeg === 'combustion') {
       $ptGhRaw = trim($row[$idx['powertrain']] ?? '');
       $fuelRaw = trim($row[$idx['fuel']] ?? '');
       $engineRaw = trim($row[$idx['engine']] ?? '');
