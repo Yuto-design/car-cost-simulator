@@ -568,13 +568,61 @@ combustion,Mazda,CX-80 "XD Premium Sports" 4WD,diesel,16.8,3.283,5683700,140000,
 combustion,Mazda,CX-80 "XD-HYBRID Drive Edition Nappa Leather Package",hybrid,19.2,3.283,5846500,140000,0,0
 combustion,Mazda,CX-80 "XD-HYBRID Premium Sports",hybrid,19.0,3.283,6347000,140000,0,0
 combustion,Mazda,CX-80 "XD-HYBRID Premium Modern",hybrid,19.0,3.283,6347000,140000,0,0
-combustion,Mazda,MX-30 Standard,gasoline,0,0,3990000,80000,0,0
-combustion,Mazda,MX-30 L Package,gasoline,0,0,4490000,80000,0,0
-combustion,Mazda,MX-30 ROTARY-EV,gasoline,0,0,4990000,80000,0,0
-combustion,Mazda,Roadster S,gasoline,15.5,0,2990000,110000,0,0
-combustion,Mazda,Roadster VS,gasoline,15.5,0,3290000,110000,0,0
-combustion,Mazda,Roadster RF S,gasoline,15.2,0,3490000,110000,0,0
-combustion,Mazda,Roadster RF VS,gasoline,15.2,0,3790000,110000,0,0
+combustion,Mazda,MX-30 "Natural Monotone" 2WD,hybrid,15.6,1.997,2935900,80000,0,0
+combustion,Mazda,MX-30 "Natural Monotone" 4WD,hybrid,15.1,1.997,3172400,80000,0,0
+combustion,Mazda,MX-30 "Modern Confidence" 2WD,hybrid,15.6,1.997,2935900,80000,0,0
+combustion,Mazda,MX-30 "Modern Confidence" 4WD,hybrid,15.1,1.997,3172400,80000,0,0
+combustion,Mazda,MX-30 "Retro Sports Edition" 2WD,hybrid,15.6,1.997,3170200,80000,0,0
+combustion,Mazda,MX-30 "Retro Sports Edition" 4WD,hybrid,15.1,1.997,3406700,80000,0,0
+combustion,Mazda,MAZDA2 "15MB" 6MT,gasoline,20.2,1.496,1768800,80000,0,0
+combustion,Mazda,MAZDA2 "15C 2" 2WD,gasoline,20.3,1.496,1720400,80000,0,0
+combustion,Mazda,MAZDA2 "15C 2" 4WD,gasoline,18.1,1.496,1940400,80000,0,0
+combustion,Mazda,MAZDA2 "15 BD i Selection 2" 2WD,gasoline,20.3,1.496,1995400,80000,0,0
+combustion,Mazda,MAZDA2 "15 BD i Selection 2" 4WD,gasoline,18.1,1.496,2215400,80000,0,0
+combustion,Mazda,MAZDA2 "15 SPORT 2" 2WD,gasoline,20.3,1.496,2192300,80000,0,0
+combustion,Mazda,MAZDA2 "15 SPORT 2" 4WD,gasoline,18.1,1.496,2412300,80000,0,0
+combustion,Mazda,MAZDA2 "15 SPORT 2" 6MT,gasoline,20.2,1.496,2192300,80000,0,0
+combustion,Mazda,MAZDA2 "15 SPORT+" 2WD,gasoline,20.3,1.496,2281400,80000,0,0
+combustion,Mazda,MAZDA2 "15 SPORT+" 4WD,gasoline,18.1,1.496,2501400,80000,0,0
+combustion,Mazda,MAZDA2 "15 SPORT+" 6MT,gasoline,20.2,1.496,2281400,80000,0,0
+combustion,Mazda,MAZDA3 FASTBACK "15S Black Selection",gasoline,16.6,1.496,2600400,80000,0,0
+combustion,Mazda,MAZDA3 FASTBACK "15S Leather Touring Selection",gasoline,16.6,1.496,2812700,80000,0,0
+combustion,Mazda,MAZDA3 FASTBACK "20S Touring" 2WD,hybrid,16.4,1.997,2946900,80000,0,0
+combustion,Mazda,MAZDA3 FASTBACK "20S Touring" 4WD,hybrid,15.9,1.997,3183400,80000,0,0
+combustion,Mazda,MAZDA3 FASTBACK "20S Touring" 6MT,hybrid,17.5,1.997,3023900,80000,0,0
+combustion,Mazda,MAZDA3 FASTBACK "20S Retro Sports Edition" 2WD,hybrid,16.4,1.997,3045900,80000,0,0
+combustion,Mazda,MAZDA3 FASTBACK "20S Retro Sports Edition" 4WD,hybrid,15.9,1.997,3282400,80000,0,0
+combustion,Mazda,MAZDA3 FASTBACK "20S Retro Sports Ediiton" 6MT,hybrid,17.5,1.997,3045900,80000,0,0
+combustion,Mazda,MAZDA3 FASTBACK "XD S Package" 2WD,diesel,21.2,1.756,2887500,80000,0,0
+combustion,Mazda,MAZDA3 FASTBACK "XD S Package" 4WD,diesel,20.0,1.756,3124000,80000,0,0
+combustion,Mazda,MAZDA3 FASTBACK "XD Drive Edition" 2WD,diesel,21.2,1.756,3177900,80000,0,0
+combustion,Mazda,MAZDA3 FASTBACK "XD Drive Edition" 4WD,diesel,20.0,1.756,3414400,80000,0,0
+combustion,Mazda,MAZDA3 FASTBACK "XD Retro Sports Edition" 2WD,diesel,21.2,1.756,3265900,80000,0,0
+combustion,Mazda,MAZDA3 FASTBACK "XD Retro Sports Edition" 4WD,diesel,20.0,1.756,3502400,80000,0,0
+combustion,Mazda,MAZDA3 FASTBACK "X Touring",hybrid,16.7,1.997,3997400,80000,0,0
+combustion,Mazda,MAZDA3 FASTBACK "X Touring" 6MT,hybrid,17.7,1.997,2281400,80000,0,0
+combustion,Mazda,MAZDA3 SEDAN "20S S Package",hybrid,16.7,1.997,2720300,80000,0,0
+combustion,Mazda,MAZDA3 SEDAN "20S Touring",hybrid,16.7,1.997,2946900,80000,0,0
+combustion,Mazda,MAZDA3 SEDAN "20S Retro Sports Edition",hybrid,16.7,1.997,3045900,80000,0,0
+combustion,Mazda,MAZDA3 SEDAN "XD S Package",diesel,21.5,1.756,2887500,80000,0,0
+combustion,Mazda,MAZDA3 SEDAN "XD Drive Edition",diesel,21.5,1.756,3177900,80000,0,0
+combustion,Mazda,MAZDA3 SEDAN "XD Retro Sports Edition",diesel,21.5,1.756,3265900,80000,0,0
+combustion,Mazda,ROADSTAR "S" 6MT,gasoline,16.8,1.496,2898500,110000,0,0
+combustion,Mazda,ROADSTAR "S Special Package" 6MT,gasoline,16.8,1.496,3087700,110000,0,0
+combustion,Mazda,ROADSTAR "S Special Package",gasoline,17.2,1.496,3203200,110000,0,0
+combustion,Mazda,ROADSTAR "S Leather Package" 6MT,gasoline,16.8,1.496,3498000,110000,0,0
+combustion,Mazda,ROADSTAR "S Leather Package",gasoline,17.2,1.496,3613500,110000,0,0
+combustion,Mazda,ROADSTAR "S Leather Package V Selection" 6MT,gasoline,16.8,1.496,3553000,110000,0,0
+combustion,Mazda,ROADSTAR "S Leather Package V Selection",gasoline,17.2,1.496,3668500,110000,0,0
+combustion,Mazda,ROADSTAR "RS" 6MT,gasoline,16.8,1.496,3679500,110000,0,0
+combustion,Mazda,ROADSTAR "NR-A" 6MT,gasoline,16.8,1.496,3064600,110000,0,0
+combustion,Mazda,ROADSTAR RF "S" 6MT,gasoline,15.8,1.997,3796100,110000,0,0
+combustion,Mazda,ROADSTAR RF "S",gasoline,15.2,1.997,3823600,110000,0,0
+combustion,Mazda,ROADSTAR RF "VS" 6MT,gasoline,15.8,1.997,4154700,110000,0,0
+combustion,Mazda,ROADSTAR RF "VS",gasoline,15.2,1.997,4182200,110000,0,0
+combustion,Mazda,ROADSTAR RF "RS" 6MT,gasoline,15.8,1.997,4308700,110000,0,0
+combustion,Mazda,MAZDA SPILIT RACING ROADSTAR,gasoline,15.2,1.997,45265700,110000,0,0
+combustion,Mazda,MAZDA SPILIT RACING ROADSTAR 12R,gasoline,15.0,1.997,7612000,110000,0,0
 combustion,Suzuki,Alto X,gasoline,25.2,0,1140000,80000,0,0
 combustion,Suzuki,Alto G,gasoline,25.2,0,1280000,80000,0,0
 combustion,Suzuki,Lapin X,gasoline,24,0,1510000,80000,0,0
@@ -742,6 +790,10 @@ electric,Mazda,CX-60 "PHEV Premium Sports",phev,14.3,0,6495500,135000,253,2.488
 electric,Mazda,CX-60 "PHEV Premium Modern",phev,14.3,0,6495500,135000,253,2.488
 electric,Mazda,CX-80 "PHEV Premium Sports",phev,12.9,0,7144500,140000,292,2.488
 electric,Mazda,CX-80 "PHEV Premium Modern",phev,12.9,0,7144500,140000,292,2.488
+electric,Mazda,MX-30 ROTARY-EV,phev,15.4,0.830,4356000,80000,176,0
+electric,Mazda,MX-30 ROTARY-EV "Modern Confidence",phev,15.4,0.830,49906000,80000,176,0
+electric,Mazda,MX-30 ROTARY-EV "Natural Monotone",phev,15.4,0.830,4906000,80000,176,0
+electric,Mazda,MX-30 ROTARY-EV "Retro Sports Edition",phev,15.4,0.830,4942300,80000,176,0
 electric,Suzuki,e-Vitara X,bev,0,0,3990000,80000,153.85,0
 electric,Suzuki,e-Vitara G,bev,0,0,4490000,80000,153.85,0
 electric,Suzuki,e-Every,bev,0,0,3150000,80000,153.85,0
