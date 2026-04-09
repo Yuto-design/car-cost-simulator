@@ -70,7 +70,7 @@
 
 .sim-intro-hero-copy {
   min-width: 0;
-  max-width: min(38rem, 100%);
+  max-width: min(48rem, 100%);
   padding: 0.15rem 0;
 }
 
@@ -115,12 +115,12 @@
 }
 
 .sim-intro-hero-lead {
-  margin: 0 0 1.45rem;
+  margin: 0 0 1.35rem;
   font-size: clamp(0.9375rem, 2vw, 1.0625rem);
   font-weight: 500;
   line-height: 1.78;
   color: #2a2a2a;
-  max-width: 34em;
+  max-width: none;
   letter-spacing: 0.03em;
   text-shadow:
     0 0 10px rgba(255, 255, 255, 0.85),
