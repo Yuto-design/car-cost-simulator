@@ -10,7 +10,7 @@ export default function SimulatorIntro({ onSelectGasoline, onSelectPlugin }) {
     <section
       className="sim-intro"
       id="sim-intro"
-      aria-labelledby="sim-intro-hero-title sim-intro-title sim-intro-comparison-heading sim-intro-howto-heading"
+      aria-labelledby="sim-intro-hero-title sim-intro-title sim-intro-howto-heading"
     >
       <div className="sim-intro-hero">
         <div className="sim-intro-hero-grid">
@@ -57,16 +57,44 @@ export default function SimulatorIntro({ onSelectGasoline, onSelectPlugin }) {
           の電気走行の割合を足し合わせて試せます。
         </p>
 
-        <div className="sim-intro-comparison">
-          <h3 id="sim-intro-comparison-heading" className="sim-intro-comparison-title">
-            比較機能
-          </h3>
-          <p className="sim-intro-comparison-text">
-            計算後の結果画面にある「比較に追加」で、いまの試算条件を比較リストにためられます。左ナビの「比較」を開くと、ガソリン/HEV
-            と BEV/PHEV/FCV を混在させた複数パターンを、モード・車種・パワートレイン・車両価格・走行距離・維持費の目安などを一覧で並べて確認できます。不要な行は削除でき、表は
-            CSV でダウンロードして保存や共有にも使えます。
-          </p>
-        </div>
+        <ul className="sim-intro-features">
+          <li className="sim-intro-feature">
+            <span className="sim-intro-feature-badge" aria-hidden="true">
+              1
+            </span>
+            <span className="sim-intro-feature-text">
+              <span className="sim-intro-feature-label">車種から自動入力</span>
+              データベースのスペックを反映し、手入力の手間を減らします。
+            </span>
+          </li>
+          <li className="sim-intro-feature">
+            <span className="sim-intro-feature-badge" aria-hidden="true">
+              2
+            </span>
+            <span className="sim-intro-feature-text">
+              <span className="sim-intro-feature-label">内訳で可視化</span>
+              計算後は円グラフとリストで、どこにコストが寄っているか確認できます。
+            </span>
+          </li>
+          <li className="sim-intro-feature">
+            <span className="sim-intro-feature-badge" aria-hidden="true">
+              3
+            </span>
+            <span className="sim-intro-feature-text">
+              <span className="sim-intro-feature-label">区分別CSVで入出力</span>
+              ガソリン/HEV用とプラグイン系用のCSVをそれぞれエクスポート・インポートできます。
+            </span>
+          </li>
+          <li className="sim-intro-feature">
+            <span className="sim-intro-feature-badge" aria-hidden="true">
+              4
+            </span>
+            <span className="sim-intro-feature-text">
+              <span className="sim-intro-feature-label">比較で横並びチェック</span>
+              複数の試算を一覧にため、条件や金額の違いを一度に見比べられます。
+            </span>
+          </li>
+        </ul>
 
         <div className="sim-intro-howto">
           <h3 id="sim-intro-howto-heading" className="sim-intro-howto-title">
@@ -132,44 +160,6 @@ export default function SimulatorIntro({ onSelectGasoline, onSelectPlugin }) {
           </ol>
         </div>
 
-        <ul className="sim-intro-features">
-          <li className="sim-intro-feature">
-            <span className="sim-intro-feature-badge" aria-hidden="true">
-              1
-            </span>
-            <span className="sim-intro-feature-text">
-              <span className="sim-intro-feature-label">車種から自動入力</span>
-              データベースのスペックを反映し、手入力の手間を減らします。
-            </span>
-          </li>
-          <li className="sim-intro-feature">
-            <span className="sim-intro-feature-badge" aria-hidden="true">
-              2
-            </span>
-            <span className="sim-intro-feature-text">
-              <span className="sim-intro-feature-label">内訳で可視化</span>
-              計算後は円グラフとリストで、どこにコストが寄っているか確認できます。
-            </span>
-          </li>
-          <li className="sim-intro-feature">
-            <span className="sim-intro-feature-badge" aria-hidden="true">
-              3
-            </span>
-            <span className="sim-intro-feature-text">
-              <span className="sim-intro-feature-label">区分別CSVで入出力</span>
-              ガソリン/HEV用とプラグイン系用のCSVをそれぞれエクスポート・インポートできます。
-            </span>
-          </li>
-          <li className="sim-intro-feature">
-            <span className="sim-intro-feature-badge" aria-hidden="true">
-              4
-            </span>
-            <span className="sim-intro-feature-text">
-              <span className="sim-intro-feature-label">比較で横並びチェック</span>
-              複数の試算を一覧にため、条件や金額の違いを一度に見比べられます。
-            </span>
-          </li>
-        </ul>
         <p className="sim-intro-note" role="note">
           表示はあくまで目安です。ガソリン価格・電気・水素の単価・保険料・駐車場などは地域や契約内容で大きく変わるため、実際の金額とは異なる場合があります。
         </p>
