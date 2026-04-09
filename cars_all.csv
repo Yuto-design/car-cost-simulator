@@ -9,17 +9,17 @@ combustion,Toyota,YARIS "X",hybrid,36.0,1.49,2249500,95000,0,0
 combustion,Toyota,YARIS "X" E-Four,hybrid,30.2,1.49,2473900,95000,0,0
 combustion,Toyota,YARIS "X" 2WD,gasoline,20.3,1.49,1848000,95000,0,0
 combustion,Toyota,YARIS "X" 4WD,gasoline,18.6,1.49,2061400,95000,0,0
-combustion,Toyota,YARIS "X" 6MT,gasoline,19.1,1.49,1771000,95000,0,0
+combustion,Toyota,YARIS "X" (6MT),gasoline,19.1,1.49,1771000,95000,0,0
 combustion,Toyota,YARIS "G",hybrid,35.8,1.49,2445300,95000,0,0
 combustion,Toyota,YARIS "G" E-Four,hybrid,30.2,1.49,2669700,95000,0,0
 combustion,Toyota,YARIS "G" 2WD,gasoline,20.0,1.49,2072400,95000,0,0
 combustion,Toyota,YARIS "G" 4WD,gasoline,18.6,1.49,2286900,95000,0,0
-combustion,Toyota,YARIS "G" 6MT,gasoline,19.1,1.49,1996500,95000,0,0
+combustion,Toyota,YARIS "G" (6MT),gasoline,19.1,1.49,1996500,95000,0,0
 combustion,Toyota,YARIS "Z",hybrid,35.4,1.49,2669700,95000,0,0
 combustion,Toyota,YARIS "Z" E-Four,hybrid,30.2,1.49,2884200,95000,0,0
 combustion,Toyota,YARIS "Z" 2WD,gasoline,20.3,1.49,2301200,95000,0,0
 combustion,Toyota,YARIS "Z" 4WD,gasoline,18.6,1.49,2515700,95000,0,0
-combustion,Toyota,YARIS "Z" 6MT,gasoline,19.1,1.49,2197800,95000,0,0
+combustion,Toyota,YARIS "Z" (6MT),gasoline,19.1,1.49,2197800,95000,0,0
 combustion,Toyota,YARIS CROSS "X",hybrid,30.8,1.49,2510200,105000,0,0
 combustion,Toyota,YARIS CROSS "X" E-Four,hybrid,28.6,1.49,2757700,105000,0,0
 combustion,Toyota,YARIS CROSS "X" 2WD,gasoline,18.9,1.49,2126300,105000,0,0
@@ -153,23 +153,23 @@ combustion,Toyota,CROWN SPORT "G",hybrid,21.3,2.487,5200000,145000,0,0
 combustion,Toyota,CROWN SPORT "Z",hybrid,21.3,2.487,5900000,145000,0,0
 combustion,Toyota,CROWN ESTATE "Z",hybrid,20.3,2.487,6350000,145000,0,0
 combustion,Toyota,CENTURY SEDAN,hybrid,11.2,4.968,23000000,250000,0,0
-combustion,Toyota,GR YARIS "RZ" 6MT,gasoline,12.4,1.618,4537200,110000,0,0
-combustion,Toyota,GR YARIS "RZ" GR-DAT,gasoline,10.8,1.618,4887200,110000,0,0
-combustion,Toyota,GR YARIS "RZ High performance" 6MT,gasoline,12.4,1.618,5037200,110000,0,0
-combustion,Toyota,GR YARIS "RZ High performance" GR-DAT,gasoline,10.8,1.618,5387200,110000,0,0
-combustion,Toyota,GR YARIS "RZ High performance + Aero performance package" 6MT,gasoline,12.4,1.618,5532200,110000,0,0
-combustion,Toyota,GR YARIS "RZ High performance + Aero performance package" GR-DAT,gasoline,10.8,1.618,5882200,110000,0,0
+combustion,Toyota,GR YARIS "RZ" (6MT),gasoline,12.4,1.618,4537200,110000,0,0
+combustion,Toyota,GR YARIS "RZ" (GR-DAT),gasoline,10.8,1.618,4887200,110000,0,0
+combustion,Toyota,GR YARIS "RZ High performance" (6MT),gasoline,12.4,1.618,5037200,110000,0,0
+combustion,Toyota,GR YARIS "RZ High performance" (GR-DAT),gasoline,10.8,1.618,5387200,110000,0,0
+combustion,Toyota,GR YARIS "RZ High performance + Aero performance package" (6MT),gasoline,12.4,1.618,5532200,110000,0,0
+combustion,Toyota,GR YARIS "RZ High performance + Aero performance package" (GR-DAT),gasoline,10.8,1.618,5882200,110000,0,0
 combustion,Toyota,GR86 "RC",gasoline,12.0,2.387,2936000,120000,0,0
-combustion,Toyota,GR86 "SZ" 6AT,gasoline,11.8,2.387,3293000,120000,0,0
-combustion,Toyota,GR86 "SZ" 6MT,gasoline,12.0,2.387,3195000,120000,0,0
-combustion,Toyota,GR86 "RZ" 6AT,gasoline,11.7,2.387,3616000,120000,0,0
-combustion,Toyota,GR86 "RZ" 6MT,gasoline,11.9,2.387,3518000,120000,0,0
-combustion,Toyota,GR COROLLA "R" 6MT,gasoline,12.4,1.618,5680000,110000,0,0
-combustion,Toyota,GR COROLLA "R" GR-DAT,gasoline,10.4,1.618,5980000,110000,0,0
+combustion,Toyota,GR86 "SZ" (6AT),gasoline,11.8,2.387,3293000,120000,0,0
+combustion,Toyota,GR86 "SZ" (6MT),gasoline,12.0,2.387,3195000,120000,0,0
+combustion,Toyota,GR86 "RZ" (6AT),gasoline,11.7,2.387,3616000,120000,0,0
+combustion,Toyota,GR86 "RZ" (6MT),gasoline,11.9,2.387,3518000,120000,0,0
+combustion,Toyota,GR COROLLA "R" (6MT),gasoline,12.4,1.618,5680000,110000,0,0
+combustion,Toyota,GR COROLLA "R" (GR-DAT),gasoline,10.4,1.618,5980000,110000,0,0
 combustion,Toyota,SUPRA "SZ",gasoline,14.5,1.998,4995000,140000,0,0
 combustion,Toyota,SUPRA "SZ-R",gasoline,14.0,1.998,6013000,140000,0,0
-combustion,Toyota,SUPRA "RZ" 6MT,gasoline,11.1,2.997,8000000,140000,0,0
-combustion,Toyota,SUPRA "RZ" 8AT,gasoline,12.2,2.997,8000000,140000,0,0
+combustion,Toyota,SUPRA "RZ" (6MT),gasoline,11.1,2.997,8000000,140000,0,0
+combustion,Toyota,SUPRA "RZ" (8AT),gasoline,12.2,2.997,8000000,140000,0,0
 combustion,Lexus,LBX "Elegant" FF,hybrid,28.0,1.490,4200000,110000,0,0
 combustion,Lexus,LBX "Elegant" E-Four,hybrid,26.4,1.490,4460000,110000,0,0
 combustion,Lexus,LBX "Active" FF,hybrid,27.7,1.490,4400000,110000,0,0
@@ -236,15 +236,15 @@ combustion,Lexus,LC 500h "S package",hybrid,14.4,3.456,15380000,200000,0,0
 combustion,Lexus,LM 500h "version L",hybrid,13.8,2.393,15200000,150000,0,0
 combustion,Lexus,LM 500h "EXECUTIVE",hybrid,13.3,2.393,20300000,150000,0,0
 combustion,Daihatsu,COPEN "Robe" CVT,gasoline,19.2,0.658,1983300,85000,0,0
-combustion,Daihatsu,COPEN "Robe" 5MT,gasoline,18.6,0.658,2038300,85000,0,0
+combustion,Daihatsu,COPEN "Robe" (5MT),gasoline,18.6,0.658,2038300,85000,0,0
 combustion,Daihatsu,COPEN "Robe S" CVT,gasoline,19.2,0.658,2196700,85000,0,0
-combustion,Daihatsu,COPEN "Robe S" 5MT,gasoline,18.6,0.658,2251700,85000,0,0
+combustion,Daihatsu,COPEN "Robe S" (5MT),gasoline,18.6,0.658,2251700,85000,0,0
 combustion,Daihatsu,COPEN "Cero" CVT,gasoline,19.2,0.658,2040500,85000,0,0
-combustion,Daihatsu,COPEN "Cero" 5MT,gasoline,18.6,0.658,2095500,85000,0,0
+combustion,Daihatsu,COPEN "Cero" (5MT),gasoline,18.6,0.658,2095500,85000,0,0
 combustion,Daihatsu,COPEN "Cero S" CVT,gasoline,19.2,0.658,2255000,85000,0,0
-combustion,Daihatsu,COPEN "Cero S" 5MT,gasoline,18.6,0.658,2310000,85000,0,0
+combustion,Daihatsu,COPEN "Cero S" (5MT),gasoline,18.6,0.658,2310000,85000,0,0
 combustion,Daihatsu,COPEN "GR SPORT" CVT,gasoline,19.2,0.658,2501400,85000,0,0
-combustion,Daihatsu,COPEN "GR SPORT" 5MT,gasoline,18.6,0.658,2556400,85000,0,0
+combustion,Daihatsu,COPEN "GR SPORT" (5MT),gasoline,18.6,0.658,2556400,85000,0,0
 combustion,Daihatsu,MIRA e:S "B SA3" 2WD,gasoline,35.2,0.658,992200,80000,0,0
 combustion,Daihatsu,MIRA e:S "B SA3" 4WD,gasoline,32.2,0.658,1118700,80000,0,0
 combustion,Daihatsu,MIRA e:S "L SA3" 2WD,gasoline,35.2,0.658,1025200,80000,0,0
@@ -330,14 +330,14 @@ combustion,Honda,N-ONE "Premium" 4WD,gasoline,21.0,0.658,2112000,80000,0,0
 combustion,Honda,N-ONE "RS",gasoline,21.6,0.658,2278100,80000,0,0
 combustion,Honda,N-ONE "Premium Tourer" FF,gasoline,21.9,0.658,2173600,80000,0,0
 combustion,Honda,N-ONE "Premium Tourer" 4WD,gasoline,19.8,0.658,2318800,80000,0,0
-combustion,Honda,N-VAN "G" FF(6MT),gasoline,19.2,0.658,1498200,80000,0,0
-combustion,Honda,N-VAN "G" 4WD(6MT),gasoline,17.2,0.658,1643400,80000,0,0
+combustion,Honda,N-VAN "G" (6MT) FF,gasoline,19.2,0.658,1498200,80000,0,0
+combustion,Honda,N-VAN "G" (6MT) 4WD,gasoline,17.2,0.658,1643400,80000,0,0
 combustion,Honda,N-VAN "G" FF,gasoline,18.8,0.658,1498200,80000,0,0
 combustion,Honda,N-VAN "G" 4WD,gasoline,16.6,0.658,1643400,80000,0,0
 combustion,Honda,N-VAN "L" FF,gasoline,18.8,0.658,1648900,80000,0,0
 combustion,Honda,N-VAN "L" 4WD,gasoline,16.6,0.658,1794100,80000,0,0
-combustion,Honda,N-VAN "FUN" FF(6MT),gasoline,19.2,0.658,1900800,80000,0,0
-combustion,Honda,N-VAN "FUN" 4WD(6MT),gasoline,17.2,0.658,2046000,80000,0,0
+combustion,Honda,N-VAN "FUN" (6MT) FF,gasoline,19.2,0.658,1900800,80000,0,0
+combustion,Honda,N-VAN "FUN" (6MT) 4WD,gasoline,17.2,0.658,2046000,80000,0,0
 combustion,Honda,N-VAN "FUN" FF,gasoline,18.8,0.658,1900800,80000,0,0
 combustion,Honda,N-VAN "FUN" 4WD,gasoline,16.6,0.658,2046000,80000,0,0
 combustion,Honda,N-VAN "FUN TURBO" FF,gasoline,18.2,0.658,2024000,80000,0,0
@@ -574,25 +574,25 @@ combustion,Mazda,MX-30 "Modern Confidence" 2WD,hybrid,15.6,1.997,2935900,80000,0
 combustion,Mazda,MX-30 "Modern Confidence" 4WD,hybrid,15.1,1.997,3172400,80000,0,0
 combustion,Mazda,MX-30 "Retro Sports Edition" 2WD,hybrid,15.6,1.997,3170200,80000,0,0
 combustion,Mazda,MX-30 "Retro Sports Edition" 4WD,hybrid,15.1,1.997,3406700,80000,0,0
-combustion,Mazda,MAZDA2 "15MB" 6MT,gasoline,20.2,1.496,1768800,80000,0,0
+combustion,Mazda,MAZDA2 "15MB" (6MT),gasoline,20.2,1.496,1768800,80000,0,0
 combustion,Mazda,MAZDA2 "15C 2" 2WD,gasoline,20.3,1.496,1720400,80000,0,0
 combustion,Mazda,MAZDA2 "15C 2" 4WD,gasoline,18.1,1.496,1940400,80000,0,0
 combustion,Mazda,MAZDA2 "15 BD i Selection 2" 2WD,gasoline,20.3,1.496,1995400,80000,0,0
 combustion,Mazda,MAZDA2 "15 BD i Selection 2" 4WD,gasoline,18.1,1.496,2215400,80000,0,0
 combustion,Mazda,MAZDA2 "15 SPORT 2" 2WD,gasoline,20.3,1.496,2192300,80000,0,0
 combustion,Mazda,MAZDA2 "15 SPORT 2" 4WD,gasoline,18.1,1.496,2412300,80000,0,0
-combustion,Mazda,MAZDA2 "15 SPORT 2" 6MT,gasoline,20.2,1.496,2192300,80000,0,0
+combustion,Mazda,MAZDA2 "15 SPORT 2" (6MT),gasoline,20.2,1.496,2192300,80000,0,0
 combustion,Mazda,MAZDA2 "15 SPORT+" 2WD,gasoline,20.3,1.496,2281400,80000,0,0
 combustion,Mazda,MAZDA2 "15 SPORT+" 4WD,gasoline,18.1,1.496,2501400,80000,0,0
-combustion,Mazda,MAZDA2 "15 SPORT+" 6MT,gasoline,20.2,1.496,2281400,80000,0,0
+combustion,Mazda,MAZDA2 "15 SPORT+" (6MT),gasoline,20.2,1.496,2281400,80000,0,0
 combustion,Mazda,MAZDA3 FASTBACK "15S Black Selection",gasoline,16.6,1.496,2600400,80000,0,0
 combustion,Mazda,MAZDA3 FASTBACK "15S Leather Touring Selection",gasoline,16.6,1.496,2812700,80000,0,0
 combustion,Mazda,MAZDA3 FASTBACK "20S Touring" 2WD,hybrid,16.4,1.997,2946900,80000,0,0
 combustion,Mazda,MAZDA3 FASTBACK "20S Touring" 4WD,hybrid,15.9,1.997,3183400,80000,0,0
-combustion,Mazda,MAZDA3 FASTBACK "20S Touring" 6MT,hybrid,17.5,1.997,3023900,80000,0,0
+combustion,Mazda,MAZDA3 FASTBACK "20S Touring" (6MT),hybrid,17.5,1.997,3023900,80000,0,0
 combustion,Mazda,MAZDA3 FASTBACK "20S Retro Sports Edition" 2WD,hybrid,16.4,1.997,3045900,80000,0,0
 combustion,Mazda,MAZDA3 FASTBACK "20S Retro Sports Edition" 4WD,hybrid,15.9,1.997,3282400,80000,0,0
-combustion,Mazda,MAZDA3 FASTBACK "20S Retro Sports Ediiton" 6MT,hybrid,17.5,1.997,3045900,80000,0,0
+combustion,Mazda,MAZDA3 FASTBACK "20S Retro Sports Ediiton" (6MT),hybrid,17.5,1.997,3045900,80000,0,0
 combustion,Mazda,MAZDA3 FASTBACK "XD S Package" 2WD,diesel,21.2,1.756,2887500,80000,0,0
 combustion,Mazda,MAZDA3 FASTBACK "XD S Package" 4WD,diesel,20.0,1.756,3124000,80000,0,0
 combustion,Mazda,MAZDA3 FASTBACK "XD Drive Edition" 2WD,diesel,21.2,1.756,3177900,80000,0,0
@@ -600,27 +600,27 @@ combustion,Mazda,MAZDA3 FASTBACK "XD Drive Edition" 4WD,diesel,20.0,1.756,341440
 combustion,Mazda,MAZDA3 FASTBACK "XD Retro Sports Edition" 2WD,diesel,21.2,1.756,3265900,80000,0,0
 combustion,Mazda,MAZDA3 FASTBACK "XD Retro Sports Edition" 4WD,diesel,20.0,1.756,3502400,80000,0,0
 combustion,Mazda,MAZDA3 FASTBACK "X Touring",hybrid,16.7,1.997,3997400,80000,0,0
-combustion,Mazda,MAZDA3 FASTBACK "X Touring" 6MT,hybrid,17.7,1.997,2281400,80000,0,0
+combustion,Mazda,MAZDA3 FASTBACK "X Touring" (6MT),hybrid,17.7,1.997,2281400,80000,0,0
 combustion,Mazda,MAZDA3 SEDAN "20S S Package",hybrid,16.7,1.997,2720300,80000,0,0
 combustion,Mazda,MAZDA3 SEDAN "20S Touring",hybrid,16.7,1.997,2946900,80000,0,0
 combustion,Mazda,MAZDA3 SEDAN "20S Retro Sports Edition",hybrid,16.7,1.997,3045900,80000,0,0
 combustion,Mazda,MAZDA3 SEDAN "XD S Package",diesel,21.5,1.756,2887500,80000,0,0
 combustion,Mazda,MAZDA3 SEDAN "XD Drive Edition",diesel,21.5,1.756,3177900,80000,0,0
 combustion,Mazda,MAZDA3 SEDAN "XD Retro Sports Edition",diesel,21.5,1.756,3265900,80000,0,0
-combustion,Mazda,ROADSTAR "S" 6MT,gasoline,16.8,1.496,2898500,110000,0,0
-combustion,Mazda,ROADSTAR "S Special Package" 6MT,gasoline,16.8,1.496,3087700,110000,0,0
+combustion,Mazda,ROADSTAR "S" (6MT),gasoline,16.8,1.496,2898500,110000,0,0
+combustion,Mazda,ROADSTAR "S Special Package" (6MT),gasoline,16.8,1.496,3087700,110000,0,0
 combustion,Mazda,ROADSTAR "S Special Package",gasoline,17.2,1.496,3203200,110000,0,0
-combustion,Mazda,ROADSTAR "S Leather Package" 6MT,gasoline,16.8,1.496,3498000,110000,0,0
+combustion,Mazda,ROADSTAR "S Leather Package" (6MT),gasoline,16.8,1.496,3498000,110000,0,0
 combustion,Mazda,ROADSTAR "S Leather Package",gasoline,17.2,1.496,3613500,110000,0,0
-combustion,Mazda,ROADSTAR "S Leather Package V Selection" 6MT,gasoline,16.8,1.496,3553000,110000,0,0
+combustion,Mazda,ROADSTAR "S Leather Package V Selection" (6MT),gasoline,16.8,1.496,3553000,110000,0,0
 combustion,Mazda,ROADSTAR "S Leather Package V Selection",gasoline,17.2,1.496,3668500,110000,0,0
-combustion,Mazda,ROADSTAR "RS" 6MT,gasoline,16.8,1.496,3679500,110000,0,0
-combustion,Mazda,ROADSTAR "NR-A" 6MT,gasoline,16.8,1.496,3064600,110000,0,0
-combustion,Mazda,ROADSTAR RF "S" 6MT,gasoline,15.8,1.997,3796100,110000,0,0
+combustion,Mazda,ROADSTAR "RS" (6MT),gasoline,16.8,1.496,3679500,110000,0,0
+combustion,Mazda,ROADSTAR "NR-A" (6MT),gasoline,16.8,1.496,3064600,110000,0,0
+combustion,Mazda,ROADSTAR RF "S" (6MT),gasoline,15.8,1.997,3796100,110000,0,0
 combustion,Mazda,ROADSTAR RF "S",gasoline,15.2,1.997,3823600,110000,0,0
-combustion,Mazda,ROADSTAR RF "VS" 6MT,gasoline,15.8,1.997,4154700,110000,0,0
+combustion,Mazda,ROADSTAR RF "VS" (6MT),gasoline,15.8,1.997,4154700,110000,0,0
 combustion,Mazda,ROADSTAR RF "VS",gasoline,15.2,1.997,4182200,110000,0,0
-combustion,Mazda,ROADSTAR RF "RS" 6MT,gasoline,15.8,1.997,4308700,110000,0,0
+combustion,Mazda,ROADSTAR RF "RS" (6MT),gasoline,15.8,1.997,4308700,110000,0,0
 combustion,Mazda,MAZDA SPILIT RACING ROADSTAR,gasoline,15.2,1.997,45265700,110000,0,0
 combustion,Mazda,MAZDA SPILIT RACING ROADSTAR 12R,gasoline,15.0,1.997,7612000,110000,0,0
 combustion,Suzuki,ALTO "A" 2WD,gasoline,25.8,0.658,1142900,80000,0,0
@@ -631,6 +631,10 @@ combustion,Suzuki,ALTO "HYBRID S" 2WD,hybrid,28.2,0.657,1301300,80000,0,0
 combustion,Suzuki,ALTO "HYBRID S" 4WD,hybrid,26.2,0.657,1433200,80000,0,0
 combustion,Suzuki,ALTO "HYBRID X" 2WD,hybrid,28.2,0.657,1469600,80000,0,0
 combustion,Suzuki,ALTO "HYBRID X" 4WD,hybrid,26.2,0.657,1589500,80000,0,0
+combustion,Suzuki,EVERY WAGON "PZ TURBO" 2WD,gasoline,15.1,0.658,1838100,80000,0,0
+combustion,Suzuki,EVERY WAGON "PZ TURBO" 4WD,gasoline,15.1,0.658,1992100,80000,0,0
+combustion,Suzuki,EVERY WAGON "PZ TURBO SPECIAL" 2WD,gasoline,15.1,0.658,1838100,80000,0,0
+combustion,Suzuki,EVERY WAGON "PZ TURBO SPECIAL" 4WD,gasoline,15.1,0.658,1992100,80000,0,0
 combustion,Suzuki,Lapin "HYBRID G" 2WD,hybrid,27.3,0.657,1514700,80000,0,0
 combustion,Suzuki,Lapin "HYBRID G" 4WD,hybrid,25.2,0.657,1626900,80000,0,0
 combustion,Suzuki,Lapin "HYBRID L" 2WD,hybrid,27.3,0.657,1601600,80000,0,0
@@ -677,10 +681,12 @@ combustion,Suzuki,Spacia Custom 4WD HYBRID GS,gasoline,21.5,0,1930000,80000,0,0
 combustion,Suzuki,Spacia Custom 4WD HYBRID XS,gasoline,21.5,0,2110000,80000,0,0
 combustion,Suzuki,Spacia Gear X,gasoline,22,0,1950000,80000,0,0
 combustion,Suzuki,Spacia Gear G,gasoline,22,0,2120000,80000,0,0
-combustion,Suzuki,Jimny X,gasoline,19,0,1920000,85000,0,0
-combustion,Suzuki,Jimny G,gasoline,19,0,2080000,85000,0,0
-combustion,Suzuki,Every Wagon X,gasoline,21,0,1840000,80000,0,0
-combustion,Suzuki,Every Wagon G,gasoline,21,0,1980000,80000,0,0
+combustion,Suzuki,JIMNY "XG" (5MT),gasoline,16.6,0.658,1918400,85000,0,0
+combustion,Suzuki,JIMNY "XG" (4AT),gasoline,14.3,0.658,1918400,85000,0,0
+combustion,Suzuki,JIMNY "XL" (5MT),gasoline,16.6,0.658,2046000,85000,0,0
+combustion,Suzuki,JIMNY "XL" (4AT),gasoline,14.3,0.658,2046000,85000,0,0
+combustion,Suzuki,JIMNY "XC" (5MT),gasoline,16.6,0.658,2160400,85000,0,0
+combustion,Suzuki,JIMNY "XC" (4AT),gasoline,14.3,0.658,2160400,85000,0,0
 combustion,Suzuki,Swift X,gasoline,20.5,0,1730000,100000,0,0
 combustion,Suzuki,Swift G,gasoline,20.5,0,1930000,100000,0,0
 combustion,Suzuki,Solio X,gasoline,21,0,1930000,105000,0,0
