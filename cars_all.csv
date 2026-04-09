@@ -623,20 +623,50 @@ combustion,Mazda,ROADSTAR RF "VS",gasoline,15.2,1.997,4182200,110000,0,0
 combustion,Mazda,ROADSTAR RF "RS" 6MT,gasoline,15.8,1.997,4308700,110000,0,0
 combustion,Mazda,MAZDA SPILIT RACING ROADSTAR,gasoline,15.2,1.997,45265700,110000,0,0
 combustion,Mazda,MAZDA SPILIT RACING ROADSTAR 12R,gasoline,15.0,1.997,7612000,110000,0,0
-combustion,Suzuki,Alto X,gasoline,25.2,0,1140000,80000,0,0
-combustion,Suzuki,Alto G,gasoline,25.2,0,1280000,80000,0,0
-combustion,Suzuki,Lapin X,gasoline,24,0,1510000,80000,0,0
-combustion,Suzuki,Lapin G,gasoline,24,0,1640000,80000,0,0
-combustion,Suzuki,Lapin LC X,gasoline,23.5,0,1640000,80000,0,0
-combustion,Suzuki,Lapin LC G,gasoline,23.5,0,1780000,80000,0,0
-combustion,Suzuki,Wagon R X,gasoline,23.5,0,1430000,80000,0,0
-combustion,Suzuki,Wagon R G,gasoline,23.5,0,1560000,80000,0,0
-combustion,Suzuki,Wagon R Smile X,gasoline,23,0,1490000,80000,0,0
-combustion,Suzuki,Wagon R Smile G,gasoline,23,0,1640000,80000,0,0
-combustion,Suzuki,Hustler X,gasoline,22.2,0,1520000,80000,0,0
-combustion,Suzuki,Hustler G,gasoline,22.2,0,1640000,80000,0,0
-combustion,Suzuki,Hustler Tough Wild X,gasoline,21.5,0,1760000,80000,0,0
-combustion,Suzuki,Hustler Tough Wild G,gasoline,21.5,0,1880000,80000,0,0
+combustion,Suzuki,ALTO "A" 2WD,gasoline,25.8,0.658,1142900,80000,0,0
+combustion,Suzuki,ALTO "A" 4WD,gasoline,23.8,0.658,1274900,80000,0,0
+combustion,Suzuki,ALTO "L" 2WD,gasoline,25.8,0.658,1197900,80000,0,0
+combustion,Suzuki,ALTO "L" 4WD,gasoline,23.8,0.658,1328800,80000,0,0
+combustion,Suzuki,ALTO "HYBRID S" 2WD,hybrid,28.2,0.657,1301300,80000,0,0
+combustion,Suzuki,ALTO "HYBRID S" 4WD,hybrid,26.2,0.657,1433200,80000,0,0
+combustion,Suzuki,ALTO "HYBRID X" 2WD,hybrid,28.2,0.657,1469600,80000,0,0
+combustion,Suzuki,ALTO "HYBRID X" 4WD,hybrid,26.2,0.657,1589500,80000,0,0
+combustion,Suzuki,Lapin "HYBRID G" 2WD,hybrid,27.3,0.657,1514700,80000,0,0
+combustion,Suzuki,Lapin "HYBRID G" 4WD,hybrid,25.2,0.657,1626900,80000,0,0
+combustion,Suzuki,Lapin "HYBRID L" 2WD,hybrid,27.3,0.657,1601600,80000,0,0
+combustion,Suzuki,Lapin "HYBRID L" 4WD,hybrid,25.2,0.657,1706100,80000,0,0
+combustion,Suzuki,Lapin "HYBRID X" 2WD,hybrid,27.3,0.657,1717100,80000,0,0
+combustion,Suzuki,Lapin "HYBRID X" 4WD,hybrid,25.2,0.657,1818300,80000,0,0
+combustion,Suzuki,Lapin LC "HYBRID L" 2WD,hybrid,27.3,0.657,1644500,80000,0,0
+combustion,Suzuki,Lapin LC "HYBRID L" 4WD,hybrid,25.2,0.657,1749000,80000,0,0
+combustion,Suzuki,Lapin LC "HYBRID X" 2WD,hybrid,27.3,0.657,1767700,80000,0,0
+combustion,Suzuki,Lapin LC "HYBRID X" 4WD,hybrid,25.2,0.657,1868900,80000,0,0
+combustion,Suzuki,WAGON R "ZL" (5MT) 2WD,gasoline,25.1,0.657,1430000,80000,0,0
+combustion,Suzuki,WAGON R "ZL" (5MT) 4WD,gasoline,22.8,0.657,1553200,80000,0,0
+combustion,Suzuki,WAGON R "ZL" 2WD,gasoline,24.2,0.657,1430000,80000,0,0
+combustion,Suzuki,WAGON R "ZL" 4WD,gasoline,22.6,0.657,1553200,80000,0,0
+combustion,Suzuki,WAGON R "HYBRID ZX" 2WD,hybrid,25.1,0.657,1709400,80000,0,0
+combustion,Suzuki,WAGON R "HYBRID ZX" 4WD,hybrid,23.5,0.657,1829300,80000,0,0
+combustion,Suzuki,WAGON R SMILE "G" 2WD,gasoline,23.9,0.657,1489400,80000,0,0
+combustion,Suzuki,WAGON R SMILE "G" 4WD,gasoline,22.5,0.657,1612600,80000,0,0
+combustion,Suzuki,WAGON R SMILE "HYBRID S" 2WD,hybrid,25.1,0.657,1717100,80000,0,0
+combustion,Suzuki,WAGON R SMILE "HYBRID S" 4WD,hybrid,23.6,0.657,1840300,80000,0,0
+combustion,Suzuki,WAGON R SMILE "HYBRID X" 2WD,hybrid,25.1,0.657,1815000,80000,0,0
+combustion,Suzuki,WAGON R SMILE "HYBRID X" 4WD,hybrid,23.6,0.657,1934900,80000,0,0
+combustion,Suzuki,WAGON R SMILE "Creme Coordinate HYBRID X" 2WD,hybrid,25.1,0.657,1864500,80000,0,0
+combustion,Suzuki,WAGON R SMILE "Creme Coordinate HYBRID X" 4WD,hybrid,23.6,0.657,1984400,80000,0,0
+combustion,Suzuki,HUSTLER "HYBRID G" 2WD,hybrid,25.0,0.657,1518000,80000,0,0
+combustion,Suzuki,HUSTLER "HYBRID G" 4WD,hybrid,23.4,0.657,1652200,80000,0,0
+combustion,Suzuki,HUSTLER "HYBRID G TURBO" 2WD,hybrid,22.6,0.658,1596100,80000,0,0
+combustion,Suzuki,HUSTLER "HYBRID G TURBO" 4WD,hybrid,20.8,0.658,1730300,80000,0,0
+combustion,Suzuki,HUSTLER "HYBRID X" 2WD,hybrid,25.0,0.657,1672000,80000,0,0
+combustion,Suzuki,HUSTLER "HYBRID X" 4WD,hybrid,23.4,0.657,18062000,80000,0,0
+combustion,Suzuki,HUSTLER "HYBRID X TURBO" 2WD,hybrid,22.6,0.658,1750100,80000,0,0
+combustion,Suzuki,HUSTLER "HYBRID X TURBO" 4WD,hybrid,20.8,0.658,1884300,80000,0,0
+combustion,Suzuki,HUSTLER TOUGH WILD 2WD,hybrid,25.0,0.657,1760000,80000,0,0
+combustion,Suzuki,HUSTLER TOUGH WILD 4WD,hybrid,23.4,0.657,1894200,80000,0,0
+combustion,Suzuki,HUSTLER TOUGH WILD TURBO 2WD,hybrid,22.6,0.658,1838100,80000,0,0
+combustion,Suzuki,HUSTLER TOUGH WILD TURBO 4WD,hybrid,20.8,0.658,1972300,80000,0,0
 combustion,Suzuki,Spacia HYBRID G,gasoline,23.8,0,1530000,80000,0,0
 combustion,Suzuki,Spacia HYBRID X,gasoline,23.8,0,1710000,80000,0,0
 combustion,Suzuki,Spacia 4WD HYBRID G,gasoline,22.5,0,1660000,80000,0,0

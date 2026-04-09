@@ -27,7 +27,7 @@ export default function SimulatorIntro({ onSelectGasoline, onSelectPlugin }) {
               <span className="sim-intro-hero-catch-line">条件で試せる。</span>
             </p>
             <p className="sim-intro-hero-lead">
-              ガソリン車・HEVと、BEV・PHEV・燃料電池で画面を分けています。<br />
+              ガソリン車・HEVと、BEV・PHEV・FCVで画面を分けています。<br />
               車種データのCSVも区分ごとにインポートできます。
             </p>
             <div className="sim-intro-hero-cta-row">
