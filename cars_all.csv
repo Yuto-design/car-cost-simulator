@@ -685,6 +685,10 @@ combustion,Suzuki,SPACIA GEAR "HYBRID XZ" 2WD,hybrid,23.9,0.657,1952500,80000,0,
 combustion,Suzuki,SPACIA GEAR "HYBRID XZ" 4WD,hybrid,22.4,0.657,2072400,80000,0,0
 combustion,Suzuki,SPACIA GEAR "HYBRID XZ TURBO" 2WD,hybrid,21.9,0.658,2037200,80000,0,0
 combustion,Suzuki,SPACIA GEAR "HYBRID XZ TURBO" 4WD,hybrid,19.8,0.658,2157100,80000,0,0
+combustion,Suzuki,SPASIA BASE "GF" 2WD,gasoline,21.2,0.658,1471800,80000,0,0
+combustion,Suzuki,SPASIA BASE "GF" 4WD,gasoline,19.9,0.658,1595000,80000,0,0
+combustion,Suzuki,SPASIA BASE "XF" 2WD,gasoline,21.2,0.658,1624700,80000,0,0
+combustion,Suzuki,SPASIA BASE "XF" 4WD,gasoline,19.9,0.658,1746600,80000,0,0
 combustion,Suzuki,JIMNY "XG" (5MT),gasoline,16.6,0.658,1918400,85000,0,0
 combustion,Suzuki,JIMNY "XG" (4AT),gasoline,14.3,0.658,1918400,85000,0,0
 combustion,Suzuki,JIMNY "XL" (5MT),gasoline,16.6,0.658,2046000,85000,0,0
@@ -716,19 +720,42 @@ combustion,Suzuki,XBEE "HYBRID MX" 2WD,hybrid,22.8,1.197,2157100,105000,0,0
 combustion,Suzuki,XBEE "HYBRID MX" 4WD,hybrid,21.0,1.197,2333100,105000,0,0
 combustion,Suzuki,XBEE "HYBRID MZ" 2WD,hybrid,22.8,1.197,2335300,105000,0,0
 combustion,Suzuki,XBEE "HYBRID MZ" 4WD,hybrid,21.0,1.197,2500300,105000,0,0
-combustion,Suzuki,FRONX 2WD,hybrid,19.0,1.460,2540000,110000,0,0
-combustion,Suzuki,FRONX 4WD,hybrid,17/8,1.460,2540000,110000,0,0
-combustion,Suzuki,e-Vitara X,gasoline,0,0,3990000,80000,0,0
-combustion,Suzuki,e-Vitara G,gasoline,0,0,4490000,80000,0,0
-combustion,Suzuki,Every X,gasoline,21,0,1140000,80000,0,0
-combustion,Suzuki,Every G,gasoline,21,0,1280000,80000,0,0
-combustion,Suzuki,Carry X,gasoline,19,0,1170000,80000,0,0
-combustion,Suzuki,Carry G,gasoline,19,0,1320000,80000,0,0
-combustion,Suzuki,Super Carry X,gasoline,18.5,0,1290000,80000,0,0
-combustion,Suzuki,Super Carry G,gasoline,18.5,0,1450000,80000,0,0
-combustion,Suzuki,Spacia Base X,gasoline,21.5,0,1470000,80000,0,0
-combustion,Suzuki,Spacia Base G,gasoline,21.5,0,1620000,80000,0,0
-combustion,Suzuki,e-Every,gasoline,0,0,3150000,80000,0,0
+combustion,Suzuki,FRONX 2WD,hybrid,19.0,1.460,2541000,110000,0,0
+combustion,Suzuki,FRONX 4WD,hybrid,17/8,1.460,2739000,110000,0,0
+combustion,Suzuki,EVERY "PA" (5MT) 2WD,gasoline,17.2,0.658,1197900,80000,0,0
+combustion,Suzuki,EVERY "PA" (4AT) 2WD,gasoline,14.6,0.658,1267200,80000,0,0
+combustion,Suzuki,EVERY "PA" (5MT) 4WD,gasoline,16.9,0.658,1329900,80000,0,0
+combustion,Suzuki,EVERY "PA" (4AT) 4WD,gasoline,14.6,0.658,1399200,80000,0,0
+combustion,Suzuki,EVERY "PA LIMITED" (5MT) 2WD,gasoline,17.2,0.658,1233100,80000,0,0
+combustion,Suzuki,EVERY "PA LIMITED" 2WD,gasoline,16.4,0.658,1324400,80000,0,0
+combustion,Suzuki,EVERY "PA LIMNITED" (5MT) 4WD,gasoline,16.9,0.658,1365100,80000,0,0
+combustion,Suzuki,EVERY "PA LIMITED" 4WD,gasoline,16.4,0.658,1478400,80000,0,0
+combustion,Suzuki,EVERY "PC" (5MT) 2WD,gasoline,17.2,0.658,1393700,80000,0,0
+combustion,Suzuki,EVERY "PC" 2WD,gasoline,16.4,0.658,1485000,80000,0,0
+combustion,Suzuki,EVERY "PC" (5MT) 4WD,gasoline,16.9,0.658,1525700,80000,0,0
+combustion,Suzuki,EVERY "PC" 4WD,gasoline,16.4,0.658,1639000,80000,0,0
+combustion,Suzuki,EVERY "JOIN" (5MT) 2WD,gasoline,17.2,0.658,1431100,80000,0,0
+combustion,Suzuki,EVERY "JOIN" 2WD,gasoline,16.4,0.658,1544400,80000,0,0
+combustion,Suzuki,EVERY "JOIN" (5MT) 4WD,gasoline,16.9,0.658,1563100,80000,0,0
+combustion,Suzuki,EVERY "JOIN" 4WD,gasoline,16.4,0.658,1698400,80000,0,0
+combustion,Suzuki,EVERY "JOIN TURBO" 2WD,gasoline,15.1,0.658,1665400,80000,0,0
+combustion,Suzuki,EVERY "JOIN TURBO" 4WD,gasoline,15.1,0.658,1819400,80000,0,0
+combustion,Suzuki,CARRY "KC" (5MT) 2WD,gasoline,18.7,0.658,1172600,80000,0,0
+combustion,Suzuki,CARRY "KC" (4AT) 2WD,gasoline,15.7,0.658,1249600,80000,0,0
+combustion,Suzuki,CARRY "KC" (5MT) 4WD,gasoline,18.7,0.658,1324400,80000,0,0
+combustion,Suzuki,CARRY "KC" (4AT) 4WD,gasoline,15.7,0.658,1401400,80000,0,0
+combustion,Suzuki,CARRY "KX" (5MT) 2WD,gasoline,18.7,0.658,1350800,80000,0,0
+combustion,Suzuki,CARRY "KX" (4AT) 2WD,gasoline,15.7,0.658,1427800,80000,0,0
+combustion,Suzuki,CARRY "KX" (5MT) 4WD,gasoline,18.7,0.658,1504800,80000,0,0
+combustion,Suzuki,CARRY "KX" (4AT) 4WD,gasoline,15.7,0.658,1581800,80000,0,0
+combustion,Suzuki,SUPER CARRY "L" (5MT) 2WD,gasoline,17.9,0.658,1291400,80000,0,0
+combustion,Suzuki,SUPER CARRY "L" (4AT) 2WD,gasoline,15.4,0.658,1368400,80000,0,0
+combustion,Suzuki,SUPER CARRY "L" (5MT) 4WD,gasoline,17.9,0.658,1443200,80000,0,0
+combustion,Suzuki,SUPER CARRY "L" (4AT) 4WD,gasoline,15.4,0.658,1520200,80000,0,0
+combustion,Suzuki,SUPER CARRY "X" (5MT) 2WD,gasoline,17.9,0.658,1459700,80000,0,0
+combustion,Suzuki,SUPER CARRY "X" (4AT) 2WD,gasoline,15.4,0.658,1536700,80000,0,0
+combustion,Suzuki,SUPER CARRY "X" (5MT) 4WD,gasoline,17.9,0.658,1613700,80000,0,0
+combustion,Suzuki,SUPER CARRY "X" (4AT) 4WD,gasoline,15.4,0.658,1690700,80000,0,0
 combustion,Subaru,Pleo Plus X,gasoline,22.5,0,1040000,80000,0,0
 combustion,Subaru,Pleo Plus G,gasoline,22.5,0,1180000,80000,0,0
 combustion,Subaru,Stella X,gasoline,20,0,1360000,80000,0,0
@@ -845,9 +872,11 @@ electric,Mazda,MX-30 ROTARY-EV,phev,15.4,0.830,4356000,80000,176,0
 electric,Mazda,MX-30 ROTARY-EV "Modern Confidence",phev,15.4,0.830,49906000,80000,176,0
 electric,Mazda,MX-30 ROTARY-EV "Natural Monotone",phev,15.4,0.830,4906000,80000,176,0
 electric,Mazda,MX-30 ROTARY-EV "Retro Sports Edition",phev,15.4,0.830,4942300,80000,176,0
-electric,Suzuki,e-Vitara X,bev,0,0,3990000,80000,153.85,0
-electric,Suzuki,e-Vitara G,bev,0,0,4490000,80000,153.85,0
-electric,Suzuki,e-Every,bev,0,0,3150000,80000,153.85,0
+electric,Suzuki,e-VITARA "X",bev,0,0,3993000,80000,124,0
+electric,Suzuki,e-VITARA "Z" 2WD,bev,0,0,4488000,80000,131,0
+electric,Suzuki,e-VITARA "Z" 4WD,bev,0,0,4928000,80000,144,0
+electric,Suzuki,e-EVERY "2 seater",bev,0,0,3146000,80000,161,0
+electric,Suzuki,e-EVERY "5 seater",bev,0,0,3234000,80000,161,0
 electric,Mitsubishi,eK Cross EV X,bev,0,0,2570000,80000,153.85,0
 electric,Mitsubishi,eK Cross EV G,bev,0,0,2770000,80000,153.85,0
 electric,Mitsubishi,Eclipse Cross PHEV X,phev,16.5,0,4090000,110000,172.41,0
