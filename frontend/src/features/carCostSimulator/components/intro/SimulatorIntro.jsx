@@ -28,7 +28,7 @@ export default function SimulatorIntro({ onSelectGasoline, onSelectPlugin }) {
             </p>
             <p className="sim-intro-hero-lead">
               ガソリン車・HEVと、BEV・PHEV・FCVで画面を分けています。<br />
-              車種データのCSVも区分ごとにインポートできます。
+              車種データは統合CSV（cars_all.csv）をエクスポート・インポートでき、区分は先頭列の segment で区別します。
             </p>
             <div className="sim-intro-hero-cta-row">
               <button type="button" className="sim-intro-hero-cta" onClick={onSelectGasoline}>
@@ -52,7 +52,7 @@ export default function SimulatorIntro({ onSelectGasoline, onSelectPlugin }) {
               </li>
               <li className="sim-intro-hero-aside-item">
                 <i className="fa-solid fa-file-csv sim-intro-hero-aside-icon" />
-                <span>区分別CSV</span>
+                <span>統合CSV</span>
               </li>
               <li className="sim-intro-hero-aside-item">
                 <i className="fa-solid fa-code-compare sim-intro-hero-aside-icon" />
@@ -103,8 +103,10 @@ export default function SimulatorIntro({ onSelectGasoline, onSelectPlugin }) {
               3
             </span>
             <span className="sim-intro-feature-text">
-              <span className="sim-intro-feature-label">区分別CSVで入出力</span>
-              ガソリン/HEV用とプラグイン系用のCSVをそれぞれエクスポート・インポートできます。
+              <span className="sim-intro-feature-label">統合CSVで入出力</span>
+              入力画面から cars_all.csv をダウンロード・インポートできます。
+              <br />
+              ガソリン/HEV とプラグイン系は、segment 列（combustion / electric）で区別します。
             </span>
           </li>
           <li className="sim-intro-feature">
@@ -113,7 +115,7 @@ export default function SimulatorIntro({ onSelectGasoline, onSelectPlugin }) {
             </span>
             <span className="sim-intro-feature-text">
               <span className="sim-intro-feature-label">比較で横並びチェック</span>
-              複数の試算を一覧にため、条件や金額の違いを一度に見比べられます。
+              複数の試算を比較一覧に溜め、条件や金額の違いを一度に見比べられます。
             </span>
           </li>
         </ul>
@@ -150,7 +152,7 @@ export default function SimulatorIntro({ onSelectGasoline, onSelectPlugin }) {
                 <i className="fa-solid fa-calculator sim-intro-howto-icon" />
               </span>
               <div className="sim-intro-howto-step-body">
-                <span className="sim-intro-howto-step-label">「計算する」を押す</span>
+                <span className="sim-intro-howto-step-label">「計算」を押す</span>
                 <span className="sim-intro-howto-step-text">
                   ボタン一つで年間・月間の維持費と、区分に合ったコスト内訳が求められます。
                 </span>
@@ -163,7 +165,7 @@ export default function SimulatorIntro({ onSelectGasoline, onSelectPlugin }) {
               <div className="sim-intro-howto-step-body">
                 <span className="sim-intro-howto-step-label">結果を確認する</span>
                 <span className="sim-intro-howto-step-text">
-                  円グラフと一覧でコストの偏りを把握。必要なら結果を CSV でダウンロードして保存・共有できます。
+                  円グラフと一覧でコストの偏りを把握できます。
                 </span>
               </div>
             </li>
