@@ -39,6 +39,27 @@ export default function SimulatorIntro({ onSelectGasoline, onSelectPlugin }) {
               </button>
             </div>
           </div>
+          <aside className="sim-intro-hero-aside" aria-hidden="true">
+            <p className="sim-intro-hero-aside-label">できること</p>
+            <ul className="sim-intro-hero-aside-list">
+              <li className="sim-intro-hero-aside-item">
+                <i className="fa-solid fa-car sim-intro-hero-aside-icon" />
+                <span>車種から自動入力</span>
+              </li>
+              <li className="sim-intro-hero-aside-item">
+                <i className="fa-solid fa-chart-pie sim-intro-hero-aside-icon" />
+                <span>内訳で可視化</span>
+              </li>
+              <li className="sim-intro-hero-aside-item">
+                <i className="fa-solid fa-file-csv sim-intro-hero-aside-icon" />
+                <span>区分別CSV</span>
+              </li>
+              <li className="sim-intro-hero-aside-item">
+                <i className="fa-solid fa-code-compare sim-intro-hero-aside-icon" />
+                <span>試算の比較</span>
+              </li>
+            </ul>
+          </aside>
         </div>
       </div>
 
