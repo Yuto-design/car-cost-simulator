@@ -671,38 +671,53 @@ combustion,Suzuki,HUSTLER TOUGH WILD 2WD,hybrid,25.0,0.657,1760000,80000,0,0
 combustion,Suzuki,HUSTLER TOUGH WILD 4WD,hybrid,23.4,0.657,1894200,80000,0,0
 combustion,Suzuki,HUSTLER TOUGH WILD TURBO 2WD,hybrid,22.6,0.658,1838100,80000,0,0
 combustion,Suzuki,HUSTLER TOUGH WILD TURBO 4WD,hybrid,20.8,0.658,1972300,80000,0,0
-combustion,Suzuki,Spacia HYBRID G,gasoline,23.8,0,1530000,80000,0,0
-combustion,Suzuki,Spacia HYBRID X,gasoline,23.8,0,1710000,80000,0,0
-combustion,Suzuki,Spacia 4WD HYBRID G,gasoline,22.5,0,1660000,80000,0,0
-combustion,Suzuki,Spacia 4WD HYBRID X,gasoline,22.5,0,1820000,80000,0,0
-combustion,Suzuki,Spacia Custom HYBRID GS,gasoline,22.5,0,1800000,80000,0,0
-combustion,Suzuki,Spacia Custom HYBRID XS,gasoline,22.5,0,1980000,80000,0,0
-combustion,Suzuki,Spacia Custom 4WD HYBRID GS,gasoline,21.5,0,1930000,80000,0,0
-combustion,Suzuki,Spacia Custom 4WD HYBRID XS,gasoline,21.5,0,2110000,80000,0,0
-combustion,Suzuki,Spacia Gear X,gasoline,22,0,1950000,80000,0,0
-combustion,Suzuki,Spacia Gear G,gasoline,22,0,2120000,80000,0,0
+combustion,Suzuki,SPACIA "HYBRID G" 2WD,hybrid,23.9,0.657,1530100,80000,0,0
+combustion,Suzuki,SPACIA "HYBRID G" 4WD,hybrid,22.4,0.657,1656600,80000,0,0
+combustion,Suzuki,SPACIA "HYBRID X" 2WD,hybrid,23.9,0.657,1705000,80000,0,0
+combustion,Suzuki,SPACIA "HYBRID X" 4WD,hybrid,22.4,0.657,1824900,80000,0,0
+combustion,Suzuki,SPACIA CUSTOM "HYBRID GS" 2WD,hybrid,23.9,0.657,1801800,80000,0,0
+combustion,Suzuki,SPACIA CUSTOM "HYBRID GS" 4WD,hybrid,22.4,0.657,1925000,80000,0,0
+combustion,Suzuki,SPACIA CUSTOM "HYBRID XS" 2WD,hybrid,23.9,0.657,1995400,80000,0,0
+combustion,Suzuki,SPACIA CUSTOM "HYBRID XS" 4WD,hybrid,22.4,0.657,2115300,80000,0,0
+combustion,Suzuki,SPACIA CUSTOM "HYBRID XS TURBO" 2WD,hybrid,21.9,0.658,2073500,80000,0,0
+combustion,Suzuki,SPACIA CUSTOM "HYBRID XS TURBO" 4WD,hybrid,19.8,0.658,21934                                                                                         00,80000,0,0
+combustion,Suzuki,SPACIA GEAR "HYBRID XZ" 2WD,hybrid,23.9,0.657,1952500,80000,0,0
+combustion,Suzuki,SPACIA GEAR "HYBRID XZ" 4WD,hybrid,22.4,0.657,2072400,80000,0,0
+combustion,Suzuki,SPACIA GEAR "HYBRID XZ TURBO" 2WD,hybrid,21.9,0.658,2037200,80000,0,0
+combustion,Suzuki,SPACIA GEAR "HYBRID XZ TURBO" 4WD,hybrid,19.8,0.658,2157100,80000,0,0
 combustion,Suzuki,JIMNY "XG" (5MT),gasoline,16.6,0.658,1918400,85000,0,0
 combustion,Suzuki,JIMNY "XG" (4AT),gasoline,14.3,0.658,1918400,85000,0,0
 combustion,Suzuki,JIMNY "XL" (5MT),gasoline,16.6,0.658,2046000,85000,0,0
 combustion,Suzuki,JIMNY "XL" (4AT),gasoline,14.3,0.658,2046000,85000,0,0
 combustion,Suzuki,JIMNY "XC" (5MT),gasoline,16.6,0.658,2160400,85000,0,0
 combustion,Suzuki,JIMNY "XC" (4AT),gasoline,14.3,0.658,2160400,85000,0,0
-combustion,Suzuki,Swift X,gasoline,20.5,0,1730000,100000,0,0
-combustion,Suzuki,Swift G,gasoline,20.5,0,1930000,100000,0,0
-combustion,Suzuki,Solio X,gasoline,21,0,1930000,105000,0,0
-combustion,Suzuki,Solio G,gasoline,21,0,2130000,105000,0,0
-combustion,Suzuki,Solio Bandit X,gasoline,19.5,0,2300000,105000,0,0
-combustion,Suzuki,Solio Bandit G,gasoline,19.5,0,2500000,105000,0,0
-combustion,Suzuki,Xbee X,gasoline,21.5,0,2160000,105000,0,0
-combustion,Suzuki,Xbee G,gasoline,21.5,0,2360000,105000,0,0
-combustion,Suzuki,Fronx X,gasoline,19.5,0,2540000,110000,0,0
-combustion,Suzuki,Fronx G,gasoline,19.5,0,2840000,110000,0,0
-combustion,Suzuki,Jimny Sierra X,gasoline,16.5,0,2270000,100000,0,0
-combustion,Suzuki,Jimny Sierra G,gasoline,16.5,0,2570000,100000,0,0
-combustion,Suzuki,Jimny Nomad X,gasoline,15.5,0,2930000,105000,0,0
-combustion,Suzuki,Jimny Nomad G,gasoline,15.5,0,3230000,105000,0,0
-combustion,Suzuki,Landy X,gasoline,14.5,0,3230000,115000,0,0
-combustion,Suzuki,Landy G,gasoline,14.5,0,3630000,115000,0,0
+combustion,Suzuki,JIMNY SIERRA "JL" (5MT),gasoline,15.4,1.460,2271500,80000,0,0
+combustion,Suzuki,JIMNY SIERRA "JL" (4AT),gasoline,14.2,1.460,2271500,80000,0,0
+combustion,Suzuki,JIMNY SIERRA "JC" (5MT),gasoline,15.4,1.460,2385900,80000,0,0
+combustion,Suzuki,JIMNY SIERRA "JC" (4AT),gasoline,14.2,1.460,2385900,80000,0,0
+combustion,Suzuki,JIMNY NOMADE "FC" (5MT),gasoline,14.9,1.460,2926000,80000,0,0
+combustion,Suzuki,JIMNY NOMADE "FC" (4AT),gasoline,13.6,1.460,2926000,80000,0,0
+combustion,Suzuki,SWIFT "XG" 2WD,gasoline,23.4,1.197,1727000,100000,0,0
+combustion,Suzuki,SWIFT "XG" 4WD,gasoline,22.0,1.197,1892000,100000,0,0
+combustion,Suzuki,SWIFT "HYBRID MX" (5MT) 2WD,hybrid,25.4,1.197,1922800,100000,0,0
+combustion,Suzuki,SWIFT "HYBRID MX" 2WD,hybrid,24.5,1.197,1922800,100000,0,0
+combustion,Suzuki,SWIFT "HYBRID MX" 4WD,hybrid,22.7,1.197,2087800,100000,0,0
+combustion,Suzuki,SWIFT "HYBRID MZ" 2WD,hybrid,24.5,1.197,2167000,100000,0,0
+combustion,Suzuki,SWIFT "HYBRID MZ" 4WD,hybrid,22.7,1.197,2332000,100000,0,0
+combustion,Suzuki,SOLIO "HYBRID MG" 2WD,hybrid,22.0,1.197,1926100,105000,0,0
+combustion,Suzuki,SOLIO "HYBRID MG" 4WD,hybrid,20.7,1.197,2051500,105000,0,0
+combustion,Suzuki,SOLIO "HYBRID MX" 2WD,hybrid,22.0,1.197,2051500,105000,0,0
+combustion,Suzuki,SOLIO "HYBRID MX" 4WD,hybrid,20.7,1.197,2271500,105000,0,0
+combustion,Suzuki,SOLIO "HYBRID MZ" 2WD,hybrid,22.0,1.197,2248400,105000,0,0
+combustion,Suzuki,SOLIO "HYBRID MZ" 4WD,hybrid,20.7,1.197,2593800,105000,0,0
+combustion,Suzuki,SOLIO BANDIT "HYBRID MV" 2WD,hybrid,22.0,1.197,2303400,105000,0,0
+combustion,Suzuki,SOLIO BANDIT "HYBRID MV" 4WD,hybrid,20.7,1.197,2648800,105000,0,0
+combustion,Suzuki,XBEE "HYBRID MX" 2WD,hybrid,22.8,1.197,2157100,105000,0,0
+combustion,Suzuki,XBEE "HYBRID MX" 4WD,hybrid,21.0,1.197,2333100,105000,0,0
+combustion,Suzuki,XBEE "HYBRID MZ" 2WD,hybrid,22.8,1.197,2335300,105000,0,0
+combustion,Suzuki,XBEE "HYBRID MZ" 4WD,hybrid,21.0,1.197,2500300,105000,0,0
+combustion,Suzuki,FRONX 2WD,hybrid,19.0,1.460,2540000,110000,0,0
+combustion,Suzuki,FRONX 4WD,hybrid,17/8,1.460,2540000,110000,0,0
 combustion,Suzuki,e-Vitara X,gasoline,0,0,3990000,80000,0,0
 combustion,Suzuki,e-Vitara G,gasoline,0,0,4490000,80000,0,0
 combustion,Suzuki,Every X,gasoline,21,0,1140000,80000,0,0
