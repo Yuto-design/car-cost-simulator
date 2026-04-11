@@ -756,12 +756,30 @@ combustion,Suzuki,SUPER CARRY "X" (5MT) 2WD,gasoline,17.9,0.658,1459700,80000,0,
 combustion,Suzuki,SUPER CARRY "X" (4AT) 2WD,gasoline,15.4,0.658,1536700,80000,0,0
 combustion,Suzuki,SUPER CARRY "X" (5MT) 4WD,gasoline,17.9,0.658,1613700,80000,0,0
 combustion,Suzuki,SUPER CARRY "X" (4AT) 4WD,gasoline,15.4,0.658,1690700,80000,0,0
-combustion,Subaru,Rex L,gasoline,22,0,1910000,100000,0,0
 combustion,Subaru,Impreza 2.0i,gasoline,17.5,0,2740000,105000,0,0
 combustion,Subaru,Levorg 1.8 GT-H,gasoline,14.5,0,3630000,115000,0,0
-combustion,Subaru,Crosstrek L,gasoline,20,0,3010000,110000,0,0
-combustion,Subaru,Forester X,gasoline,15.8,0,2990000,115000,0,0
-combustion,Subaru,Solterra X,gasoline,5.8,0,5170000,95000,0,0
+combustion,Subaru,REX "G" 2WD,gasoline,24.6,1.196,1910700,100000,0,0
+combustion,Subaru,REX "G" 4WD,gasoline,21.2,0.996,2187900,100000,0,0
+combustion,Subaru,REX "Z" 2WD,gasoline,23.6,1.196,2274500,100000,0,0
+combustion,Subaru,REX "Z" 4WD,gasoline,21.2,0.996,2511300,100000,0,0
+combustion,Subaru,REX "G HYBRID",hybrid,34.4,1.196,2216500,100000,0,0
+combustion,Subaru,REX "Z HYBRID",hybrid,34.8,1.196,2608100,100000,0,0
+combustion,Subaru,CROSSTREK "Premium S:HEV EX",hybrid,22.7,2.498,4053500,110000,0,0
+combustion,Subaru,CROSSTREK "Premium S:HEV",hybrid,22.7,2.498,3833500,110000,0,0
+combustion,Subaru,CROSSTREK "Limited Style Edition" FWD,hybrid,19.3,1.995,3355000,110000,0,0
+combustion,Subaru,CROSSTREK "Limited Style Edition" AWD,hybrid,18.8,1.995,35695000,110000,0,0
+combustion,Subaru,CROSSTREK "Limited" FWD,hybrid,19.3,1.995,3234000,110000,0,0
+combustion,Subaru,CROSSTREK "Limited" AWD,hybrid,18.8,1.995,34485000,110000,0,0
+combustion,Subaru,CROSSTREK "Touring" FWD,hybrid,19.3,1.995,3014000,110000,0,0
+combustion,Subaru,CROSSTREK "Touring" AWD,hybrid,18.8,1.995,3234000,110000,0,0
+combustion,Subaru,LAYBACK "Black Selection",gasoline,16.5,1.795,4246000,115000,0,0
+combustion,Subaru,LAYBACK "Limited EX",gasoline,16.5,1.795,3993000,115000,0,0
+combustion,Subaru,FORESTER "SPORT EX",gasoline,15.5,1.795,4191000,115000,0,0
+combustion,Subaru,FORESTER "SPORT",gasoline,15.5,1.795,4048000,115000,0,0
+combustion,Subaru,FORESTER "X-BREAK S:HEV EX",hybrid,21.9,2.498,4477000,115000,0,0
+combustion,Subaru,FORESTER "X-BREAK S:HEV",hybrid,21.9,2.498,4202000,115000,0,0
+combustion,Subaru,FORESTER "Premium S:HEV EX",hybrid,21.1,2.498,4598000,115000,0,0
+combustion,Subaru,FORESTER "Premium S:HEV",hybrid,21.1,2.498,4488000,115000,0,0
 combustion,Subaru,WRX S4 GT,gasoline,10.5,0,4480000,130000,0,0
 combustion,Subaru,BRZ R,gasoline,12.5,0,3320000,120000,0,0
 combustion,Subaru,Justy X,gasoline,20.5,0,2170000,95000,0,0
@@ -846,6 +864,12 @@ electric,Suzuki,e-VITARA "Z" 2WD,bev,0,0,4488000,80000,131,0
 electric,Suzuki,e-VITARA "Z" 4WD,bev,0,0,4928000,80000,144,0
 electric,Suzuki,e-EVERY "2 seater",bev,0,0,3146000,80000,161,0
 electric,Suzuki,e-EVERY "5 seater",bev,0,0,3234000,80000,161,0
+combustion,Subaru,SOLTERRA "ET-SS" FWD,bev,0,0,5170000,95000,113,0
+combustion,Subaru,SOLTERRA "ET-SS" AWD,bev,0,0,5610000,95000,121,0
+combustion,Subaru,SOLTERRA "ET-HS",bev,0,0,6050000,95000,121,0
+combustion,Subaru,TRAILSEEKER "ET-SS" FWD,bev,0,0,5390000,95000,114,0
+combustion,Subaru,TRAILSEEKER "ET-SS" AWD,bev,0,0,5940000,95000,121,0
+combustion,Subaru,TRAILSEEKER "ET-HS",bev,0,0,6380000,95000,121,0
 electric,Mitsubishi,eK Cross EV X,bev,0,0,2570000,80000,153.85,0
 electric,Mitsubishi,eK Cross EV G,bev,0,0,2770000,80000,153.85,0
 electric,Mitsubishi,Eclipse Cross PHEV X,phev,16.5,0,4090000,110000,172.41,0
