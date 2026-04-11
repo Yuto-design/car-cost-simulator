@@ -756,46 +756,15 @@ combustion,Suzuki,SUPER CARRY "X" (5MT) 2WD,gasoline,17.9,0.658,1459700,80000,0,
 combustion,Suzuki,SUPER CARRY "X" (4AT) 2WD,gasoline,15.4,0.658,1536700,80000,0,0
 combustion,Suzuki,SUPER CARRY "X" (5MT) 4WD,gasoline,17.9,0.658,1613700,80000,0,0
 combustion,Suzuki,SUPER CARRY "X" (4AT) 4WD,gasoline,15.4,0.658,1690700,80000,0,0
-combustion,Subaru,Pleo Plus X,gasoline,22.5,0,1040000,80000,0,0
-combustion,Subaru,Pleo Plus G,gasoline,22.5,0,1180000,80000,0,0
-combustion,Subaru,Stella X,gasoline,20,0,1360000,80000,0,0
-combustion,Subaru,Stella G,gasoline,20,0,1520000,80000,0,0
-combustion,Subaru,Chiffon X,gasoline,21.5,0,1490000,80000,0,0
-combustion,Subaru,Chiffon G,gasoline,21.5,0,1690000,80000,0,0
-combustion,Subaru,Chiffon Custom X,gasoline,20.5,0,1890000,80000,0,0
-combustion,Subaru,Chiffon Custom G,gasoline,20.5,0,2090000,80000,0,0
-combustion,Subaru,Chiffon Try X,gasoline,20,0,1830000,80000,0,0
-combustion,Subaru,Chiffon Try G,gasoline,20,0,2030000,80000,0,0
-combustion,Subaru,Dias X,gasoline,18.5,0,1820000,80000,0,0
-combustion,Subaru,Dias G,gasoline,18.5,0,2020000,80000,0,0
-combustion,Subaru,Sambar Van X,gasoline,19,0,1100000,80000,0,0
-combustion,Subaru,Sambar Van G,gasoline,19,0,1250000,80000,0,0
-combustion,Subaru,Sambar Truck X,gasoline,19,0,1030000,80000,0,0
-combustion,Subaru,Sambar Truck G,gasoline,19,0,1180000,80000,0,0
 combustion,Subaru,Rex L,gasoline,22,0,1910000,100000,0,0
-combustion,Subaru,Rex S,gasoline,22,0,2110000,100000,0,0
 combustion,Subaru,Impreza 2.0i,gasoline,17.5,0,2740000,105000,0,0
-combustion,Subaru,Impreza 2.0i-L,gasoline,17.5,0,3040000,105000,0,0
-combustion,Subaru,Impreza ST,gasoline,16.5,0,3510000,110000,0,0
-combustion,Subaru,Impreza ST-H,gasoline,20,0,3720000,110000,0,0
 combustion,Subaru,Levorg 1.8 GT-H,gasoline,14.5,0,3630000,115000,0,0
-combustion,Subaru,Levorg 2.4 GT-H,gasoline,13.2,0,4230000,120000,0,0
-combustion,Subaru,Levorg Layback 1.8,gasoline,14.2,0,3990000,115000,0,0
-combustion,Subaru,Levorg Layback 2.4,gasoline,13,0,4590000,120000,0,0
 combustion,Subaru,Crosstrek L,gasoline,20,0,3010000,110000,0,0
-combustion,Subaru,Crosstrek S,gasoline,20,0,3410000,110000,0,0
 combustion,Subaru,Forester X,gasoline,15.8,0,2990000,115000,0,0
-combustion,Subaru,Forester S,gasoline,15.8,0,3490000,115000,0,0
-combustion,Subaru,Forester tS,gasoline,15.2,0,3990000,115000,0,0
 combustion,Subaru,Solterra X,gasoline,5.8,0,5170000,95000,0,0
-combustion,Subaru,Solterra G,gasoline,5.8,0,5770000,95000,0,0
 combustion,Subaru,WRX S4 GT,gasoline,10.5,0,4480000,130000,0,0
-combustion,Subaru,WRX S4 STI Sport,gasoline,10.2,0,5030000,130000,0,0
 combustion,Subaru,BRZ R,gasoline,12.5,0,3320000,120000,0,0
-combustion,Subaru,BRZ S,gasoline,12.5,0,3720000,120000,0,0
-combustion,Subaru,BRZ STI Sport,gasoline,12.2,0,3780000,120000,0,0
 combustion,Subaru,Justy X,gasoline,20.5,0,2170000,95000,0,0
-combustion,Subaru,Justy G,gasoline,20.5,0,2370000,95000,0,0
 combustion,Mitsubishi,eK Wagon X,gasoline,22.5,0,1470000,80000,0,0
 combustion,Mitsubishi,eK Wagon G,gasoline,22.5,0,1620000,80000,0,0
 combustion,Mitsubishi,eK Space X,gasoline,20.5,0,1750000,80000,0,0

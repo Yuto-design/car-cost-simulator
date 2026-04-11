@@ -120,37 +120,28 @@ function App() {
         },
       }
 
+      const inputProps = {
+        ...inputCommon,
+        fuel,
+        setFuel: (v) => patch({ fuel: v }),
+        gasPrice,
+        setGasPrice: (v) => patch({ gasPrice: v }),
+        price,
+        setPrice: (v) => patch({ price: v }),
+        engine,
+        setEngine: (v) => patch({ engine: v }),
+        onEngineBlur: handleEngineBlur,
+        powertrain,
+        setPowertrain: (v) => patch({ powertrain: v }),
+      }
+
       return (
         <main className="main">
           {simulatorMode === SEGMENT_COMBUSTION ? (
-            <SimulatorInputGasolineHybrid
-              {...inputCommon}
-              fuel={fuel}
-              setFuel={(v) => patch({ fuel: v })}
-              gasPrice={gasPrice}
-              setGasPrice={(v) => patch({ gasPrice: v })}
-              price={price}
-              setPrice={(v) => patch({ price: v })}
-              engine={engine}
-              setEngine={(v) => patch({ engine: v })}
-              onEngineBlur={handleEngineBlur}
-              powertrain={powertrain}
-              setPowertrain={(v) => patch({ powertrain: v })}
-            />
+            <SimulatorInputGasolineHybrid {...inputProps} />
           ) : (
             <SimulatorInputPluginEv
-              {...inputCommon}
-              fuel={fuel}
-              setFuel={(v) => patch({ fuel: v })}
-              gasPrice={gasPrice}
-              setGasPrice={(v) => patch({ gasPrice: v })}
-              price={price}
-              setPrice={(v) => patch({ price: v })}
-              engine={engine}
-              setEngine={(v) => patch({ engine: v })}
-              onEngineBlur={handleEngineBlur}
-              powertrain={powertrain}
-              setPowertrain={(v) => patch({ powertrain: v })}
+              {...inputProps}
               electricWhPerKm={electricWhPerKm}
               setElectricWhPerKm={(v) => patch({ electricWhPerKm: v })}
               hydrogenKmPerKg={hydrogenKmPerKg}
@@ -167,27 +158,6 @@ function App() {
         </main>
       )
     }
-    if (!result) {
-      if (activeView === 'compare') {
-        return (
-          <ComparisonPage
-            items={comparisonItems}
-            onRemove={removeComparisonItem}
-            onClear={clearComparisonItems}
-            onDownload={downloadComparisonCsv}
-          />
-        )
-      }
-      return (
-        <main className="main">
-          <p className="error" role="alert">
-            先に入力画面で計算を実行してください。
-          </p>
-        </main>
-      )
-    }
-
-    const isPlugin = isElectricSegment(result.calc_mode)
     if (activeView === 'compare') {
       return (
         <ComparisonPage
@@ -198,6 +168,29 @@ function App() {
         />
       )
     }
+    if (!result) {
+      return (
+        <main className="main">
+          <p className="error" role="alert">
+            先に入力画面で計算を実行してください。
+          </p>
+        </main>
+      )
+    }
+
+    const isPlugin = isElectricSegment(result.calc_mode)
+    const assumptionsBase = {
+      carName: selectedCarName,
+      distance,
+      fuel,
+      gasPrice,
+      engine,
+      price,
+      insurance,
+      parking,
+      inspection,
+      ownershipYears,
+    }
 
     return (
       <main className="main">
@@ -206,16 +199,7 @@ function App() {
             result={result}
             onAddToComparison={addCurrentResultToComparison}
             assumptions={{
-              carName: selectedCarName,
-              distance,
-              fuel,
-              gasPrice,
-              engine,
-              price,
-              insurance,
-              parking,
-              inspection,
-              ownershipYears,
+              ...assumptionsBase,
               powertrain,
               electricWhPerKm,
               hydrogenKmPerKg,
@@ -228,18 +212,7 @@ function App() {
           <ResultSectionGasolineHybrid
             result={result}
             onAddToComparison={addCurrentResultToComparison}
-            assumptions={{
-              carName: selectedCarName,
-              distance,
-              fuel,
-              gasPrice,
-              engine,
-              price,
-              insurance,
-              parking,
-              inspection,
-              ownershipYears,
-            }}
+            assumptions={assumptionsBase}
           />
         )}
       </main>

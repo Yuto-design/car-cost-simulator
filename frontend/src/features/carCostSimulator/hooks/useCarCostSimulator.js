@@ -297,8 +297,7 @@ export function useCarCostSimulator() {
         parking: normalizeValue(state.parking),
         inspection: normalizeValue(state.inspection),
         ownershipYears: normalizeValue(state.ownershipYears),
-        powertrain:
-          normalizeValue(state.powertrain),
+        powertrain: normalizeValue(state.powertrain),
         electricWhPerKm: normalizeValue(state.electricWhPerKm),
         hydrogenKmPerKg: normalizeValue(state.hydrogenKmPerKg),
         electricityPrice: normalizeValue(state.electricityPrice),
@@ -424,19 +423,6 @@ export function useCarCostSimulator() {
     patch({ engine: formatEngineToThreeDecimals(state.engine) })
   }, [state.engine, patch])
 
-  const navigateToInput = useCallback(() => {
-    flushSync(() => {
-      dispatch({ type: 'UPDATE', payload: { activeView: 'input' } })
-    })
-    window.requestAnimationFrame(() => {
-      document.getElementById('simulation-input')?.scrollIntoView({
-        block: 'start',
-        behavior: 'smooth',
-      })
-      window.history.replaceState(null, '', '#simulation-input')
-    })
-  }, [])
-
   const selectSimulatorMode = useCallback((mode) => {
     flushSync(() => {
       dispatch({
@@ -502,7 +488,6 @@ export function useCarCostSimulator() {
     clearComparisonItems,
     downloadComparisonCsv,
     handleEngineBlur,
-    navigateToInput,
     navigateToFooterSection,
     selectSimulatorMode,
     setActiveView,
