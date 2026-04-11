@@ -756,8 +756,27 @@ combustion,Suzuki,SUPER CARRY "X" (5MT) 2WD,gasoline,17.9,0.658,1459700,80000,0,
 combustion,Suzuki,SUPER CARRY "X" (4AT) 2WD,gasoline,15.4,0.658,1536700,80000,0,0
 combustion,Suzuki,SUPER CARRY "X" (5MT) 4WD,gasoline,17.9,0.658,1613700,80000,0,0
 combustion,Suzuki,SUPER CARRY "X" (4AT) 4WD,gasoline,15.4,0.658,1690700,80000,0,0
-combustion,Subaru,Impreza 2.0i,gasoline,17.5,0,2740000,105000,0,0
-combustion,Subaru,Levorg 1.8 GT-H,gasoline,14.5,0,3630000,115000,0,0
+combustion,Subaru,IMPREZA "ST" FWD,gasoline,15.8,1.995,2744500,105000,0,0
+combustion,Subaru,IMPREZA "ST" AWD,gasoline,14.7,1.995,3014000,105000,0,0
+combustion,Subaru,IMPREZA "ST Smart Edition" FWD,gasoline,15.8,1.995,2953500,105000,0,0
+combustion,Subaru,IMPREZA "ST Smart Edition" AWD,gasoline,14.7,1.995,3168000,105000,0,0
+combustion,Subaru,IMPREZA "ST Black Selection" FWD,gasoline,15.8,1.995,3058000,105000,0,0
+combustion,Subaru,IMPREZA "ST Black Selection" AWD,gasoline,14.7,1.995,3272500,105000,0,0
+combustion,Subaru,IMPREZA "ST Style Edition" FWD,gasoline,15.8,1.995,3096500,105000,0,0
+combustion,Subaru,IMPREZA "ST Style Edition" AWD,gasoline,14.7,1.995,3311000,105000,0,0
+combustion,Subaru,IMPREZA "ST-G" FWD,hybrid,19.4,1.995,2959000,105000,0,0
+combustion,Subaru,IMPREZA "ST-G" AWD,hybrid,18.9,1.995,3179000,105000,0,0
+combustion,Subaru,IMPREZA "ST-H" FWD,hybrid,19.4,1.995,3157000,105000,0,0
+combustion,Subaru,IMPREZA "ST-H" AWD,hybrid,18.9,1.995,3371500,105000,0,0
+combustion,Subaru,IMPREZA "ST-H Style Edition" FWD,hybrid,19.4,1.995,3300000,105000,0,0
+combustion,Subaru,IMPREZA "ST-H Style Edition" AWD,hybrid,18.9,1.995,3514500,105000,0,0
+combustion,Subaru,LEVORG "Smart Edition EX",gasoline,16.5,1.795,3630000,115000,0,0
+combustion,Subaru,LEVORG "GT-H EX",gasoline,16.5,1.795,3795000,115000,0,0
+combustion,Subaru,LEVORG "STI Sport EX",gasoline,16.5,1.795,4411000,115000,0,0
+combustion,Subaru,LEVORG "STI Sport EX Black Interior Selection",gasoline,16.5,1.795,4411000,115000,0,0
+combustion,Subaru,LEVORG "STI Sport R EX",gasoline,13.1,2.387,5093000,115000,0,0
+combustion,Subaru,LEVORG "STI Sport R EX Black Interior Selection",gasoline,13.1,2.387,5093000,115000,0,0
+combustion,Subaru,LEVORG "STI Sport R-Black Limited",gasoline,13.1,2.387,5368000,115000,0,0
 combustion,Subaru,REX "G" 2WD,gasoline,24.6,1.196,1910700,100000,0,0
 combustion,Subaru,REX "G" 4WD,gasoline,21.2,0.996,2187900,100000,0,0
 combustion,Subaru,REX "Z" 2WD,gasoline,23.6,1.196,2274500,100000,0,0
@@ -780,9 +799,17 @@ combustion,Subaru,FORESTER "X-BREAK S:HEV EX",hybrid,21.9,2.498,4477000,115000,0
 combustion,Subaru,FORESTER "X-BREAK S:HEV",hybrid,21.9,2.498,4202000,115000,0,0
 combustion,Subaru,FORESTER "Premium S:HEV EX",hybrid,21.1,2.498,4598000,115000,0,0
 combustion,Subaru,FORESTER "Premium S:HEV",hybrid,21.1,2.498,4488000,115000,0,0
-combustion,Subaru,WRX S4 GT,gasoline,10.5,0,4480000,130000,0,0
-combustion,Subaru,BRZ R,gasoline,12.5,0,3320000,120000,0,0
-combustion,Subaru,Justy X,gasoline,20.5,0,2170000,95000,0,0
+combustion,Subaru,WRX S4 "GT-H EX",gasoline,10.8,2.387,4477000,130000,0,0
+combustion,Subaru,WRX S4 "STI Sport R EX",gasoline,10.7,2.387,5027000,130000,0,0
+combustion,Subaru,WRX S4 "STI Sport R-Black Limited",gasoline,10.7,2.387,5302000,130000,0,0
+combustion,Subaru,BRZ "R" (6MT),gasoline,12.0,2.387,3322000,120000,0,0
+combustion,Subaru,BRZ "R" (E-6AT),gasoline,11.8,2.387,3355000,120000,0,0
+combustion,Subaru,BRZ "S" (6MT),gasoline,11.9,2.387,3509000,120000,0,0
+combustion,Subaru,BRZ "S" (E-6AT),gasoline,11.7,2.387,3542000,120000,0,0
+combustion,Subaru,BRZ "STI Sport" (6MT),gasoline,11.9,2.387,3784000,120000,0,0
+combustion,Subaru,BRZ "STI Sport" (E-6AT),gasoline,11.7,2.387,3817000,120000,0,0
+combustion,Subaru,JUSTY 2WD,gasoline,18.4,0.996,2169200,95000,0,0
+combustion,Subaru,JUSTY 4WD,gasoline,16.8,0.996,2369400,95000,0,0
 combustion,Mitsubishi,eK Wagon X,gasoline,22.5,0,1470000,80000,0,0
 combustion,Mitsubishi,eK Wagon G,gasoline,22.5,0,1620000,80000,0,0
 combustion,Mitsubishi,eK Space X,gasoline,20.5,0,1750000,80000,0,0
