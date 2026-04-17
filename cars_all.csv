@@ -828,10 +828,6 @@ combustion,Mitsubishi,Delica D:2 Custom X,gasoline,19.5,0,2350000,105000,0,0
 combustion,Mitsubishi,Delica D:2 Custom G,gasoline,19.5,0,2600000,105000,0,0
 combustion,Mitsubishi,Eclipse Cross X,gasoline,14,0,2770000,110000,0,0
 combustion,Mitsubishi,Eclipse Cross G,gasoline,14,0,3070000,110000,0,0
-combustion,Mitsubishi,Eclipse Cross PHEV X,gasoline,16.5,0,4090000,110000,0,0
-combustion,Mitsubishi,Eclipse Cross PHEV G,gasoline,16.5,0,4490000,110000,0,0
-combustion,Mitsubishi,Outlander PHEV X,gasoline,18,0,5290000,120000,0,0
-combustion,Mitsubishi,Outlander PHEV G,gasoline,18,0,5790000,120000,0,0
 combustion,Mitsubishi,Delica D:5 X,gasoline,12,0,4510000,130000,0,0
 combustion,Mitsubishi,Delica D:5 G,gasoline,12,0,5010000,130000,0,0
 combustion,Mitsubishi,Delica D:5 Urban Gear,gasoline,12,0,4450000,130000,0,0
@@ -897,9 +893,16 @@ combustion,Subaru,SOLTERRA "ET-HS",bev,0,0,6050000,95000,121,0
 combustion,Subaru,TRAILSEEKER "ET-SS" FWD,bev,0,0,5390000,95000,114,0
 combustion,Subaru,TRAILSEEKER "ET-SS" AWD,bev,0,0,5940000,95000,121,0
 combustion,Subaru,TRAILSEEKER "ET-HS",bev,0,0,6380000,95000,121,0
-electric,Mitsubishi,eK Cross EV X,bev,0,0,2570000,80000,153.85,0
-electric,Mitsubishi,eK Cross EV G,bev,0,0,2770000,80000,153.85,0
-electric,Mitsubishi,Eclipse Cross PHEV X,phev,16.5,0,4090000,110000,172.41,0
-electric,Mitsubishi,Eclipse Cross PHEV G,phev,16.5,0,4490000,110000,172.41,0
-electric,Mitsubishi,Outlander PHEV X,phev,18,0,5290000,120000,172.41,0
-electric,Mitsubishi,Outlander PHEV G,phev,18,0,5790000,120000,172.41,0
+electric,Mitsubishi,eKX EV "G",bev,0,0,2568500,80000,124,0
+electric,Mitsubishi,eKX EV "P",bev,0,0,3131700,80000,124,0
+electric,Mitsubishi,OUTLANDER "M (5 seater)",phev,17.6,2.359,5294300,120000,218,0
+electric,Mitsubishi,OUTLANDER "G (5 seater)",phev,17.2,2.359,5910300,120000,227,0
+electric,Mitsubishi,OUTLANDER "G (7 seater)",phev,17.2,2.359,6001600,120000,227,0
+electric,Mitsubishi,OUTLANDER "P (5 seater)",phev,17.2,2.359,6344800,120000,227,0
+electric,Mitsubishi,OUTLANDER "P (7 seater)",phev,17.2,2.359,6436100,120000,227,0
+electric,Mitsubishi,OUTLANDER "P Executive Package (5 seater)",phev,17.2,2.359,6625300,120000,227,0
+electric,Mitsubishi,OUTLANDER "P Executive Package (7 seater)",phev,17.2,2.359,6716600,120000,227,0
+electric,Mitsubishi,OUTLANDER "BLACK Edition (5 seater)",phev,17.2,2.359,6735300,120000,227,0
+electric,Mitsubishi,OUTLANDER "BLACK Edition (7 seater)",phev,17.2,2.359,6826600,120000,227,0
+electric,Mitsubishi,MINICAB EV "2 seater",bev,0,0,2431000,80000,127,0
+electric,Mitsubishi,MINICAB EV "4 seater",bev,0,0,2486000,80000,127,0
