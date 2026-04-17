@@ -810,27 +810,47 @@ combustion,Subaru,BRZ "STI Sport" (6MT),gasoline,11.9,2.387,3784000,120000,0,0
 combustion,Subaru,BRZ "STI Sport" (E-6AT),gasoline,11.7,2.387,3817000,120000,0,0
 combustion,Subaru,JUSTY 2WD,gasoline,18.4,0.996,2169200,95000,0,0
 combustion,Subaru,JUSTY 4WD,gasoline,16.8,0.996,2369400,95000,0,0
-combustion,Mitsubishi,eK Wagon X,gasoline,22.5,0,1470000,80000,0,0
-combustion,Mitsubishi,eK Wagon G,gasoline,22.5,0,1620000,80000,0,0
-combustion,Mitsubishi,eK Space X,gasoline,20.5,0,1750000,80000,0,0
-combustion,Mitsubishi,eK Space G,gasoline,20.5,0,1900000,80000,0,0
-combustion,Mitsubishi,eK Cross X,gasoline,20,0,1740000,80000,0,0
-combustion,Mitsubishi,eK Cross G,gasoline,20,0,1890000,80000,0,0
-combustion,Mitsubishi,eK Cross EV X,gasoline,0,0,2570000,80000,0,0
-combustion,Mitsubishi,eK Cross EV G,gasoline,0,0,2770000,80000,0,0
-combustion,Mitsubishi,Delica Mini X,gasoline,19,0,1960000,80000,0,0
-combustion,Mitsubishi,Delica Mini G,gasoline,19,0,2120000,80000,0,0
-combustion,Mitsubishi,Town Box X,gasoline,15,0,1920000,80000,0,0
-combustion,Mitsubishi,Town Box G,gasoline,15,0,2080000,80000,0,0
+combustion,Mitsubishi,DELICA MINI "G" 2WD,gasoline,21.0,0.659,1964600,80000,0,0
+combustion,Mitsubishi,DELICA MINI "G" 4WD,gasoline,18.8,0.659,2179100,80000,0,0
+combustion,Mitsubishi,DELICA MINI "G Premium" 2WD,gasoline,21.0,0.659,2129600,80000,0,0
+combustion,Mitsubishi,DELICA MINI "G Premium" 4WD,gasoline,18.8,0.659,2296800,80000,0,0
+combustion,Mitsubishi,DELICA MINI "G Premium DELIMARU Package" 2WD,gasoline,21.0,0.659,2649900,80000,0,0
+combustion,Mitsubishi,DELICA MINI "G Premium DELIMARU Package" 4WD,gasoline,18.8,0.659,2817100,80000,0,0
+combustion,Mitsubishi,DELICA MINI "T" 2WD,gasoline,19.5,0.659,2042700,80000,0,0
+combustion,Mitsubishi,DELICA MINI "T" 4WD,gasoline,17.8,0.659,2258300,80000,0,0
+combustion,Mitsubishi,DELICA MINI "T Premium" 2WD,gasoline,19.5,0.659,2219800,80000,0,0
+combustion,Mitsubishi,DELICA MINI "T Premium" 4WD,gasoline,17.8,0.659,2387000,80000,0,0
+combustion,Mitsubishi,DELICA MINI "T Premium DELIMARU Package" 2WD,gasoline,19.5,0.659,2740100,80000,0,0
+combustion,Mitsubishi,DELICA MINI "T Premium DELIMARU Package" 4WD,gasoline,17.8,0.659,2907300,80000,0,0
+combustion,Mitsubishi,eK WAGON "M" 2WD,gasoline,29.0,0.659,1468500,80000,0,0
+combustion,Mitsubishi,eK WAGON "M" 4WD,gasoline,24.2,0.659,1600500,80000,0,0
+combustion,Mitsubishi,eK WAGON "G" 2WD,gasoline,29.0,0.659,1551000,80000,0,0
+combustion,Mitsubishi,eK WAGON "G" 4WD,gasoline,24.2,0.659,1683000,80000,0,0
+combustion,Mitsubishi,eK SPACE "M" 2WD,gasoline,24.9,0.659,1749000,80000,0,0
+combustion,Mitsubishi,eK SPACE "M" 4WD,gasoline,21.6,0.659,1879900,80000,0,0
+combustion,Mitsubishi,eK SPACE "G" 2WD,gasoline,24.9,0.659,1809500,80000,0,0
+combustion,Mitsubishi,eK SPACE "G" 4WD,gasoline,21.6,0.659,1945900,80000,0,0
+combustion,Mitsubishi,eK X "G" 2WD,gasoline,28.0,0.659,1743500,80000,0,0
+combustion,Mitsubishi,eK X "G" 4WD,gasoline,25.0,0.659,1875500,80000,0,0
+combustion,Mitsubishi,eK X "G Premium" 2WD,gasoline,28.0,0.659,1886500,80000,0,0
+combustion,Mitsubishi,eK X "G Premium" 4WD,gasoline,25.0,0.659,2018500,80000,0,0
+combustion,Mitsubishi,eK X "T" 2WD,gasoline,24.8,0.659,1831500,80000,0,0
+combustion,Mitsubishi,eK X "T" 4WD,gasoline,22.4,0.659,1963500,80000,0,0
+combustion,Mitsubishi,eK X "T Premium" 2WD,gasoline,24.8,0.659,1974500,80000,0,0
+combustion,Mitsubishi,eK X "T Premium" 4WD,gasoline,22.4,0.659,2106500,80000,0,0
+combustion,Mitsubishi,TOWN BOX "G" 2WD,gasoline,19.4,0.658,1921700,80000,0,0
+combustion,Mitsubishi,TOWN BOX "G" 4WD,gasoline,19.2,0.658,2075700,80000,0,0
+combustion,Mitsubishi,TOWN BOX "G Special" 2WD,gasoline,19.4,0.658,1995400,80000,0,0
+combustion,Mitsubishi,TOWN BOX "G Special" 4WD,gasoline,19.2,0.658,2149400,80000,0,0
 combustion,Mitsubishi,Delica D:2 X,gasoline,20,0,2100000,105000,0,0
 combustion,Mitsubishi,Delica D:2 G,gasoline,20,0,2350000,105000,0,0
 combustion,Mitsubishi,Delica D:2 Custom X,gasoline,19.5,0,2350000,105000,0,0
 combustion,Mitsubishi,Delica D:2 Custom G,gasoline,19.5,0,2600000,105000,0,0
 combustion,Mitsubishi,Eclipse Cross X,gasoline,14,0,2770000,110000,0,0
 combustion,Mitsubishi,Eclipse Cross G,gasoline,14,0,3070000,110000,0,0
-combustion,Mitsubishi,Delica D:5 X,gasoline,12,0,4510000,130000,0,0
-combustion,Mitsubishi,Delica D:5 G,gasoline,12,0,5010000,130000,0,0
-combustion,Mitsubishi,Delica D:5 Urban Gear,gasoline,12,0,4450000,130000,0,0
+combustion,Mitsubishi,DELICA D:5 "G",diesel,12.9,2.267,4510000,130000,0,0
+combustion,Mitsubishi,DELICA D:5 "G-Power Package",diesel,12.9,2.267,4746500,130000,0,0
+combustion,Mitsubishi,DELICA D:5 "P",diesel,12.9,2.267,4944500,130000,0,0
 combustion,Mitsubishi,Triton X,gasoline,10.5,0,5520000,150000,0,0
 combustion,Mitsubishi,Triton G,gasoline,10.5,0,6020000,150000,0,0
 electric,Toyota,PRIUS "G",phev,26,1.986,3847300,115000,134,0
@@ -893,8 +913,8 @@ combustion,Subaru,SOLTERRA "ET-HS",bev,0,0,6050000,95000,121,0
 combustion,Subaru,TRAILSEEKER "ET-SS" FWD,bev,0,0,5390000,95000,114,0
 combustion,Subaru,TRAILSEEKER "ET-SS" AWD,bev,0,0,5940000,95000,121,0
 combustion,Subaru,TRAILSEEKER "ET-HS",bev,0,0,6380000,95000,121,0
-electric,Mitsubishi,eKX EV "G",bev,0,0,2568500,80000,124,0
-electric,Mitsubishi,eKX EV "P",bev,0,0,3131700,80000,124,0
+electric,Mitsubishi,eK X EV "G",bev,0,0,2568500,80000,124,0
+electric,Mitsubishi,eK X EV "P",bev,0,0,3131700,80000,124,0
 electric,Mitsubishi,OUTLANDER "M (5 seater)",phev,17.6,2.359,5294300,120000,218,0
 electric,Mitsubishi,OUTLANDER "G (5 seater)",phev,17.2,2.359,5910300,120000,227,0
 electric,Mitsubishi,OUTLANDER "G (7 seater)",phev,17.2,2.359,6001600,120000,227,0
