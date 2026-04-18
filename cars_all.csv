@@ -842,17 +842,38 @@ combustion,Mitsubishi,TOWN BOX "G" 2WD,gasoline,19.4,0.658,1921700,80000,0,0
 combustion,Mitsubishi,TOWN BOX "G" 4WD,gasoline,19.2,0.658,2075700,80000,0,0
 combustion,Mitsubishi,TOWN BOX "G Special" 2WD,gasoline,19.4,0.658,1995400,80000,0,0
 combustion,Mitsubishi,TOWN BOX "G Special" 4WD,gasoline,19.2,0.658,2149400,80000,0,0
-combustion,Mitsubishi,Delica D:2 X,gasoline,20,0,2100000,105000,0,0
-combustion,Mitsubishi,Delica D:2 G,gasoline,20,0,2350000,105000,0,0
-combustion,Mitsubishi,Delica D:2 Custom X,gasoline,19.5,0,2350000,105000,0,0
-combustion,Mitsubishi,Delica D:2 Custom G,gasoline,19.5,0,2600000,105000,0,0
-combustion,Mitsubishi,Eclipse Cross X,gasoline,14,0,2770000,110000,0,0
-combustion,Mitsubishi,Eclipse Cross G,gasoline,14,0,3070000,110000,0,0
+combustion,Mitsubishi,DELICA D:2 "MZ" 2WD,hybrid,25.6,1.197,2517900,105000,0,0
+combustion,Mitsubishi,DELICA D:2 "MZ" 4WD,hybrid,24.9,1.197,2643300,105000,0,0
+combustion,Mitsubishi,DELICA D:2 "MX" 2WD,hybrid,25.6,1.197,2101000,105000,0,0
+combustion,Mitsubishi,DELICA D:2 "MX" 4WD,hybrid,24.9,1.197,2226400,105000,0,0
+combustion,Mitsubishi,DELICA D:2 CUSTOM "MV" 2WD,hybrid,25.6,1.197,2352900,105000,0,0
+combustion,Mitsubishi,ECLIPSE CROSS "P" 2WD,gasoline,15.0,1.498,3300000,110000,0,0
+combustion,Mitsubishi,ECLIPSE CROSS "P" 4WD,gasoline,14.0,1.498,3520000,110000,0,0
+combustion,Mitsubishi,ECLIPSE CROSS "BLACK Edition" 2WD,gasoline,15.0,1.498,3300000,110000,0,0
+combustion,Mitsubishi,ECLIPSE CROSS "BLACK Edition" 4WD,gasoline,14.0,1.498,3520000,110000,0,0
+combustion,Mitsubishi,ECLIPSE CROSS "G" 2WD,gasoline,15.0,1.498,3118500,110000,0,0
+combustion,Mitsubishi,ECLIPSE CROSS "G" 4WD,gasoline,14.0,1.498,3338500,110000,0,0
 combustion,Mitsubishi,DELICA D:5 "G",diesel,12.9,2.267,4510000,130000,0,0
 combustion,Mitsubishi,DELICA D:5 "G-Power Package",diesel,12.9,2.267,4746500,130000,0,0
 combustion,Mitsubishi,DELICA D:5 "P",diesel,12.9,2.267,4944500,130000,0,0
-combustion,Mitsubishi,Triton X,gasoline,10.5,0,5520000,150000,0,0
-combustion,Mitsubishi,Triton G,gasoline,10.5,0,6020000,150000,0,0
+combustion,Mitsubishi,TRITON "GSR",diesel,11.3,2.439,5518700,150000,0,0
+combustion,Mitsubishi,MINICAB VAN "E" (5MT) 2WD,gasoline,20.5,0.658,1192400,80000,0,0
+combustion,Mitsubishi,MINICAB VAN "E" (4AT) 2WD,gasoline,19.8,0.658,1261700,80000,0,0
+combustion,Mitsubishi,MINICAB VAN "E" (5MT) 4WD,gasoline,20.0,0.658,1324400,80000,0,0
+combustion,Mitsubishi,MINICAB VAN "E" (4AT) 4WD,gasoline,19.2,0.658,1393700,80000,0,0
+combustion,Mitsubishi,MINICAB VAN "M" 2WD,gasoline,22.1,0.658,1401400,80000,0,0
+combustion,Mitsubishi,MINICAB VAN "M" 4WD,gasoline,21.1,0.658,1555400,80000,0,0
+combustion,Mitsubishi,MINICAB VAN "G" 2WD,gasoline,22.1,0.658,1522400,80000,0,0
+combustion,Mitsubishi,MINICAB VAN "G" 4WD,gasoline,21.1,0.658,1676400,80000,0,0
+combustion,Mitsubishi,MINICAB VAN "BRAVO" 2WD,gasoline,20.7,0.658,1731400,80000,0,0
+combustion,Mitsubishi,MINICAB VAN "BRAVO" 4WD,gasoline,19.8,0.658,1885400,80000,0,0
+combustion,Mitsubishi,MINICAB TRUCK "M" (5MT) 2WD,gasoline,22.5,0.658,1311200,80000,0,0
+combustion,Mitsubishi,MINICAB TRUCK "M" (4AT) 2WD,gasoline,19.8,0.658,1388200,80000,0,0
+combustion,Mitsubishi,MINICAB TRUCK "G" (4AT) 4WD,gasoline,19.0,0.658,1677500,80000,0,0
+combustion,Mitsubishi,MINICAB TRUCK "MINORI" (5MT) 4WD,gasoline,21.3,0.658,1499300,80000,0,0
+combustion,Mitsubishi,MINICAB TRUCK "MINORI" (4AT) 4WD,gasoline,19.0,0.658,1576300,80000,0,0
+combustion,Mitsubishi,MINICAB TRUCK "M" (5MT) 4WD,gasoline,21.4,0.658,1463000,80000,0,0
+combustion,Mitsubishi,MINICAB TRUCK "M" (4AT) 4WD,gasoline,19.0,0.658,1540000,80000,0,0
 electric,Toyota,PRIUS "G",phev,26,1.986,3847300,115000,134,0
 electric,Toyota,PRIUS "Z",phev,26,1.986,4608900,115000,134,0
 electric,Toyota,RAV4 "Z",phev,22.2,2.487,6000000,120000,151,0
