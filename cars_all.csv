@@ -721,7 +721,7 @@ combustion,Suzuki,XBEE "HYBRID MX" 4WD,hybrid,21.0,1.197,2333100,105000,0,0
 combustion,Suzuki,XBEE "HYBRID MZ" 2WD,hybrid,22.8,1.197,2335300,105000,0,0
 combustion,Suzuki,XBEE "HYBRID MZ" 4WD,hybrid,21.0,1.197,2500300,105000,0,0
 combustion,Suzuki,FRONX 2WD,hybrid,19.0,1.460,2541000,110000,0,0
-combustion,Suzuki,FRONX 4WD,hybrid,17/8,1.460,2739000,110000,0,0
+combustion,Suzuki,FRONX 4WD,hybrid,17.8,1.460,2739000,110000,0,0
 combustion,Suzuki,EVERY "PA" (5MT) 2WD,gasoline,17.2,0.658,1197900,80000,0,0
 combustion,Suzuki,EVERY "PA" (4AT) 2WD,gasoline,14.6,0.658,1267200,80000,0,0
 combustion,Suzuki,EVERY "PA" (5MT) 4WD,gasoline,16.9,0.658,1329900,80000,0,0
@@ -928,12 +928,12 @@ electric,Suzuki,e-VITARA "Z" 2WD,bev,0,0,4488000,80000,131,0
 electric,Suzuki,e-VITARA "Z" 4WD,bev,0,0,4928000,80000,144,0
 electric,Suzuki,e-EVERY "2 seater",bev,0,0,3146000,80000,161,0
 electric,Suzuki,e-EVERY "5 seater",bev,0,0,3234000,80000,161,0
-combustion,Subaru,SOLTERRA "ET-SS" FWD,bev,0,0,5170000,95000,113,0
-combustion,Subaru,SOLTERRA "ET-SS" AWD,bev,0,0,5610000,95000,121,0
-combustion,Subaru,SOLTERRA "ET-HS",bev,0,0,6050000,95000,121,0
-combustion,Subaru,TRAILSEEKER "ET-SS" FWD,bev,0,0,5390000,95000,114,0
-combustion,Subaru,TRAILSEEKER "ET-SS" AWD,bev,0,0,5940000,95000,121,0
-combustion,Subaru,TRAILSEEKER "ET-HS",bev,0,0,6380000,95000,121,0
+electric,Subaru,SOLTERRA "ET-SS" FWD,bev,0,0,5170000,95000,113,0
+electric,Subaru,SOLTERRA "ET-SS" AWD,bev,0,0,5610000,95000,121,0
+electric,Subaru,SOLTERRA "ET-HS",bev,0,0,6050000,95000,121,0
+electric,Subaru,TRAILSEEKER "ET-SS" FWD,bev,0,0,5390000,95000,114,0
+electric,Subaru,TRAILSEEKER "ET-SS" AWD,bev,0,0,5940000,95000,121,0
+electric,Subaru,TRAILSEEKER "ET-HS",bev,0,0,6380000,95000,121,0
 electric,Mitsubishi,eK X EV "G",bev,0,0,2568500,80000,124,0
 electric,Mitsubishi,eK X EV "P",bev,0,0,3131700,80000,124,0
 electric,Mitsubishi,OUTLANDER "M (5 seater)",phev,17.6,2.359,5294300,120000,218,0
