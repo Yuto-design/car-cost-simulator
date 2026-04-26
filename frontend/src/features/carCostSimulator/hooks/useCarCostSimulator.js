@@ -12,12 +12,26 @@ import {
   isElectricSegment,
 } from '../segments.js'
 
+const ELECTRIC_POWERTRAINS = ['bev', 'phev', 'fcv']
+
 function normalizeValue(v) {
   return v == null ? '' : v
 }
 
 function formatDateForFileName() {
   return new Date().toISOString().slice(0, 10)
+}
+
+function toNumberOr(value, fallback = 0) {
+  const num = Number(value)
+  return Number.isFinite(num) ? num : fallback
+}
+
+function scrollToElementById(id) {
+  document.getElementById(id)?.scrollIntoView({
+    block: 'start',
+    behavior: 'smooth',
+  })
 }
 
 /**
@@ -47,6 +61,60 @@ function carPickerLabel(c, carDisplayName) {
   const base = c.name || c.model || carDisplayName(c)
   const suffix = powertrainBracketForDisplay(c.segment, c.powertrain)
   return suffix ? `${base}${suffix}` : base
+}
+
+function buildCalcRequestBody(state) {
+  const baseBody = {
+    distance: toNumberOr(state.distance),
+    insurance: toNumberOr(state.insurance),
+    parking: toNumberOr(state.parking),
+    engine: toNumberOr(state.engine),
+    inspection: toNumberOr(state.inspection),
+    price: toNumberOr(state.price),
+    ownership_years: toNumberOr(state.ownershipYears, 1),
+  }
+
+  if (state.simulatorMode === SEGMENT_ELECTRIC) {
+    return {
+      ...baseBody,
+      calc_mode: SEGMENT_ELECTRIC,
+      powertrain: state.powertrain,
+      fuel: toNumberOr(state.fuel),
+      electric_wh_per_km: toNumberOr(state.electricWhPerKm),
+      hydrogen_km_per_kg: toNumberOr(state.hydrogenKmPerKg),
+      electricity_price: toNumberOr(state.electricityPrice),
+      gas_price: toNumberOr(state.gasPrice),
+      hydrogen_price: toNumberOr(state.hydrogenPrice),
+      phev_ev_ratio: Number.isFinite(Number(state.phevEvRatio)) ? Number(state.phevEvRatio) : 0.5,
+    }
+  }
+
+  return {
+    ...baseBody,
+    calc_mode: SEGMENT_COMBUSTION,
+    fuel: toNumberOr(state.fuel),
+    gas_price: toNumberOr(state.gasPrice),
+  }
+}
+
+function buildComparisonInputs(state) {
+  return {
+    distance: normalizeValue(state.distance),
+    fuel: normalizeValue(state.fuel),
+    gasPrice: normalizeValue(state.gasPrice),
+    price: normalizeValue(state.price),
+    engine: normalizeValue(state.engine),
+    insurance: normalizeValue(state.insurance),
+    parking: normalizeValue(state.parking),
+    inspection: normalizeValue(state.inspection),
+    ownershipYears: normalizeValue(state.ownershipYears),
+    powertrain: normalizeValue(state.powertrain),
+    electricWhPerKm: normalizeValue(state.electricWhPerKm),
+    hydrogenKmPerKg: normalizeValue(state.hydrogenKmPerKg),
+    electricityPrice: normalizeValue(state.electricityPrice),
+    hydrogenPrice: normalizeValue(state.hydrogenPrice),
+    phevEvRatio: normalizeValue(state.phevEvRatio),
+  }
 }
 
 export function useCarCostSimulator() {
@@ -149,42 +217,13 @@ export function useCarCostSimulator() {
       const pt = String(state.powertrain ?? '')
         .trim()
         .toLowerCase()
-      if (!['bev', 'phev', 'fcv'].includes(pt)) {
+      if (!ELECTRIC_POWERTRAINS.includes(pt)) {
         patch({ error: '区分を選択してください', result: null })
         return
       }
     }
     patch({ error: null, result: null, loading: true })
-    const baseBody = {
-      distance: Number(state.distance) || 0,
-      insurance: Number(state.insurance) || 0,
-      parking: Number(state.parking) || 0,
-      engine: Number(state.engine) || 0,
-      inspection: Number(state.inspection) || 0,
-      price: Number(state.price) || 0,
-      ownership_years: Number(state.ownershipYears) || 1,
-    }
-
-    const body =
-      state.simulatorMode === SEGMENT_ELECTRIC
-        ? {
-            ...baseBody,
-            calc_mode: SEGMENT_ELECTRIC,
-            powertrain: state.powertrain,
-            fuel: Number(state.fuel) || 0,
-            electric_wh_per_km: Number(state.electricWhPerKm) || 0,
-            hydrogen_km_per_kg: Number(state.hydrogenKmPerKg) || 0,
-            electricity_price: Number(state.electricityPrice) || 0,
-            gas_price: Number(state.gasPrice) || 0,
-            hydrogen_price: Number(state.hydrogenPrice) || 0,
-            phev_ev_ratio: Number.isFinite(Number(state.phevEvRatio)) ? Number(state.phevEvRatio) : 0.5,
-          }
-        : {
-            ...baseBody,
-            calc_mode: SEGMENT_COMBUSTION,
-            fuel: Number(state.fuel) || 0,
-            gas_price: Number(state.gasPrice) || 0,
-          }
+    const body = buildCalcRequestBody(state)
 
     fetch(`${API_BASE}/calc.php`, {
       method: 'POST',
@@ -198,10 +237,7 @@ export function useCarCostSimulator() {
           dispatch({ type: 'UPDATE', payload: { result: data, activeView: 'result' } })
         })
         window.requestAnimationFrame(() => {
-          document.getElementById('simulation-result')?.scrollIntoView({
-            block: 'start',
-            behavior: 'smooth',
-          })
+          scrollToElementById('simulation-result')
         })
       })
       .catch(() => patch({ error: '計算に失敗しました' }))
@@ -287,23 +323,7 @@ export function useCarCostSimulator() {
       addedAt: new Date().toISOString(),
       mode: state.result.calc_mode,
       carName: selectedCarName || '',
-      inputs: {
-        distance: normalizeValue(state.distance),
-        fuel: normalizeValue(state.fuel),
-        gasPrice: normalizeValue(state.gasPrice),
-        price: normalizeValue(state.price),
-        engine: normalizeValue(state.engine),
-        insurance: normalizeValue(state.insurance),
-        parking: normalizeValue(state.parking),
-        inspection: normalizeValue(state.inspection),
-        ownershipYears: normalizeValue(state.ownershipYears),
-        powertrain: normalizeValue(state.powertrain),
-        electricWhPerKm: normalizeValue(state.electricWhPerKm),
-        hydrogenKmPerKg: normalizeValue(state.hydrogenKmPerKg),
-        electricityPrice: normalizeValue(state.electricityPrice),
-        hydrogenPrice: normalizeValue(state.hydrogenPrice),
-        phevEvRatio: normalizeValue(state.phevEvRatio),
-      },
+      inputs: buildComparisonInputs(state),
       result: state.result,
     }
     dispatch({ type: 'ADD_COMPARISON_ITEM', payload: item })
@@ -439,10 +459,7 @@ export function useCarCostSimulator() {
       })
     })
     window.requestAnimationFrame(() => {
-      document.getElementById('simulation-input')?.scrollIntoView({
-        block: 'start',
-        behavior: 'smooth',
-      })
+      scrollToElementById('simulation-input')
       window.history.replaceState(null, '', '#simulation-input')
     })
   }, [])

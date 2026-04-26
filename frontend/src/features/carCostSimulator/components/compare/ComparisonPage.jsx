@@ -17,6 +17,15 @@ function formatYen(value) {
   return `${num.toLocaleString('ja-JP')}円`
 }
 
+function formatDistance(value) {
+  const distance = Number(value)
+  return Number.isFinite(distance) ? `${distance.toLocaleString('ja-JP')}km` : '—'
+}
+
+function modeLabel(mode) {
+  return isElectricSegment(mode) ? 'BEV/PHEV/FCV' : 'ガソリン/HEV'
+}
+
 /**
  * @param {{
  *   items: Array<{
@@ -89,20 +98,16 @@ export default function ComparisonPage({ items, onRemove, onClear, onDownload })
               </thead>
               <tbody>
                 {items.map((item) => {
-                  const modeName = isElectricSegment(item.mode) ? 'BEV/PHEV/FCV' : 'ガソリン/HEV'
-                  const distance = Number(item.inputs?.distance)
                   const pt = String(item.inputs?.powertrain ?? '')
                   return (
                     <tr key={item.id}>
-                      <td className="cell-mode">{modeName}</td>
+                      <td className="cell-mode">{modeLabel(item.mode)}</td>
                       <td className="cell-car-name" title={item.carName || '（未選択）'}>
                         {item.carName || '（未選択）'}
                       </td>
                       <td>{pt ? POWERTRAIN_LABELS[pt] || pt : '—'}</td>
                       <td className="cell-number">{formatYen(item.inputs?.price)}</td>
-                      <td className="cell-number">
-                        {Number.isFinite(distance) ? `${distance.toLocaleString('ja-JP')}km` : '—'}
-                      </td>
+                      <td className="cell-number">{formatDistance(item.inputs?.distance)}</td>
                       <td className="cell-number">{formatYen(item.result?.total)}</td>
                       <td className="cell-number">{formatYen(item.result?.monthly)}</td>
                       <td className="cell-number">{formatYen(item.result?.total_with_vehicle)}</td>
