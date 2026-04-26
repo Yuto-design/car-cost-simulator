@@ -1,0 +1,140 @@
+<mxfile host="65bd71144e">
+    <diagram id="system-overview" name="SystemOverview">
+        <mxGraphModel dx="767" dy="755" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1080" background="none" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title1" value="&lt;font color=&quot;#ffffff&quot;&gt;Car Cost Simulator - System Overview&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=20;rounded=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="20" width="520" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="browser" value="Browser&#10;React + Vite (localhost:5173)&#10;App / useCarCostSimulator" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="120" width="300" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="chartjs" value="Chart.js / react-chartjs-2&#10;(Result visualization)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="300" width="300" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="viteproxy" value="Vite proxy&#10;/api -&gt; localhost:8080" style="shape=process;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;rounded=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="150" width="220" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="phpapi" value="PHP API (backend/api)&#10;cars.php&#10;calc.php&#10;cars_export.php&#10;cars_import.php" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="100" width="290" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="db" value="Database&#10;SQLite (default)&#10;or MySQL (optional)" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;fontSize=13;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1140" y="130" width="210" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge1" value="fetch / UI events" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontColor=#000000;" parent="1" source="browser" target="viteproxy" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge2" value="forward /api" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontColor=#000000;" parent="1" source="viteproxy" target="phpapi" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge3" value="&lt;font color=&quot;#ffffff&quot;&gt;JSON response&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;startArrow=block;endArrow=none;fontColor=#000000;" parent="1" source="phpapi" target="browser" edge="1">
+                    <mxGeometry x="0.038" y="-20" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge4" value="&lt;font color=&quot;#fcfcfc&quot;&gt;read/write car master + calc params&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontColor=#000000;" parent="1" source="phpapi" target="db" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge5" value="&lt;font color=&quot;#fcfcfc&quot;&gt;render charts from result data&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontColor=#000000;" parent="1" source="browser" target="chartjs" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="frontend-detail" name="FrontendDetail">
+        <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1920" pageHeight="1400" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title2" value="Car Cost Simulator - Frontend Detail" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontStyle=1;fontSize=20;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="20" width="520" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="entry" value="main.jsx" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="100" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="routes" value="AppRoutes.jsx" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="100" width="170" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="app" value="App.jsx&#10;(Shell + renderMainContent)" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="90" width="250" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="hook" value="useCarCostSimulator.js&#10;state + handlers hub&#10;fetchCars / handleCalculate / CSV I/O" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="790" y="70" width="330" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="layout" value="Layout components&#10;AppHeader&#10;SpaLeftNav&#10;AppFooter" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="220" width="250" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="intro" value="SimulatorIntro&#10;(activeView=intro)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="420" width="220" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="inputGh" value="SimulatorInputGasolineHybrid&#10;(activeView=input, mode=combustion)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="400" width="300" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="inputEv" value="SimulatorInputPluginEv&#10;(activeView=input, mode=electric)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="520" width="300" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="resultGh" value="ResultSectionGasolineHybrid&#10;(activeView=result, combustion result)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="670" y="400" width="310" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="resultEv" value="ResultSectionPluginEv&#10;(activeView=result, electric result)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="670" y="520" width="310" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="compare" value="ComparisonPage&#10;(activeView=compare)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1030" y="460" width="240" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="shared" value="Shared UI&#10;SpaSectionLead&#10;CalcButton&#10;CsvExportButton / CsvImportButton&#10;ModelPickerModal / mode switch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1030" y="250" width="300" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="apiNode" value="API_BASE&#10;/api/cars.php&#10;/api/calc.php&#10;/api/cars_export.php&#10;/api/cars_import.php" style="shape=process;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1180" y="70" width="260" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" parent="1" source="entry" target="routes" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" parent="1" source="routes" target="app" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e3" value="state/handlers" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontColor=#000000;" parent="1" source="hook" target="app" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e4" value="uses" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontColor=#000000;" parent="1" source="app" target="layout" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e5" value="activeView=intro" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontColor=#000000;" parent="1" source="app" target="intro" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e6" value="activeView=input" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontColor=#000000;" parent="1" source="app" target="inputGh" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e7" value="activeView=input" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontColor=#000000;" parent="1" source="app" target="inputEv" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e8" value="activeView=result" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontColor=#000000;" parent="1" source="app" target="resultGh" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e9" value="activeView=result" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontColor=#000000;" parent="1" source="app" target="resultEv" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e10" value="activeView=compare" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontColor=#000000;" parent="1" source="app" target="compare" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e11" value="shared controls" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontColor=#000000;" parent="1" source="shared" target="inputGh" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e12" value="shared controls" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontColor=#000000;" parent="1" source="shared" target="inputEv" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e13" value="section lead + actions" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontColor=#000000;" parent="1" source="shared" target="resultGh" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e14" value="section lead + actions" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontColor=#000000;" parent="1" source="shared" target="resultEv" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e15" value="fetch" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontColor=#000000;" parent="1" source="hook" target="apiNode" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
