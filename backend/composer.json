@@ -1,6 +1,7 @@
 {
   "name": "car-cost-simulator/backend",
   "description": "Backend test dependencies",
+  "license": "proprietary",
   "type": "project",
   "require": {},
   "require-dev": {
