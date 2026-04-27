@@ -48,6 +48,44 @@ npm run dev
 - バックエンド: `npm run dev:backend`（PHP のみ）
 - フロントエンド: `npm run dev:frontend`（Vite のみ）
 
+## テスト
+
+### フロントエンド
+
+```bash
+npm run test:frontend
+```
+
+必要に応じて個別に実行する場合:
+
+```bash
+cd frontend
+npm run lint
+npm run build
+npm run test:run
+```
+
+### バックエンド
+
+初回のみ依存をインストールします。
+
+```bash
+composer install --working-dir backend
+```
+
+テスト実行:
+
+```bash
+npm run test:backend
+```
+
+## CI
+
+GitHub Actions の `CI` ワークフローで、以下を `push`（`main` / `master`）と `pull_request` のたびに自動実行します。
+
+- Frontend: `lint` / `build` / `test`
+- Backend: `composer test`（PHPUnit）
+
 ## 使い方
 
 1. 車種を選ぶと、燃費・排気量・車両価格・車検費用が自動入力されます。

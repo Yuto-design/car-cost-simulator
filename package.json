@@ -4,7 +4,9 @@
   "scripts": {
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
     "dev:backend": "cd backend && php -S localhost:8080",
-    "dev:frontend": "cd frontend && npm run dev"
+    "dev:frontend": "cd frontend && npm run dev",
+    "test:frontend": "npm run --prefix frontend test:run",
+    "test:backend": "composer test --working-dir backend"
   },
   "devDependencies": {
     "concurrently": "^9.1.2"
