@@ -7,6 +7,7 @@
 - **フロントエンド**: React (Vite) + Chart.js
 - **バックエンド**: PHP API
 - **データベース**: SQLite（既定）/ MySQL（任意）
+- フロントエンド構成の詳細: [`docs/frontend-component-architecture.md`](docs/frontend-component-architecture.md)
 
 ## セットアップ
 
@@ -49,6 +50,8 @@ npm run dev
 - フロントエンド: `npm run dev:frontend`（Vite のみ）
 
 ## テスト
+
+テストとCIの詳細は [`docs/testing-and-ci.md`](docs/testing-and-ci.md) を参照してください。
 
 ### フロントエンド
 
