@@ -13,6 +13,36 @@
 - Frontend: `lint` / `build` / `test`
 - Backend: `composer test`（PHPUnit）
 
+### 1.1 テスト関連ファイル構成
+
+```text
+.
+├── .github/
+│   └── workflows/
+│       └── ci.yml                    # CI定義（frontend/backendの品質ゲート）
+├── frontend/
+│   ├── package.json                  # lint/build/testスクリプト定義
+│   ├── vite.config.js                # Vitest設定（jsdom, setupFiles）
+│   └── src/
+│       ├── test/
+│       │   └── setup.js              # jest-dom等のテスト初期化
+│       ├── App.test.jsx              # 画面表示分岐のテスト
+│       └── features/
+│           └── carCostSimulator/
+│               └── hooks/
+│                   └── useCarCostSimulator.test.js
+│                                        # 計算呼び出し・入力検証のテスト
+└── backend/
+    ├── composer.json                 # PHPUnit実行コマンド定義
+    ├── phpunit.xml                   # PHPUnit設定
+    ├── lib/
+    │   ├── calc_service.php          # 主な計算ロジック
+    │   └── cars_schema.php           # スキーマ正規化ロジック
+    └── tests/
+        ├── CalcServiceTest.php       # 金額計算/異常系のテスト
+        └── CarsSchemaTest.php        # 旧値互換を含む正規化テスト
+```
+
 ---
 
 ## 2. フロントエンドテスト
@@ -26,12 +56,12 @@
 
 ### 2.2 関連ファイル
 
-- 設定: `frontend/vite.config.js`
-- セットアップ: `frontend/src/test/setup.js`
-- スクリプト: `frontend/package.json`
+- 設定: [`frontend/vite.config.js`](../frontend/vite.config.js)
+- セットアップ: [`frontend/src/test/setup.js`](../frontend/src/test/setup.js)
+- スクリプト: [`frontend/package.json`](../frontend/package.json)
 - テスト:
-  - `frontend/src/App.test.jsx`
-  - `frontend/src/features/carCostSimulator/hooks/useCarCostSimulator.test.js`
+  - [`frontend/src/App.test.jsx`](../frontend/src/App.test.jsx)
+  - [`frontend/src/features/carCostSimulator/hooks/useCarCostSimulator.test.js`](../frontend/src/features/carCostSimulator/hooks/useCarCostSimulator.test.js)
 
 ### 2.3 現在のテスト内容
 
@@ -72,14 +102,14 @@ npm run test:run
 
 ### 3.2 関連ファイル
 
-- Composer設定: `backend/composer.json`
-- PHPUnit設定: `backend/phpunit.xml`
+- Composer設定: [`backend/composer.json`](../backend/composer.json)
+- PHPUnit設定: [`backend/phpunit.xml`](../backend/phpunit.xml)
 - テスト対象ロジック:
-  - `backend/lib/calc_service.php`
-  - `backend/lib/cars_schema.php`
+  - [`backend/lib/calc_service.php`](../backend/lib/calc_service.php)
+  - [`backend/lib/cars_schema.php`](../backend/lib/cars_schema.php)
 - テスト:
-  - `backend/tests/CalcServiceTest.php`
-  - `backend/tests/CarsSchemaTest.php`
+  - [`backend/tests/CalcServiceTest.php`](../backend/tests/CalcServiceTest.php)
+  - [`backend/tests/CarsSchemaTest.php`](../backend/tests/CarsSchemaTest.php)
 
 ### 3.3 現在のテスト内容
 
